@@ -1,5 +1,10 @@
+use_directory_urls: false
+
 site_name: Portfolio - Koen Pijnenburg
-theme: windmill
+theme:
+  name: null
+  custom_dir: 'cinder'
+
 nav:
   - Home: index.md
   - Blog: blog.md

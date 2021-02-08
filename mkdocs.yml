@@ -2,3 +2,4 @@ site_name: Portfolio - Koen Pijnenburg
 theme: windmill
 nav:
   - Home: index.md
+  - Blog: blog.md

@@ -1,5 +1,3 @@
-use_directory_urls: True
-
 site_name: Portfolio - Koen Pijnenburg
 theme:
   name: windmill

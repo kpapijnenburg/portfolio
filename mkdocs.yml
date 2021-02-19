@@ -1,7 +1,12 @@
-site_name: Portfolio - Koen Pijnenburg
+site_name: Twindle 3.0 - Portfolio - Koen Pijnenburg
 theme:
   name: windmill
 
 nav:
   - Home: index.md
+  - Analyseren: analyseren.md
+  - Ontwerpen: ontwerpen.md
+  - Realiseren: realiseren.md
+  - Adviseren: adviseren.md
+  - Onderhouden: onderhouden.md
   - Blog: blog.md

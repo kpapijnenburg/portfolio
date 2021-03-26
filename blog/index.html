@@ -39,6 +39,7 @@
               {title: "Week 4", url: "#week-4" },
               {title: "Week 5", url: "#week-5" },
               {title: "Week 6", url: "#week-6" },
+              {title: "Week 7", url: "#week-7" },
           ]},
         ];
 
@@ -127,7 +128,7 @@ Aan de hand van de exploratory data analyse heb ik een data requirements analyse
 <p><strong>Projectplan</strong><br>
 Op maandag had ik feedback ontvangen over mijn projectplan van Bartosz. Dit had ik opgedeeld in onderdelen zodat ik op donderdag of vrijdag alle onderdelen verwerkt zou hebben. Ik heb mezelf aan deze planning kunnen houden en de tweede versie van het plan is nu af. Deze ga ik op sturen voor feedback of goedkeuring. Volgende week verwacht ik dit afgerond te hebben.</p>
 <h2 id="week-5">Week 5</h2>
-<p><strong>01-08-2021 t/m 05-012-2021</strong><br>
+<p><strong>08-03-2021 t/m 12-03-2021</strong><br>
 Deze week ben ik begonnen met het verzamelen van data uit externe bronnen. Daarnaast heb ik het projectplan afgerond. </p>
 <p><strong>Dataverzameling</strong><br>
 Vorige week was ik geëindigd met het samenstellen van een "data-boodschappenlijstje". Het doel was alle items deze week te verzamelen. In de meeste gevallen is dit gelukt. Zo heb ik bijvoorbeeld een bouwtekening van het kantoor ontvangen waaruit ik de oppervlakte van de ruimten heb gehaald.</p>
@@ -139,7 +140,7 @@ Aangezien de data verzameling voorspoediger verliep dan verwacht kon ik een week
 <p><strong>Projectplan</strong> <br>
 Deze week was de deadline voor het projectplan. Bartosz had nog wat kleine aanmerkingen. Deze heb ik verwerkt en zal ik volgende week of de week daarop bespreken.</p>
 <h2 id="week-6">Week 6</h2>
-<p><strong>01-08-2021 t/m 05-012-2021</strong><br>
+<p><strong>15-03-2021 t/m 19-03-2021</strong><br>
 Deze week was er een nieuwe sprint begonnen. Het doel van deze sprint is om een eerste prototype van de modellen op te leveren.</p>
 <p><strong>Linear Regression</strong><br>
 Vorige week ben ik begonnen met het ontwikkelen van linear regression modellen. De eerste indruk was dat deze goed presteerde. Ik was wat achterdochtig over de 0.997 R2 score die de modellen behaalde en heb dat verder onderzocht. Het bleek dat de data seizoensgebonden en autocorrelaties bevat. Dit maakt traditionele regressie modellen ongeschikt. </p>
@@ -147,6 +148,15 @@ Vorige week ben ik begonnen met het ontwikkelen van linear regression modellen. 
 <p>Zoals in de bovenstaande afbeelding resulteerd dit soort data in modellen die altijd de waarden van t-1 weergeven. In R2 scores en dergelijke lijkt het te werken maar uiteindelijk bevat het model geen voorspellende capaciteiten.</p>
 <p><strong>Time Series Prediction</strong><br>
 Na wat onderzoek te hebben gedaan ben ik uit gekomen op time series prediction. Dit is iets waar ik nog nooit eerder mee heb gewerkt en wat aardig complex is. Momenteel heb ik de data verder onderzocht op seizoensgebondenheid, autocorrelatie en trends. Vanuit hier wil ik volgende week met technieken zoals ARIMA aan de slag om modellen te ontwikkelen.</p>
+<h2 id="week-7">Week 7</h2>
+<p><strong>22-03-2021 t/m 26-03-2021</strong><br>
+vorige week was ik tot de conclusie gekomen dat mijn lineare regressie modellen geen voorspellende waarde hadden. Deze week heb ik verder onderzoek gedaan naar time series prediction en de volgende drie model soorten uitgeprobeerd; Linear regression, Exponential Smoothing &amp; ARIMA.</p>
+<p>Voor ik begin met de experimenten had ik vastgesteld dat modellen beoordeeld worden op R2 score. Een model moet een <strong>minimale R2 score van 0.90</strong> halen om als goed beschouwd te worden.</p>
+<p><strong>Linear Regression</strong> <br>
+Omdat de data erg sterke autocorrelaties bevat heb ik de keuze gemaakt om in plaats van de echte waarde te voorspellen het verschil tussen twee punten te voorspellen. De modellen die ik hier mee ontwikkeld heb komen niet boven de 0.30 R2 score uit en zijn dus niet goed genoeg. Waarschijnlijk mis ik nog belangrijke features die leiden tot een verandering in de meetwaarde.</p>
+<p><strong>Exponential Smoothing &amp; ARIMA</strong> <br>
+Deze technieken werkte beide redelijk goed maar haalde het gestelde doel niet. Cross-validation moet toegepast worden om te bepalen hoe goed het model echt presteert.</p>
+<p>Volgende week wil ik beginnen met het ontwikkelen van de integratie van de modellen in Twindle. Hiervoor zal ik beginnen met een ontwerp maken wat ik daarna bespreek met mijn technisch begeleider. Parallel hieraan wil ik de modellen verder verbeteren. De eerste stap hierin is om meer data te verzamelen die invloed kan hebben op veranderingen in de meetwaarde.</p>
 
   <br>
     

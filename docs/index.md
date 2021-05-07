@@ -11,10 +11,6 @@ wordt aan de gestelde luchtkwaliteitseisen. Mede door COVID-19 is de luchtkwalit
 ruimte steeds belangrijker geworden. Slechte luchtkwaliteit kan ernstige gezondheidsproblemen
 veroorzaken. Door dit project uit te voeren willen we de leefbaarheid van ruimtes verbeteren.
 
-Momenteel geeft Twindle alleen de huidige situatie weer. Om tijdig te kunnen ingrijpen bij
-verslechterende luchtkwaliteit zou ook de toekomstige situatie zichtbaar moeten zijn. Het is aan
-mij om technieken zoals machine learning toe te passen om dit te kunnen realiseren.
-
 ## Probleemstelling
 Momenteel wordt er veel data verzameld door Twindle die betrekking heeft op de luchtkwaliteit.
 Dit zijn meetwaarden zoals temperatuur, CO2, luchtvochtigheid en dergelijke. Het doel is om
@@ -29,6 +25,9 @@ Een verdere beschrijving van het doel kan in hoofdstuk *1.2.1 SMART* [^1] van he
 
 ## Planning
 Tijdens het project zal er gewerkt worden in sprint van twee weken. Om het project te structureren zal de IBM Data Science methodology toegepast worden, zie onderstaande afbeelding. Per sprint zal vermeld worden welke onderzoeken [^2] en producten [^3] opgeleverd zullen worden. 
+
+![ibm methodology](images/ibm-data-science-methodology.png)
+<center>_Afbeelding 1: IBM Data Science Methodology_</center>
 
 |#  | Fase      | Onderzoeken                                       | Producten                             | Start | Eind  |
 | :-| :---------| :-----------                                      | :-----------                          | :-----| :-----|

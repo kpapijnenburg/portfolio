@@ -8,6 +8,7 @@ theme:
 
 markdown_extensions:
   - footnotes
+  - attr_list
 
 nav:
   - Introductie: index.md

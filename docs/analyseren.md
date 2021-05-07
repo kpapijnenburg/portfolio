@@ -1,5 +1,3 @@
-# Introductie
-
 # Stakeholders analyse
 ## Identificeren
 Om de stakeholders te kunnen identificeren is een brainstormsessie gehouden. Het resultaat van deze sessie is een mindmap van alle personen of entiteiten die invloed hebben op de Digital Twin 3.0. Deze mindmap zal in de volgende hoofdstukken worden toegelicht.

@@ -153,4 +153,53 @@ Vorige week was het ontwerp van mijn applicatie goedgekeurd. Het bestaat uit dri
 Het proces wat nu in de notebooks gebruikt wordt om de ARIMA modellen te maken moest worden omgezet naar een geautomatiseerde pipeline. Hiervoor heb ik een modules gemaakt die data kan opvragen uit het Twindle back-end, deze data kunnen voorbereiden en de modellen kunnen updaten en daarna opslaan in een database. Hierbij liep ik tegen het probleem aan dat de .pkl bestanden ~1.5 GB per stuk waren. Dit bleek te groot te zijn om in een SQL database op te slaan. Na wat onderzoek te doen en mogelijkheden te bespreken heb ik besloten om het pad naar de bestanden op te slaan i.p.v. de complete modellen.   
 
 **API**<br>
-De forecasts die gemaakt worden na het updaten van de modellen moeten kunnen worden opgevraagd via een API. Hiervoor heb ik de Flask library toegepast. Ik verwachte dat dit een redelijk simpel proces was aangezien ik maar 1 endpoint hoefde te ontwikkelen. Aangezien ik niet veel ervaring heb met het ontwikkelen van applicaties in Python ging dit wat minder soepel dan verwacht. Uiteindelijk is het me gelukt om dit endpoint toe te voegen. De manier waarop ben ik alleen nog niet helemaal tevreden over. Volgende week maandag heb ik een technische bespreking met Samet waarin ik, onder andere, dit wil aankaarten.  
+De forecasts die gemaakt worden na het updaten van de modellen moeten kunnen worden opgevraagd via een API. Hiervoor heb ik de Flask library toegepast. Ik verwachte dat dit een redelijk simpel proces was aangezien ik maar 1 endpoint hoefde te ontwikkelen. Aangezien ik niet veel ervaring heb met het ontwikkelen van applicaties in Python ging dit wat minder soepel dan verwacht. Uiteindelijk is het me gelukt om dit endpoint toe te voegen. De manier waarop ben ik alleen nog niet helemaal tevreden over. Volgende week maandag heb ik een technische bespreking met Samet waarin ik, onder andere, dit wil aankaarten.
+
+##Week 11
+**19-04-2021 t/m 23-04-2021** <br>
+Deze week heb ik samen met mijn technisch begeleider naar de ML pipeline en API gekeken. Hieruit kwam de volgende feedback:
+
+- Pipeline meer SOLID opstellen
+- Mappen structuur voor file opslag verbeteren
+- Zorgen dat de code niet te lang wordt. Eerder onderbreken.
+  
+Daarnaast vondt hij het goed dat ik veel comments heb geplaatst, gebruik maak van docstrings en een groot gedeelte van de applicatie automatisch getest kan worden via unit tests. 
+
+**Afonronding Pipeline**<br>
+Nadat de feedback verwerkt was ben ik verder gegaan met het ontwikkelen van de pipeline. Voornamelijk heb ik aan het systeem gewerkt waardoor er steeds een tijdsinterval naar voor wordt verwerkt. Dit looped totdat er geen data meer beschikbaar is of tot dat het tijdstip waarnaar geüpdatet dient te worden in de toekomst valt. 
+
+Dit syteem werkt goed, ik wel gemerkt dat de voorspellingen altijd twee uur achterlopen. Waarschijnlijk komt dit doordat ik een fout heb gemaakt tijdens het berekenen van de datum. Volgende week ga ik dit probleem uitzoeken.
+
+##Week 12
+**28-04-2021 t/m 30-04-2021**<br>
+Deze week heb ik een aantal dagen vrij genomen in verband met Koningsdag. Daardoor heb ik deze week maar drie dagen gewerkt. Deze week stond in het teken van de laatste bugs uit de ML pipeline halen. 
+
+**Bugs**<br>
+De volgende bugs zijn gevonden en opgelost.
+
+- ARIMA Model werd geladen, geüpdatet maar niet opgeslagen. Opgelost door model iedere iteratie op te slaan.
+- Datum berekening liep een uur voor.
+
+Na deze veranderingen door te voeren heb ik het model geëvalueerd. Hieruit blijkt dat de voorspellingen nog steeds een uur achter lopen. Het kan zijn dat dit komt door het model zelf en niet een fout in de pipeline. Als dit zo is zou dat betekenen dat dit model waarschijnlijk niet gaat werken voor dit systeem.
+
+**Portfolio**<br>
+Tijdens de terugkomdag werd ons als tip meegegeven om iedere week een dag te besteden aan het portfolio. Naar aanleiding van deze feedback heb ik besloten om iedere vrijdag aan het portfolio te gaan werken. Deze week heb ik uitgezocht hoe ik MkDocs zo kan toepassen dat ik een online versie kan hebben en een versie die ik als bestanden kan inleveren. Daarnaast ben ik begonnen aan het schrijven van de leeswijzer.
+
+##Week 13
+**03-05-2021 t/m 07-05-2021** <br>
+Deze week staat er op de planning om de eerste iteratie van de implementatie af te ronden. Deze week heb ik een aantal bugs opgelost uit de pipeline en het front-end uitgebreid met de voorspellingen die vanuit de pipeline worden gemaakt. Daarnaast heb ik deze week een oplevering gehad voor Techtenna.
+
+**Pipeline** <br>
+Vorige week was ik begonnen met het het opslaan van de modellen na iedere iteratie. Hierdoor groeide de modellen erg snel in bestandsgrootte, 30GB +. Dit betekent dat de ARIMA modellen uit het pmdarima package niet bruikbaar zijn. Dit heb ik opgelost door ARIMA modellen uit het statsmodel package te gebruiken. Deze worden niet zo groot (~300 MB) en houden bij welke timestamps er gebruikt zijn. Zo kan ik beter bepalen met welke data het model geüpdatet moet worden.
+
+Helaas blijft het probleem met de achterlopende voorspellingen bestaan. Hier ga ik verder op in tijdens de volgende onderwerpen.
+
+**Front-end** <br>
+Ondanks dat de voorspellingen nog niet helemaal klopte wilde ik graag de front-end implementatie ontwikkelen. Dit kan ik namelijk meenemen tijdens de evaluatie van de modellen. Doordat ik de ML api goed heb getest ging de implementatie erg vlot.  
+
+**Oplevering** <br>
+Op woensdag heb ik een oplevering gehad voor Techtenna. Hieruit bleek dat de modellen waarschijnlijk niet goed gaan werken voor het probleem wat we proberen op te lossen. Marco adviseerde mij om feedback te vragen van een machine learning expert. Daarnaast verwacht hij dat we betere resultaten kunnen bereiken wanneer we meer data verzamelen die invloed hebben op de targets, bijvoorbeeld het aantal personen in een ruimte wat invloed heeft op de CO2 & TVOC waarde.
+
+Volgende maandag ga ik dit verder bespreken met mijn begeleiders. Daarnaast ga ik een afsrpaak inplannen met Bartosz om dit te bespreken.
+
+

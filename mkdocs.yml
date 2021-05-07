@@ -1,5 +1,5 @@
 site_name: Portfolio
-use_directory_urls: false
+use_directory_urls: true
 
 theme:
   name: material

@@ -24,7 +24,7 @@ voorkomen kan worden.
 Een verdere beschrijving van het doel kan in hoofdstuk *1.2.1 SMART* [^1] van het projectplan gevonden worden. 
 
 ## Planning
-Tijdens het project zal er gewerkt worden in sprint van twee weken. Om het project te structureren zal de IBM Data Science methodology toegepast worden, zie onderstaande afbeelding. Per sprint zal vermeld worden welke onderzoeken [^2] en producten [^3] opgeleverd zullen worden. 
+Tijdens het project zal er gewerkt worden in sprint van twee weken. Om het project te structureren zal de IBM Data Science methodology toegepast worden, zie *afbeelding 1: IBM Data Science Methodology*. Per sprint zal vermeld worden welke onderzoeken [^2] en producten [^3] opgeleverd zullen worden. 
 
 ![ibm methodology](images/ibm-data-science-methodology.png)
 <center>_Afbeelding 1: IBM Data Science Methodology_</center>
@@ -41,37 +41,6 @@ Tijdens het project zal er gewerkt worden in sprint van twee weken. Om het proje
 |7. | 3 - 4     | Model experimenten                                | ML modellen versie 2                  | 10-05 | 21-05 |
 |8. |           |                                                   |                                       | 24-05 | 04-06 |
 |9. |           |                                                   |                                       | 07-06 | 18-06 |
-
-## Leeswijzer
-Tijdens het afstuderen zal er gewerkt worden aan de ICT competenties zoals beschreven in de [HBO-I domeinbeschrijving](https://hboidomein-212218.appspot.com/pdf?template=https://hboidomein-212218.appspot.com/template.html&deep=true&full=true&lang=NL&skipcache=&viewport=1156x818&url=https://hboidomein-212218.appspot.com/pdfdoc). Per competentie zal een korte toegelichting geven worden en beschreven worden welke manier deze verwerkt is in het portfolio.   
-
-**Analyseren** <br>
-
-- Stakeholders
-- Requirements
-
-### Ontwerpen
-
-- Architectuur
-
-### Realiseren
-
-- Manier van aanpak
-- Prototype
-- Proof of concept
-
-### Adviseren
-
-- Aanpak & scope
-- Volgende stappen
-
-### Onderhouden
-
-- Versie beheer
-- Planning
-- Feedback
-
-### Blog
 
 [^1]: [Projectplan 1.2.1 SMART](./pdfs/project_plan.pdf#page=8) *blz. 8 - 9*
 [^2]: [Projectplan 1.4 Onderzoeksvragen](./pdfs/project_plan.pdf#page=12) *blz. 12 - 15*

@@ -84,7 +84,19 @@ room                        object # Ruimte waarin de meting is vericht.
 ```
 
 **Univariate analyse** <br>
+Univariate analyse is de eenvoudigste vorm van data analyse. Tijdens deze analyse wordt elke variabele afzonderlijk geanalyseerd. Dit wordt gedaan door de gegevens in histogrammen en boxplots te visualiseren. Hierdoor kunnen eventuele afwijkingen of uitschieters gedetecteerd worden.
+
+![boardroom distributie](images/univariate.PNG)
+<center>_Afbeelding 6: Big Top's Boardroom distributie_</center>
+
+In de bovenstaande afbeelding zijn de distributies van alle meetwaarden in de boardroom van de Big Top gevisualiseerd. Hierin valt te zien dat de meeste waarden een redelijk normale distributie hebben. Sommigen zoals bijvoorbeeld de CO2 waarden hebben afwijkingen en uitbijters. Tijdens de modellering fase zal hier rekening mee gehouden moeten worden. 
+
 **Multivariate analyse** <br>
+Tijdens dit soort data analyse zullen de verbanden tussen twee variablen worden geanalyseerd. Dit zal worden gedaan door correlatiecoëfficiënt-heatmaps te maken, de meest gecorreleerde kenmerken te visualiseren via scatterplots en de waardeverandering in de loop van de tijd te weer te geven.
+
+![boardroom heatmap](images/corr-heatmap.png)
+<center>_Afbeelding 7: Big Top's Boardroom correlaties_</center>
+
 **Missende gegevens** <br>
 **Uitbijter** <br>
 

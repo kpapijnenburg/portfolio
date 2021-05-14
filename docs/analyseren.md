@@ -56,6 +56,39 @@ De story mapping sessie heeft plaatsgevonden op 02-03-2021. Om iedereen duidelij
 
 <center>*Afbeelding 5: Story map*</center>
 
+## Exploratory Data Analyse
+
+De eerste stap om te kunnen bepalen welke machine learning modellen toegepast kunnen worden is het analyseren van de data die Twindle tot nu toe verzameld heeft. Hiervoor is een Exploratory Data Analyse[^7] (EDA) gemaakt volgens de methode van Sunil Ray[^8]. Dit bestaat uit de volgende onderdelen:
+
+1. Variable identificatie
+2. Univariate analyse
+3. Multivariate analyse
+4. Missende gegevens
+5. Uitbijters
+
+**Variable identificatie** <br>
+De volgende gegevens, en hun datatype, zijn aanwezig in de dataset. Een overzicht van de handelingen die gedaan zijn om de onjuiste datatypes op te lossen kan gevonden worden in hoofdstuk 1.1[^9].
+
+```
+TVOC                       float64 # 'Total volatile organic componds' in PPB
+Pressure                   float64 # Luchtdruk in Pa.
+CO2                        float64 # CO2 concentratie in PPM.
+Illumination               float64 # Verlichtingsniveau in flux.
+Activity                   float64 # 'Person in Room' (PIR)
+TimeStamp           datetime64[ns] # Datum en tijd van meting 
+TempInt                    float64 # Temperatuur in graden celsius
+Humidity                   float64 # Luchtvochtigheidspercentage
+DOOR_OPEN_STATUS           float64 # Boolean of de deur open of dicht is.
+DOOR_OPEN_TIMES            float64 # Aantal keer dat de deur geopend is.
+room                        object # Ruimte waarin de meting is vericht.
+```
+
+**Univariate analyse** <br>
+**Multivariate analyse** <br>
+**Missende gegevens** <br>
+**Uitbijter** <br>
+
+
 ## Data requirements
 
 
@@ -66,3 +99,6 @@ De story mapping sessie heeft plaatsgevonden op 02-03-2021. Om iedereen duidelij
 [^4]: [AltexSoft: A Complete Guide to User Story Mapping](https://www.altexsoft.com/blog/uxdesign/a-complete-guide-to-user-story-mapping-process-tips-advantages-and-use-cases-in-product-management/)
 [^5]: [Story mapping rapport](pdfs/story_mapping.pdf)
 [^6]: [Story mapping rapport hoofdstuk 1.1; Personas](pdfs/story_mapping.pdf#page=5) _blz. 5 - 6_
+[^7]: [Exploratory Data Analyse](htmls/eda.html)
+[^8]: [Analytics Vidya: A Comprehensive Guide to Data Exploration](https://www.analyticsvidhya.com/blog/2016/01/guide-data-exploration/)
+[^9]: [Exploratory Data Analyse: 1.1 Insights](htmls/eda.html#1.1-Insights)

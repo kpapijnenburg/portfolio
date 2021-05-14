@@ -6,6 +6,7 @@ Tijdens de analyse fases van het project wordt de probleemstelling verduidelijkt
 
 - [Stakeholders analyse](analyseren.md#stakeholders-analyse)
 - [Story mapping](analyseren.md#story-mapping)
+- [Exploratory data analyse](analyseren.md#exploratory-data-analyse)
 - [Data requirements](analyseren.md#data-requirements)
 
 ## Ontwerpen

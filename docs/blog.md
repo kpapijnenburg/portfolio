@@ -200,6 +200,6 @@ Ondanks dat de voorspellingen nog niet helemaal klopte wilde ik graag de front-e
 **Oplevering** <br>
 Op woensdag heb ik een oplevering gehad voor Techtenna. Hieruit bleek dat de modellen waarschijnlijk niet goed gaan werken voor het probleem wat we proberen op te lossen. Marco adviseerde mij om feedback te vragen van een machine learning expert. Daarnaast verwacht hij dat we betere resultaten kunnen bereiken wanneer we meer data verzamelen die invloed hebben op de targets, bijvoorbeeld het aantal personen in een ruimte wat invloed heeft op de CO2 & TVOC waarde.
 
-Volgende maandag ga ik dit verder bespreken met mijn begeleiders. Daarnaast ga ik een afsrpaak inplannen met Bartosz om dit te bespreken.
+Volgende maandag ga ik dit verder bespreken met mijn begeleiders. Daarnaast ga ik een afspraak inplannen met Bartosz om dit te bespreken.
 
 

@@ -11,7 +11,7 @@ markdown_extensions:
   - attr_list
 
 nav:
-  - Leeswijzer: leeswijzer.md
+  - Leeswijzer: index.md
   - Introductie: introductie.md
   - Analyseren: analyseren.md
   - Ontwerpen: ontwerpen.md

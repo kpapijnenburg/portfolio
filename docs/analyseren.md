@@ -56,6 +56,10 @@ De story mapping sessie heeft plaatsgevonden op 02-03-2021. Om iedereen duidelij
 
 <center>*Afbeelding 5: Story map*</center>
 
+## Data requirements
+
+
+
 [^1]: [Stakeholders analyse rapport](pdfs/stakeholders_analyse.pdf)
 [^2]: [LucidChart: How to do a stakeholder analysis](https://www.lucidchart.com/blog/how-to-do-a-stakeholder-analysis)
 [^3]: [Stakeholders analyse rapport hoofdstuk 3: Begrijpen](pdfs/stakeholders_analyse.pdf#page=7) _blz. 7 - 9_

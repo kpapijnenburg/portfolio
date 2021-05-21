@@ -12,11 +12,11 @@ markdown_extensions:
 
 nav:
   - Leeswijzer: index.md
-  - Introductie: introductie.md
   - Analyseren: analyseren.md
   - Ontwerpen: ontwerpen.md
   - Realiseren: realiseren.md
   - Adviseren: adviseren.md
   - Onderhouden: onderhouden.md
+  - Planning: planning.md
   - Blog: blog.md
 

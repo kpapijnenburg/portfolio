@@ -59,7 +59,7 @@ De eerste stap om te kunnen bepalen welke machine learning modellen toegepast ku
 4. Missende gegevens
 5. uitschieters
 
-**Variable identificatie** <br>
+### Variable identificatie
 De volgende gegevens, en hun datatype, zijn aanwezig in de dataset. Een overzicht van de handelingen die gedaan zijn om de onjuiste datatypes op te lossen kan gevonden worden in hoofdstuk 1.1[^9].
 
 ```
@@ -76,7 +76,7 @@ DOOR_OPEN_TIMES            float64 # Aantal keer dat de deur geopend is.
 room                        object # Ruimte waarin de meting is vericht.
 ```
 
-**Univariate analyse** <br>
+### Univariate analyse
 Univariate analyse is de eenvoudigste vorm van data analyse. Tijdens deze analyse wordt elke variabele afzonderlijk geanalyseerd. Dit wordt gedaan door de gegevens in histogrammen en boxplots te visualiseren. Hierdoor kunnen eventuele afwijkingen of uitschieters gedetecteerd worden.
 
 ![boardroom distributie](images/univariate.PNG)
@@ -85,7 +85,7 @@ Univariate analyse is de eenvoudigste vorm van data analyse. Tijdens deze analys
 
 In de bovenstaande afbeelding zijn de distributies van alle meetwaarden in de boardroom van de Big Top gevisualiseerd. Hierin valt te zien dat de meeste waarden een redelijk normale distributie hebben. Sommigen zoals bijvoorbeeld de CO2 waarden hebben afwijkingen en uitschieters. Tijdens de modellering fase zal hier rekening mee gehouden moeten worden.
 
-**Multivariate analyse** <br>
+### Multivariate analyse
 Tijdens dit soort data analyse zullen de verbanden tussen twee variabelen worden geanalyseerd. Dit zal worden gedaan door correlatiecoëfficiënt-heatmaps te maken. In _afbeelding 7: Big Top's boardroom correlaties_ is een voorbeeld van deze correlatiecoëfficiënt-heatmaps te zien.
 
 ![boardroom heatmap](images/corr-heatmap.png)
@@ -94,7 +94,7 @@ Tijdens dit soort data analyse zullen de verbanden tussen twee variabelen worden
 
 Hieruit kunnen we opmaken dat er meerdere waarden zijn die redelijk sterk met elkaar gecorreleerd zijn. Bijvoorbeeld TVOC & temperatuur, dit zou een indicatie kunnen zijn dat wanneer de temperatuur stijgt de TVOC waarde meestijgt. Om dit te kunnen uitsluiten zal per meetwaarden verder onderzoek verricht moeten worden.
 
-**Missende gegevens** <br>
+### Missende gegevens
 In de onderstaande afbeelding is het percentage van de data wat mist gevisualiseerd. Het is opvallend dat de missende data in clusters opgedeeld kan worden, namelijk:
 
 - TVOC, Pressure, CO2, Illumunation, Activity
@@ -107,7 +107,7 @@ In de onderstaande afbeelding is het percentage van de data wat mist gevisualise
 
 Na de applicatie beter te bekijken is bevonden dat er per ruimte andere gegevens worden bijgehouden. Hierdoor is de clustervorming van de missende gegevens te verklaren. Tijdens het modelleren moet hier rekening mee gehouden worden.
 
-**Uitschieters** <br>
+### Uitschieters
 Tijdens de univariate analyse is gebleken dat sommige meetwaarden veel uitschieters bevatten. Om deze op te lossen is de onderstaande "interquartile range outlier removal" methode gebruikt
 
 ```
@@ -137,7 +137,7 @@ def iqr_outlier_removal(df, scale=1.5):
 
 Wanneer deze methode wordt gebruikt op de datasets verwijderd het ongeveer 20% van de data. Het kan zijn dat dit teveel is en dat er niet meer genoeg data over is om effectieve modellen van te maken. In dit geval kan de `scale` parameter worden aangepast zodat er minder data als uitschieter wordt gezien.
 
-**Bevindingen** <br>
+### Bevindingen
 Deze Exploratory Data Analyse is uitgevoerd om te kijken hoe de data die door de Twindle applicatie verzameld wordt in elkaar zit. De volgende bevindingen zijn gemaakt:
 
 - De gegevens bevatten grote uitschieters.
@@ -163,12 +163,15 @@ Om te bepalen of aan de luchtkwaliteitseisen wordt voldaan is een overzicht same
 
 Uit dit onderzoek is de volgende lijst met te verzamelen data gekomen:
 
-- Gebouw:
+**Gebouw**
+
   - Oppervlakte van de ruimten
   - Bouwjaar
   - Verwarming/airconditioning instellingen
   - Raamstand
-- Weer
+  
+**Weer**
+
   - Buitentemperatuur
   - Luchtvochtigheid
   - Zonnestraling

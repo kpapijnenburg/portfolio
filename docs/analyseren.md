@@ -4,7 +4,11 @@ Voordat begonnen wordt aan het ontwikkelen van het product is het belangrijk om 
 
 > **_Wie zijn de gebruikers van Twindle?_**
 
-In dit hoofdstuk zal deze vraag beantwoord worden door middel van een stakeholders analyse. Hierna zal verder onderzocht worden wat de behoefte is van deze stakeholders door gebruik te maken van story mapping technieken.
+In dit onderdeel van het portfolio zal deze vraag beantwoord worden door middel van een [stakeholders analyse](#stakeholders-analyse). Hierna zal verder onderzocht worden wat de behoefte is van deze stakeholders door gebruik te maken van [story mapping technieken](#story-mapping).
+
+Daarnaast wordt er geanalyseerd welke data de Twindle applicatie tot nu toe heeft verzameld in een [exploratory data analyse](#exploratory-data-analyse). Samen met het [data requirements](#data-requirements) onderzoek leidt dit tot een antwoord op de vraag:
+
+> **_Welke data is benodigd om luchtkwaliteit te voorspellen?_**
 
 ## Stakeholders analyse
 

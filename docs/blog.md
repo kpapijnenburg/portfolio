@@ -202,4 +202,19 @@ Op woensdag heb ik een oplevering gehad voor Techtenna. Hieruit bleek dat de mod
 
 Volgende maandag ga ik dit verder bespreken met mijn begeleiders. Daarnaast ga ik een afspraak inplannen met Bartosz om dit te bespreken.
 
+##Week 14
+**10-05-2021 14-05-2021** <br>
+Na aanleiding van de oplevering vorige week heb ik met Samet besloten om eerst een model te ontwikkelen voor de CO2-waarde. Op deze manier heb ik genoeg tijd om een model te ontwikkelen, de pipeline aan te passen en de front-end implementatie af te ronden.
 
+**Data Requirements** <br>
+Marco van Techtenna vertelde tijdens de oplevering vorige week dat het aantal personen in een ruimte veel invloed heeft op de CO2 gehalte. Na verder onderzoek hierna te doen kon ik dit bevestigen. Om deze data te verzamelen heb ik besloten om de Google Calendar API te gebruiken. Via deze API kan ik gemakkelijk opvragen hoeveel personen er aanwezig zijn bij een geplande afpsraak.
+
+**Korte termijn model** <br>
+De eerste stap die ik heb genomen om het korte termijn model te ontwikkelen was bekijken of andere personen dit probleem al hebben opgelost. Hieruit kwam een erg goed onderzoek met een duidelijke uitleg, code en dataset. De stappen die hierin genomen worden heb ik nagemaakt met de Twindle dataset. Hieruit is een model gekomen wat erg accuraat kan voorspellen wat de CO2-waarde over twee minuten zal zijn. Volgende week wil ik een model ontwikkelen wat voor de lange termijn een globaal overzicht kan geven. Deze twee modellen kunnen dat gekoppeld worden in het front-end om een compleet overzicht te geven.
+
+#Week 15
+**17-05-2021 - 21-05-2021** <br>
+Deze week is de planning om de tweede versie van de modellen af te ronden. Hiervoor moet nog een lange termijn model worden ontwikkelt.
+
+**Lange termijn model** <br>
+In het onderzoek wat ik had gevonden voor het korte termijn model werdt gerefereerd naar een ander onderzoek wat op uurlijkse basis CO2 probeerde te voorspellen. Dit onderzoek heb ik doorgenomen. Helaas was het niet zo gedetailleerd als het andere onderzoek. Hierdoor heb ik zelf nog wat aanpassingen moeten maken aan het model. Uiteindelijk heb ik erg veel geprobeerd maar ben ik niet tot een juist model gekomen. Ik heb besloten om deze toch toe te passen, waarschijnlijk zou ik nog een complete stage periode bezig kunnen zijn met model experimenten uitvoeren. Ik vind het belangrijker dat ik uiteindelijk kan demonsteren dat het probleem opgelost wordt door mijn applicatie.

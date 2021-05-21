@@ -63,10 +63,6 @@ Voeg ook een deelvraag over air quality toe. Je hebt daar niet genoeg kennis van
 
 - Deelvraag 3 specifiek op luchtkwaliteit gericht.
 
-## Stakeholders analyse 
-
-## Exploratory data analyse
-
-## Machine learning modellen 1.0
-
-## Integratie ontwerp
+## Portfolio
+** Bartosz op 19-05-2021** <br>
+Evaluatie, zelf reflexie en conclusie bijvoegen in de leeswijzer. op hoog niveau van leeswijzer wil je laten zien wat het probleem was en in hoeverre het opgelost is (behaalde resultaten).

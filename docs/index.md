@@ -44,7 +44,7 @@ Onderstaand zijn de deelvragen opgesomd. In het projectplan is een overzicht[^1]
 Een verdere beschrijving van het doel kan in hoofdstuk _1.2.1 SMART_ [^2] van het projectplan gevonden worden.
 
 ## Leeswijzer
-Tijdens het afstuderen zal er gewerkt worden aan de ICT competenties zoals beschreven in de [HBO-I domeinbeschrijving](https://hboidomein-212218.appspot.com/pdf?template=https://hboidomein-212218.appspot.com/template.html&deep=true&full=true&lang=NL&skipcache=&viewport=1156x818&url=https://hboidomein-212218.appspot.com/pdfdoc). Per competentie zal een korte toegelichting geven worden en beschreven worden welke manier deze verwerkt is in het portfolio.   
+Tijdens het afstuderen zal er gewerkt worden aan de ICT competenties zoals beschreven in de [HBO-I domeinbeschrijving](https://hboidomein-212218.appspot.com/pdf?template=https://hboidomein-212218.appspot.com/template.html&deep=true&full=true&lang=NL&skipcache=&viewport=1156x818&url=https://hboidomein-212218.appspot.com/pdfdoc). Per competentie zal beschreven worden op welke manier deze verwerkt is in het portfolio en welke deelvragen beantwoord worden.   
 
 ### Analyseren
 

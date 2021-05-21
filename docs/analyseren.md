@@ -1,7 +1,7 @@
 
 ## Stakeholders analyse
 
-Om te bepalen welke partijen er relevant zijn voor het project is een stakeholders analyse uitgevoerd [^1]. De methodiek om stakeholders analyse uit te voeren bestaat uit de volgende onderdelen: Identificatie- , prioriteren- en het begrijpen van de stakeholders[^2].
+Om te bepalen welke partijen relevant zijn voor het project is een stakeholders analyse uitgevoerd [^1]. De methodiek om de stakeholders analyse uit te voeren bestaat uit het identificeren- , prioriteren- en het begrijpen van deze groepen personen[^2].
 
 ### Identificeren
 
@@ -21,7 +21,7 @@ De stakeholders die in het vorige hoofdstuk geïdentificeerd zijn zullen in dit 
 
 ### Begrijpen
 
-De volgende stap is om, per stakeholder, te begrijpen wat hun relatie is tot het project. Dit is gedaan door per stakeholdercategorie een
+De volgende stap is om, per stakeholder, te begrijpen wat hun relatie is tot het project. Dit is gedaan door per stakeholder categorie een
 aantal vragen te stellen en te beantwoorden [^3]. Gebaseerd op deze vragen is het onderstaande communicatieplan opgesteld.
 
 ![communicatie plan](images/communicatie-plan.png)
@@ -143,8 +143,8 @@ Deze Exploratory Data Analyse is uitgevoerd om te kijken hoe de data die door de
 - De gegevens bevatten grote uitschieters.
 - Niet voor elke kamer worden dezelfde gegevens verzameld.
 - De gegevens zijn erg scheef, wat onnauwkeurigheden kan veroorzaken bij gebruik in regressie-algoritmen.
-- Er is een gebrek aan sterk gecorreleerde kenmerken.
-- De methode voor het verwijderen van uitschieters verwijdert ongeveer ~ 20% van de gegevens; kwantielen kunnen worden aangepast om dit bedrag te verlagen.
+- Er is een gebrek aan sterk gecorreleerde features.
+- De methode voor het verwijderen van uitschieters verwijdert ongeveer ~ 20% van de gegevens; de ```scale``` parameter kan worden aangepast om dit te verlagen.
 
 Op basis van deze bevindingen kunnen de data requirements worden onderzocht.
 

@@ -1,4 +1,3 @@
-
 ## Stakeholders analyse
 
 Om te bepalen welke partijen relevant zijn voor het project is een stakeholders analyse uitgevoerd [^1]. De methodiek om de stakeholders analyse uit te voeren bestaat uit het identificeren- , prioriteren- en het begrijpen van deze groepen personen[^2].
@@ -60,6 +59,7 @@ De eerste stap om te kunnen bepalen welke machine learning modellen toegepast ku
 5. uitschieters
 
 ### Variable identificatie
+
 De volgende gegevens, en hun datatype, zijn aanwezig in de dataset. Een overzicht van de handelingen die gedaan zijn om de onjuiste datatypes op te lossen kan gevonden worden in hoofdstuk 1.1[^9].
 
 ```
@@ -77,6 +77,7 @@ room                        object # Ruimte waarin de meting is vericht.
 ```
 
 ### Univariate analyse
+
 Univariate analyse is de eenvoudigste vorm van data analyse. Tijdens deze analyse wordt elke variabele afzonderlijk geanalyseerd. Dit wordt gedaan door de gegevens in histogrammen en boxplots te visualiseren. Hierdoor kunnen eventuele afwijkingen of uitschieters gedetecteerd worden.
 
 ![boardroom distributie](images/univariate.PNG)
@@ -86,6 +87,7 @@ Univariate analyse is de eenvoudigste vorm van data analyse. Tijdens deze analys
 In de bovenstaande afbeelding zijn de distributies van alle meetwaarden in de boardroom van de Big Top gevisualiseerd. Hierin valt te zien dat de meeste waarden een redelijk normale distributie hebben. Sommigen zoals bijvoorbeeld de CO2 waarden hebben afwijkingen en uitschieters. Tijdens de modellering fase zal hier rekening mee gehouden moeten worden.
 
 ### Multivariate analyse
+
 Tijdens dit soort data analyse zullen de verbanden tussen twee variabelen worden geanalyseerd. Dit zal worden gedaan door correlatiecoëfficiënt-heatmaps te maken. In _afbeelding 7: Big Top's boardroom correlaties_ is een voorbeeld van deze correlatiecoëfficiënt-heatmaps te zien.
 
 ![boardroom heatmap](images/corr-heatmap.png)
@@ -95,6 +97,7 @@ Tijdens dit soort data analyse zullen de verbanden tussen twee variabelen worden
 Hieruit kunnen we opmaken dat er meerdere waarden zijn die redelijk sterk met elkaar gecorreleerd zijn. Bijvoorbeeld TVOC & temperatuur, dit zou een indicatie kunnen zijn dat wanneer de temperatuur stijgt de TVOC waarde meestijgt. Om dit te kunnen uitsluiten zal per meetwaarden verder onderzoek verricht moeten worden.
 
 ### Missende gegevens
+
 In de onderstaande afbeelding is het percentage van de data wat mist gevisualiseerd. Het is opvallend dat de missende data in clusters opgedeeld kan worden, namelijk:
 
 - TVOC, Pressure, CO2, Illumunation, Activity
@@ -108,6 +111,7 @@ In de onderstaande afbeelding is het percentage van de data wat mist gevisualise
 Na de applicatie beter te bekijken is bevonden dat er per ruimte andere gegevens worden bijgehouden. Hierdoor is de clustervorming van de missende gegevens te verklaren. Tijdens het modelleren moet hier rekening mee gehouden worden.
 
 ### Uitschieters
+
 Tijdens de univariate analyse is gebleken dat sommige meetwaarden veel uitschieters bevatten. Om deze op te lossen is de onderstaande "interquartile range outlier removal" methode gebruikt
 
 ```
@@ -138,19 +142,46 @@ def iqr_outlier_removal(df, scale=1.5):
 Wanneer deze methode wordt gebruikt op de datasets verwijderd het ongeveer 20% van de data. Het kan zijn dat dit teveel is en dat er niet meer genoeg data over is om effectieve modellen van te maken. In dit geval kan de `scale` parameter worden aangepast zodat er minder data als uitschieter wordt gezien.
 
 ### Bevindingen
+
 Deze Exploratory Data Analyse is uitgevoerd om te kijken hoe de data die door de Twindle applicatie verzameld wordt in elkaar zit. De volgende bevindingen zijn gemaakt:
 
 - De gegevens bevatten grote uitschieters.
 - Niet voor elke kamer worden dezelfde gegevens verzameld.
 - De gegevens zijn erg scheef, wat onnauwkeurigheden kan veroorzaken bij gebruik in regressie-algoritmen.
 - Er is een gebrek aan sterk gecorreleerde features.
-- De methode voor het verwijderen van uitschieters verwijdert ongeveer ~ 20% van de gegevens; de ```scale``` parameter kan worden aangepast om dit te verlagen.
+- De methode voor het verwijderen van uitschieters verwijdert ongeveer ~ 20% van de gegevens; de `scale` parameter kan worden aangepast om dit te verlagen.
 
 Op basis van deze bevindingen kunnen de data requirements worden onderzocht.
 
-## Data requirements
+## Requirements
 
-Om te bepalen of aan de luchtkwaliteitseisen wordt voldaan is een overzicht samengesteld met minima en maxima opgesteld, zie _tabel 1: minima & maxima waarden_. Om deze waarden effectief te kunnen voorspellen zal extra data verzameld moeten worden, per meetwaarde is dit onderzocht[^10].
+vanuit de voorgaande analyses zijn requirements opgesteld. Deze vallen in de volgende drie categorieen:
+
+- Software
+- Data
+- Machine learning
+
+### Software requirements
+
+Gebaseerd op het [resultaat](#resultaat) van de story mapping sessie zijn de volgende requirements opgesteld voor het software product. Deze zijn geprioriteerd door middel van de MosCoW[^10] methode.
+
+| ID  | Beschrijving                                                        | Prioritijd |
+| --- | ------------------------------------------------------------------- | ---------- |
+| 1.  | Tijdlijn waarop de toekomstige- en verleden meldingen te zien zijn. | Must       |
+| 2.  | Meldingen wanneer luchtkwaliteit te laag dreigt te worden.          | Must       |
+| 3.  | Comments plaatsen op de tijdlijn.                                   | Must       |
+| 4.  | Uitschieters rapportage.                                            | Could      |
+| 5.  | Energiebesparing voorspellen om exessen te voorkomen.               | Could      |
+| 6.  | Preventief onderhoud voorspellen\*.                                 | Won't      |
+| 7.  | Indicatie waar personen zich bevinden\*.                            | Won't      |
+
+De kern van het systeem zal zijn dat er meldingen gemaakt kunnen worden wanneer de luchtkwaliteit in gevaar is. Hiervoor zal een tijdlijn aan de bestaande applicatie worden toegevoegd om deze meldingen inzichtbaar te maken.
+
+<small>\*In het resultaat van de storymapping staat beschreven dat requirement #7 bij het proof of concept hoort. Later is besloten om de scope in te perken tot luchtkwaliteit voorspellingen. </small>
+
+### Data requirements
+
+Om te bepalen of aan de luchtkwaliteitseisen wordt voldaan is een overzicht samengesteld met minima en maxima opgesteld, zie _tabel 1: minima & maxima waarden_. Om deze waarden effectief te kunnen voorspellen zal extra data verzameld moeten worden, per meetwaarde is dit onderzocht[^11].
 
 |       Meetwaarde | Min (waarschuwing) | Max (waarschuwing) | Min (gevaar) | Max (gevaar) |
 | ---------------: | ------------------ | ------------------ | ------------ | ------------ |
@@ -165,16 +196,23 @@ Uit dit onderzoek is de volgende lijst met te verzamelen data gekomen:
 
 **Gebouw**
 
-  - Oppervlakte van de ruimten
-  - Bouwjaar
-  - Verwarming/airconditioning instellingen
-  - Raamstand
-  
+- Oppervlakte van de ruimten
+- Bouwjaar
+- Verwarming/airconditioning instellingen
+- Raamstand
+
 **Weer**
 
-  - Buitentemperatuur
-  - Luchtvochtigheid
-  - Zonnestraling
+- Buitentemperatuur
+- Luchtvochtigheid
+- Zonnestraling
+
+### Machine learning requirements
+
+Vanuit de product owner is het doel gesteld dat de modellen tenminste 90% accuraat moeten zijn. De meetwaarden die gemodelleerd dienen te worden zijn continu en niet uit te
+drukken in procent accuracy. R-squared score kan gebruikt worden voor dit soort modellen. Het geeft een waarde tussen 0.0 en 1.0 aan wat geïnterpreteerd kan worden als een percentage. Wanneer een R2 Score van 0.90 wordt behaald zal het model aan de eisen voldoen.
+
+Om de modellen onderling met elkaar te vergelijken zal, naast r-squared, ook de root mean squared error scoring methode worden gebruikt. Deze methode resulteert in een waarde in dezelfde eenheid als het target. Hierdoor kan gezien worden in hoeverre de gemiddelde voorspelling zal afwijkt van de realiteit.
 
 [^1]: [Stakeholders analyse rapport](pdfs/stakeholders_analyse.pdf)
 [^2]: [LucidChart: How to do a stakeholder analysis](https://www.lucidchart.com/blog/how-to-do-a-stakeholder-analysis)
@@ -185,4 +223,5 @@ Uit dit onderzoek is de volgende lijst met te verzamelen data gekomen:
 [^7]: [Exploratory Data Analyse](htmls/eda.html)
 [^8]: [Analytics Vidya: A Comprehensive Guide to Data Exploration](https://www.analyticsvidhya.com/blog/2016/01/guide-data-exploration/)
 [^9]: [Exploratory Data Analyse: 1.1 Insights](htmls/eda.html#1.1-Insights)
-[^10]: [Data requirements rapport](pdfs/data_requirements.pdf)
+[^10]: [MosCow methode](https://nl.wikipedia.org/wiki/MoSCoW-methode)
+[^11]: [Data requirements rapport](pdfs/data_requirements.pdf)

@@ -1,15 +1,6 @@
 ## Model experimenten versie 1
 
-Voor de uitbreiding van het Twindle project zullen machine learning modellen gebruikt worden om de luchtkwaliteit te voorspellen. Dit zullen modellen zijn voor luchtvochtigheid, temperatuur, CO2 en TVOC.
-
-### Eisen
-
-Vanuit de product owner is het doel gesteld dat de modellen tenminste 90% accuraat moeten zijn. De meetwaarden die gemodelleerd dienen te worden zijn continu en niet uit te
-drukken in procent accuracy. R-squared score kan gebruikt worden voor dit soort modellen.
-
-Het geeft een waarde tussen 0.0 en 1.0 aan wat geïnterpreteerd kan worden als een percentage. Wanneer een R2 Score van 0.9 wordt behaald zal het model aan de eisen voldoen.
-
-Om de modellen onderling met elkaar te vergelijken zal, naast r-squared, ook de root mean squared error scoring methode worden gebruikt. Deze methode resulteert in een waarde in dezelfde eenheid als het target. Hierdoor kan gezien worden in hoeverre de gemiddelde voorspelling zal afwijkt van de realiteit.
+Voor de uitbreiding van het Twindle project zullen machine learning modellen gebruikt worden om de luchtkwaliteit te voorspellen. Dit zullen modellen zijn voor luchtvochtigheid, temperatuur, CO2 en TVOC. Deze modellen moeten voldoen aan bepaalde eisen, welke besproken worden in het [analyseren: requirements - machine learning](analyseren.md#machine-learning-requirements) onderdeel.
 
 ### Beschrijving & resultaten
 
@@ -86,22 +77,23 @@ Voor dat een begin gemaakt was met het ontwerpen van de applicatie is eerst voor
 
 1. Het opslaan en ophalen van de data en voorspellingen.
 2. Frameworks en tooling die hierbij passen.
-    * API; gekozen voor ```Flask```
-    * Database; gekozen voor ```MySQL```
+   - API; gekozen voor `Flask`
+   - Database; gekozen voor `MySQL`
 3. Hoe feedback verzameld wordt en iteratief verwerkt kan worden.
-    * Modellen periodiek trainen en evalueren (R<sup>2</sup> & RMSE)
+   - Modellen periodiek trainen en evalueren (R<sup>2</sup> & RMSE)
 
 **C1: Context** <br>
-In het onderstaande systeem context diagram zijn de gebruikersgroepen en de manier waarop zij de applicatiegebruiken gevisualiseerd. 
+In het onderstaande systeem context diagram zijn de gebruikersgroepen en de manier waarop zij de applicatiegebruiken gevisualiseerd.
 
 ![Systeem context diagram](images/ontwerp/c1_context.png)
-<center>_Afbeelding 3: Systeem context diagram_</center>
 
+<center>_Afbeelding 3: Systeem context diagram_</center>
 
 **C2: Containers**<br>
 In dit diagram zal er verder ingezoomt worden op de twee software systemen zoals deze zijn beschreven in het vorige diagram. Ze zijn verder onderverdeeld worden in containers. Containers zijn onderdelen van het systeem die apart van elkaar functioneren. In dit diagram ligt de focus op de technologie keuzes en manier van communicatie tussen containers.
 
 ![Container diagram](images/ontwerp/c2_container.png)
+
 <center>_Afbeelding 4: Container diagram_</center>
 
 De webapplicatie haalt voorspellingen op uit de AI-layer. Om deze voorspellingen te kunnen maken is historische data nodig die voorzien wordt door de back-end applicatie van de Digital Twin.
@@ -110,16 +102,18 @@ De webapplicatie haalt voorspellingen op uit de AI-layer. Om deze voorspellingen
 Iedere container uit het vorige diagram bestaat uit een of meerdere componenten. In dit diagram zal de technologiekeuze, communicatie en verantwoordelijkheden van deze componenten worden toegelicht.
 
 ![Systeem context diagram](images/ontwerp/c3_components_ai_layer.png)
+
 <center>_Afbeelding 5: Components diagram_</center>
 
 **C4: Code** <br>
 Onderstaand valt een overzicht te vinden van de routes die aan de API zijn toegevoegd. Via deze route kunnen de voorspellingen die gemaakt zijn opgevraagd worden door het front-end
 
-| Methode 	| Route                                 	| Parameters 	| Type 	| Response                                                     	|
-|--------:	|------------------------------------------	|------------	|------	|--------------------------------------------------------------	|
-|     GET 	| /forecasts/:location/:room/:metric     	|            	|      	| \[   \{     "timestamp": date,     "value": float   \}   .... \]|
+| Methode | Route                              | Parameters | Type | Response                                           |
+| ------: | ---------------------------------- | ---------- | ---- | -------------------------------------------------- |
+|     GET | /forecasts/:location/:room/:metric |            |      | \[ \{ "timestamp": date, "value": float \} .... \] |
 
 In de applicatie zullen zich meerdere entiteiten bevinden. Onderstaand is een overzicht van deze entiteiten en hun attributen en relaties te zien.
+
 <center>
 ![Entity Relation diagram](images/ontwerp/erd.png){:height="70%" width="70%"}
 </center>

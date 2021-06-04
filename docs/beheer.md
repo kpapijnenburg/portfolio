@@ -69,7 +69,13 @@ Voeg ook een deelvraag over air quality toe. Je hebt daar niet genoeg kennis van
 Evaluatie, zelf reflexie en conclusie bijvoegen in de leeswijzer. op hoog niveau van leeswijzer wil je laten zien wat het probleem was en in hoeverre het opgelost is (behaalde resultaten).
 
 ** Bartosz op 02-06-2021** <br>
-planning zou ik weghalen van je introductie pagina. te veel detail.
+Gebruik verleden tijd, omdat het een blik is op de al uitgevoerde werk/project.
+
+ - Project omgezet naar verleden tijd.
+
+De structuur dat je voorstelde met abstractie niveaus is goed. Je kan dan ook strategisch wat meer detail plaatsen in bv. leeswijzer -waar je zelf denkt dat je het meeste kan scoren. Want je wilt niet dat een opmerkelijke werk van je te onzichtbaar is.  Je kan dus shinen door het beste werk stiekem expliciet naar voren te brengen in de leeswijzer. dat kan uiteraard niet te veel van zijn- dus wees selectief.
+
+planning zou ik weghalen van je introductie pagina. Te veel detail.
 
 - Apart hoofdstuk voor planning gemaakt.
 

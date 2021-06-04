@@ -1,31 +1,21 @@
 ## Introductie
 
-Tijdens het achtste semester van de studie ICT & Software engineering zal mijn afstudeerstage
-plaatsvinden bij Handpicked Agencies. Het project waar ik aan zal werken is de digital twin
-genaamd [Twindle](https://demo.twindle.io/). Dit product is vorig jaar ontwikkeld door [Handpicked Labs](https://labs.handpickedagencies.com/) in samenwerking
-met [Techtenna](https://techtenna.com/). Het doel van de applicatie was om de luchtkwaliteit, energieverbruik en
-brandveiligheid van gebouwen in kaart te brengen door middel van een digitale kopie van het
-gebouw.
+Tijdens het achtste semester van de studie ICT & Software Engineering heeft mijn afstudeerstage bij Handpicked Agencies plaatsgevonden. Het project waar ik aan gewerkt heb is de digital twin genaamd [Twindle](https://demo.twindle.io/).
 
-Twindle meet, onder andere, de temperatuur, luchtvochtigheid en CO2 en bepaalt of er voldaan
-wordt aan de gestelde luchtkwaliteitseisen. Mede door COVID-19 is de luchtkwaliteit in een
-ruimte steeds belangrijker geworden. Slechte luchtkwaliteit kan ernstige gezondheidsproblemen
-veroorzaken. Door dit project uit te voeren willen we de leefbaarheid van ruimtes verbeteren.
+Dit product is vorig jaar ontwikkeld door [Handpicked Labs](https://labs.handpickedagencies.com/) in samenwerking met [Techtenna](https://techtenna.com/). Het doel van de applicatie was om de luchtkwaliteit, energieverbruik en brandveiligheid van gebouwen in kaart te brengen door middel van een digitale kopie van het gebouw.
 
 ### Probleemstelling
 
-Momenteel wordt er veel data verzameld door Twindle die betrekking heeft op de luchtkwaliteit.
-Dit zijn meetwaarden zoals temperatuur, CO2, luchtvochtigheid en dergelijke. Het doel is om
-voor deze meetwaarde een voorspellend model te ontwikkelen zodat slechte luchtkwaliteit
-voorkomen kan worden.
+Twindle meet, onder andere, de temperatuur, luchtvochtigheid en CO2 en bepaalt of er voldaan wordt aan de gestelde luchtkwaliteitseisen. Mede door COVID-19 is de luchtkwaliteit in een ruimte steeds belangrijker geworden. Slechte luchtkwaliteit kan ernstige gezondheidsproblemen veroorzaken. Door de luchtkwaliteit te voorspellen en meldingen te maken wanneer deze in gevaar is willen we de leefbaarheid van ruimten verbeteren.
 
 ### Hoofd- en deelvragen
 
-Tijdens het gehele project zal onderzoek verricht worden volgens het [Development Oriented Triangulation (DOT) framework](https://ictresearchmethods.nl/The_DOT_Framework). Dit framework bestaat uit verschillende onderzoeks categorieën die gecombineerd dienen te worden om tot een valide conclusie te komen.
+Tijdens het gehele project is onderzoek verricht worden volgens het [Development Oriented Triangulation (DOT) framework](https://ictresearchmethods.nl/The_DOT_Framework). Dit framework bestaat uit verschillende onderzoekscategorieën die gecombineerd moeten worden om tot een valide conclusie te komen.
 
 Om het onderzoek te structureren is er een hoofdvraag en meerdere deelvragen opgesteld. Tijdens de conclusie zullen deze hoofd- en deelvragen beantwoord worden.
 
 **Hoofdvraag** <br>
+
 > **_Hoe kan Twindle uitgebreidt worden om een hoge luchtkwaliteit in ruimten te garanderen?_**
 
 **Deelvragen** <br>
@@ -36,44 +26,68 @@ Onderstaand zijn de deelvragen opgesomd. In het projectplan is een overzicht[^1]
 - Hoe kan machine learning worden toegepast om luchtkwaliteit te voorspellen?
 - Met welke ethische aspecten dient rekening gehouden te worden? En op welke manier?
 - Hoe kunnen machine learning modellen gekoppeld worden aan Twindle?
-  
+
 ### Doelstelling
 
-> **_Vanaf 18-06 zullen de gebruikers van Twindle meldingen kunnen ontvangen wanneer slechte luchtkwaliteit wordt verwacht. Het machine learning model wat hiervoor wordt toegepast zal een “recall’ en “precision” score hebben van minimaal 95%._**
+> **_Vanaf 18-06 zullen de gebruikers van Twindle meldingen kunnen ontvangen wanneer slechte luchtkwaliteit wordt verwacht. Het machine learning model wat hiervoor wordt toegepast zal een "recall" en "precision" score hebben van minimaal 95%._**
 
 Een verdere beschrijving van het doel kan in hoofdstuk _1.2.1 SMART_ [^2] van het projectplan gevonden worden.
 
 ## Leeswijzer
-Tijdens het afstuderen zal er gewerkt worden aan de ICT competenties zoals beschreven in de [HBO-I domeinbeschrijving](https://hboidomein-212218.appspot.com/pdf?template=https://hboidomein-212218.appspot.com/template.html&deep=true&full=true&lang=NL&skipcache=&viewport=1156x818&url=https://hboidomein-212218.appspot.com/pdfdoc). Per competentie zal beschreven worden op welke manier deze verwerkt is in het portfolio en welke deelvragen beantwoord worden.   
+
+Tijdens het afstuderen is gewerkt aan de ICT competenties zoals beschreven in de [HBO-I domeinbeschrijving](https://hboidomein-212218.appspot.com/pdf?template=https://hboidomein-212218.appspot.com/template.html&deep=true&full=true&lang=NL&skipcache=&viewport=1156x818&url=https://hboidomein-212218.appspot.com/pdfdoc). In de onderstaande secties zal per competentie kort samengevat worden hoe deze aangetoond is.
 
 ### Analyseren
 
-Voordat begonnen wordt aan het ontwikkelen van het product is het belangrijk om te weten wie er bij de applicatie betrokken zijn en wat zij belangrijk vinden. Hiervoor is tijdens het opstellen van het project is de volgende vraag gesteld:
+Voordat begonnen was aan het ontwikkelen van het product was het belangrijk om te weten wie er bij betrokken waren en wat zij belangrijk vonden. Hiervoor is tijdens het opstellen van het project is de volgende vraag gesteld:
 
 > **_Wie zijn de gebruikers van Twindle?_**
 
-In dit onderdeel van het portfolio zal deze vraag beantwoord worden door middel van een [stakeholders analyse](#stakeholders-analyse). Hierna zal verder onderzocht worden wat de behoefte is van deze stakeholders door gebruik te maken van [story mapping technieken](#story-mapping).
+In dit onderdeel van het portfolio zal deze vraag beantwoord worden door middel van een [stakeholders analyse](analyseren.md#stakeholders-analyse). Hierna is verder onderzocht wat de behoeften van deze stakeholders zijn door gebruik te maken van [story mapping technieken](analyseren.md#story-mapping).
 
-Daarnaast wordt er geanalyseerd welke data de Twindle applicatie tot nu toe heeft verzameld in een [exploratory data analyse](#exploratory-data-analyse). Samen met het [data requirements](#data-requirements) onderzoek leidt dit tot een antwoord op de vraag:
+Daarnaast werd er geanalyseerd welke data de Twindle applicatie tot nu toe heeft verzameld in een [exploratory data analyse](analyseren.md#exploratory-data-analyse). De resultaten van deze analyses zijn verwerkt in requirements. Deze zijn opgesplitst in de volgende categorieën:
+
+- [Software](analyseren.md#software-requirements)
+- [Data](analyseren.md#data-requirements)
+- [Machine learning](analyseren.md#machine-learning-requirements)
+
+Deze requirements onderzoeken hebben geleidt tot een antwoord op de vraag:
 
 > **_Welke data is benodigd om luchtkwaliteit te voorspellen?_**
 
 ### Ontwerpen
-Nadat was vastgesteld wat er ontwikkelt moest worden is de applicatie ontworpen door de volgende onderzoeken uit te voeren: 
 
-- Model experimenten
-- Architectuur
+Uit de verschillende analyses was gebleken dat het belangrijk is dat personen snel geinformeerd worden wanneer de luchtkwaliteit dreigt te verslechteren. De eerste stap hierin is om de meetwaarden die samen de luchtkwaliteit vormen te voorspellen. Hiervoor is de volgende vraag gesteld:
+
+> **_Hoe kan machine learning worden toegepast om luchtkwaliteit te voorspellen?_**
+
+Tijdens de [model experimenten](ontwerpen.md#model-experimenten-versie-1) zijn meerdere machine learning technieken onderzocht en getest om een antwoord op deze vraag te kunnen geven.
+
+De tweede stap was om een systeem te ontwerpen waardoor de machine learning modellen up-to-date blijven, periodiek nieuwe voorspellingen maken en deze toegankelijk maken voor, bijvoorbeeld, front-end applicaties. Dit ontwerp geeft antwoord de de vraag:
+
+> **_Hoe kunnen machine learning modellen gekoppeld worden aan Twindle?_**
+
+Na het ontwerp te hebben geïmplementeerd was dit [opgeleverd](realiseren.md#oplevering-2). Hieruit bleek dat er meerdere problemen waren met de machine learning modellen die opgelost moesten worden. Hiervoor is een [tweede iteratie](ontwerpen.md#model-experimenten-versie-2) van de model experimenten gedaan.
 
 ### Realiseren <br>
 
-- Manier van aanpak
-- Prototype
-- Proof of concept
+Na goedkeuring van het ontwerp door de stakeholders vanuit Handpicked Labs en Techtenna was begonnen an het realiseren van de applicaties. Hiervoor is gewerkt in vier iteraties, waarvan er drie voor 18-06 plaats hebben gevonden.
+
+- Oplevering 1: Ontwerp
+- Oplevering 2: Integratie ARIMA modellen
+- Oplevering 3: Iteratie op integratie
+
+Voor ieder van deze opleveringen is een conclusie, evaluatie en reflectie geschreven.
 
 ### Adviseren <br>
 
+Tijdens de realisatie zijn er meerdere onderwerpen waar adviezen over gemaakt zijn: 
+
 - Aanpak & scope
 - Volgende stappen
+- Ethische gevolgen
+
+> **_Met welke ethische aspecten dient rekening gehouden te worden? En op welke manier?_**
 
 ### Onderhouden <br>
 
@@ -82,6 +96,7 @@ Nadat was vastgesteld wat er ontwikkelt moest worden is de applicatie ontworpen 
 - Feedback
 
 ## Behaalde resultaten
+
 Hier komt een overzicht van de behaalde resultaten zodra dit het project afgerond is.
 
 [^1]: [Projectplan 1.4.1 & 1.4.2](./pdfs/project_plan.pdf#page=13) _blz. 13 - 15_

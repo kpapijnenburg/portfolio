@@ -121,9 +121,93 @@ In de applicatie zullen zich meerdere entiteiten bevinden. Onderstaand is een ov
 
 ## Model experimenten versie 2
 
+De voorgaande experimenten resulteerde nog niet in modellen die de eis van 0.9 r-squared haalde. Uiteindelijk is toch besloten om deze modellen toe te passen in de applicatie. Uit deze [implementatie](realiseren.md#oplevering-2-integratie-arima-modellen) bleek dat de modellen niet presteerde zoals verwacht. Om het doel te behalen moeten de volgende aanpassingen gedaan worden:
+
+1. Onderzoeken wat invloed heeft op de veranderingen in de meetwaarden.
+2. Verder in de toekomst kijken
+3. Betere controle voor welk tijdstip de voorspelling wordt gemaakt.
+4. Bestandsgrootte limiteren om schaalbaarheid te vergroten
+
+In overleg met de opdrachtgevers en belangrijkste stakeholder, Techtenna, was besloten om eerste een model voor de CO2 waarde te ontwikkelen. Wanneer dit succesvol is bevonden kan dit worden uitgebreid naar de overige meetwaarden.
+
+### Gegevensverzameling
+
+Tijdens de tweede oplevering van het project werd door Marco van Techtenna opgemerkt dat het aantal personen wat zich in een ruimte bevindt invloed heeft op de CO2 niveaus. Via de Google Calendar API is opgevraagd hoeveel personen zich op een bepaalde tijd in een ruimte bevinden. Deze gegevens zijn toegevoegd aan de dataset zoals beschreven in de vorige iteratie.
+
+Uit een vergelijkbaar onderzoek[^7] is gebleken dat temperatuur, luchtvochtigheid en activiteitsniveau een mogelijke invloed kunnen hebben op de CO2 waarde. Door deze waarden te visualiseren in een correlatie heatmap kon dit gevalideerd worden.
+
+<center>
+![Correlatie heatmap](images/realisatie/heatmap.png)
+</center>
+<center>_Afbeelding 7: Correlatie Heatmap_</center>
+
+### Beschrijving & resultaten
+
+Om het tweede doel te behalen zijn er twee modellen uitgewerkt. Een voor lange termijn voorspellingen en een voor korte termijn voorspellingen. In het onderzoeksrapport[^8] wordt verder toegelicht welke data gebruikt was en hoe deze werd voorbereid.
+
+**Korte termijn - Modellen** <br>
+Tijdens het onderzoek van Kallio et al.[^7] worden meerdere mogelijke modellen beschreven. Deze zijn specifiek uitgekozen omdat ze accurate voorspellingen kunnen geven op auto gecorreleerde data.
+
+- [Ridge Regression (RR)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html)
+- [Decision Tree (DT)](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html)
+- [Random Forest (RF)](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)
+- [Multilayer Perceptron (MLP)](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html)
+
+Aangezien de CO2 waarden in een ruimte vaak niet drastisch veranderen in korte tijd is er gekozen om als baseline een ‘last-observation carried forward’ model te gebruiken. Dit geeft een de laatst gemeten CO2 waarde aan als de voorspelde waarde.
+
+**Korte termijn - Features** <br>
+Per model kan het verschillen welke features tot het beste resultaat leiden. Om dit te optimaliseren is gebruik gemaakt van de `SelectKBest` class. Deze klasse maakt gebruik van `f_regression` om te bepalen welke features het meest gecorreleerd zijn tot het target. Tussen de drie en dertig features zijn getest door middel van GridSearch. Onderstaand valt per model te zien welke features de hoogste score behalen.
+
+![Feature selectie](images/realisatie/feature-selection.png)
+
+<center>_Afbeelding 8: Feature selectie_</center>
+
+Een belangrijke bevinding uit deze grafiek is dat de modellen niet alleen de voorgaande CO2 metingen gebruiken, wat overfitting zou veroorzaken, maar ook bijvoorbeeld verlichting- en luchtvochtigheidsniveaus.
+
+**Korte termijn - Resultaten** <br>
+Door de voorspelde waarde tegenover daadwerkelijke waarde te plotten kunnen patronen in de fouten van model worden opgespoord. Ideaal gezien vormen deze plotten een diagonale lijn, zoals bij het baseline, RR en MLP model. Dit betekend dat de voorspelde waarde dicht bij de daadwerkelijke waarde ligt. Bij de DTR en RF modellen worden de voorspellingen onnauwkeurig wanneer ze hoger worden.
+<center>
+![Daadwerkelijk vs. voorspelt](images/realisatie/actual-v-predicted.png)
+</center>
+<center>_Afbeelding 9: Daadwerkelijk vs. voorspelt_</center>
+
+De r-squared (R2) score van een model geeft aan hoe goed de fit is van een model. Hoe dichter dit bij 1.0 is hoe beter. Het MLP en RR model presteren beter dan de baseline. Dit valt ook te zien in de foutmarges van de modellen. Het RR model presteert het beste op RMSE en MAE
+<center>
+![Model evaluatie](images/realisatie/model-eval.png)
+</center>
+<center>_Afbeelding 10: Model evaluatie_</center>
+
+**Lange termijn - Resultaten** </br>
+
+Ieder model, baseline inbegrepen, vertoont hetzelfde patroon. Er zitten meer lage waarden in de dataset dan hoge. Hierdoor zijn alle modellen gebiased richting lagere voorspellingen.
+![Daadwerkelijk vs. voorspelt](images/realisatie/long-term-actual-v-predicted.png)
+
+<center>_Afbeelding 9: Daadwerkelijk vs. voorspelt_</center>
+
+### Bevindingen
+Vanuit de vorige iteratie waren er een viertal uitdagingen die opgelost moesten worden. Onderstaand zijn deze, en de oplossingen, toegelicht.
+
+_Onderzoeken wat invloed heeft op veranderingen in de meetwaarden en deze data toevoegen aan de modellen._
+
+CO2 gehaltes worden vooral bepaald door het aantal personen in een ruimte. Door gebruik te maken van de google calendar API kan opgevraagd worden hoeveel personen zich op een bepaalde tijd in de ruimte bevonden.
+
+_Verder in de toekomst kijken, 3 uur of meer._
+
+In het onderzoek van Kallio et al. [^7] werd geconcludeerd dat voorspellingen voor de lange termijn vaak niet accuraat zijn. Hierdoor is er gekozen om een model te ontwikkelen wat op korte termijn accuraat is, deze zal ondersteunt worden door een visualisatie van gemiddelde voor een bepaalde dag en tijd.
+
+_Betere controleren voor welk tijdstip de voorspelling gemaakt worden._
+
+Door andere data voorbereidingstechnieken te gebruiken wordt er geen voorspelling gedaan voor een bepaald tijdstip. Hierdoor hoeft deze ook niet meer gecontroleerd te worden.
+
+_Bestandsgrootte modellen verminderen om schaalbaarheid te vergroten._
+
+De Ridge Regression modellen zijn minder dan 64 KB groot. Dit betekend dat het makkelijk schaalbaar is wanneer ze voor digital twins met veel ruimten moeten worden gebruikt
+
 [^1]: [Model experimenten rapport - versie 1: Gegevensoverzicht](pdfs/model_experimenten_v1.pdf#page=3) _blz. 3 t/m 9_
 [^2]: [Model experimenten rapport - versie 1: Bronnen](pdfs/model_experimenten_v1.pdf#page=21) _blz. 21_
 [^3]: [Model experimenten rapport - versie 1: Gegevensvoorbereiding](pdfs/model_experimenten_v1.pdf#page=13) _blz. 12_
 [^4]: [StackoverFlow Blog: How to put machine learning models into production](https://stackoverflow.blog/2020/10/12/how-to-put-machine-learning-models-into-production/)
 [^5]: [c4model.com](https://c4model.com/)
 [^6]: [Ontwerpdocument: Vooronderzoek](pdfs/ontwerp.pdf#page=4) _blz. 3 t/m 6_
+[^7]: [Forecasting office indoor CO2 concentration using machine learning with a one-year dataset](https://doi.org/10.1016/j.buildenv.2020.107409)
+[^8]: [Model experimenten rapport - versie 2: Model beschrijvingen](pdfs/model_experimenten_v2.pdf#page=6)_blz. 5 t/m 6_

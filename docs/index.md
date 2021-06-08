@@ -67,21 +67,21 @@ De tweede stap was om een systeem te ontwerpen waardoor de machine learning mode
 
 > **_Hoe kunnen machine learning modellen gekoppeld worden aan Twindle?_**
 
-Na het ontwerp te hebben geïmplementeerd was dit [opgeleverd](realiseren.md#oplevering-2). Hieruit bleek dat er meerdere problemen waren met de machine learning modellen die opgelost moesten worden. Hiervoor is een [tweede iteratie](ontwerpen.md#model-experimenten-versie-2) van de model experimenten gedaan.
+Na het ontwerp te hebben geïmplementeerd was dit [opgeleverd](realiseren.md#oplevering-2-integratie-arima-modellen). Hieruit bleek dat er meerdere problemen waren met de machine learning modellen die opgelost moesten worden. Hiervoor is een [tweede iteratie](ontwerpen.md#model-experimenten-versie-2) van de model experimenten gedaan.
 
 ### Realiseren <br>
 
 Na goedkeuring van het ontwerp door de stakeholders vanuit Handpicked Labs en Techtenna was begonnen an het realiseren van de applicaties. Hiervoor is gewerkt in vier iteraties, waarvan er drie voor 18-06 plaats hebben gevonden.
 
-- Oplevering 1: Ontwerp
-- Oplevering 2: Integratie ARIMA modellen
-- Oplevering 3: Iteratie op integratie
+- [Oplevering 1: Ontwerp](realiseren.md#oplevering-1-ontwerp)
+- [Oplevering 2: Integratie ARIMA modellen](realiseren.md#oplevering-2-integratie-arima-modellen)
+- [Oplevering 3: Iteratie op integratie](realiseren.md#oplevering-3-iteratie-op-integratie)
 
 Voor ieder van deze opleveringen is een conclusie, evaluatie en reflectie geschreven.
 
 ### Adviseren <br>
 
-Tijdens de realisatie zijn er meerdere onderwerpen waar adviezen over gemaakt zijn: 
+Tijdens de realisatie zijn er meerdere onderwerpen waar adviezen over gemaakt zijn:
 
 - Aanpak & scope
 - Volgende stappen

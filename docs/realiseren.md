@@ -63,7 +63,7 @@ Onderstaand is te zien hoe deze voorspellingen verwerkt waren in het front-end. 
 3. De voorspellingen zijn niet accuraat genoeg.
 
 <center>![Front-end implementatie](images/realisatie/front-end.png)</center>
-<center><small>Afbeelding 3: Front-end implementatie<small></center>
+<center><small>Afbeelding 3: Front-end implementatie</small></center>
 
 **Feedback** <br>
 Tijdens de presentatie[^4] van de oplevering werd de onderstaande afbeelding getoond. Hierin is te zien dat de voorspellingen altijd ~ 1 uur achter lijken te lopen. Om dit op te lossen is veel tijd besteed aan het controleren met welke data de modellen werden geüpdatet en voor welke tijdstippen de voorspellingen werden gemaakt. Uiteindelijk was, mede door feedback van Marco van Techtenna, de conclusie dat dit een eigenschap is van de modellen die zijn toegepast.

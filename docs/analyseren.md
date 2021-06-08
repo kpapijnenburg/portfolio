@@ -46,7 +46,7 @@ Personas zijn gebruikt worden om een duidelijker beeld bij de gebruikers van de 
 De story mapping sessie heeft plaatsgevonden op 02-03-2021. Om iedereen duidelijk te maken wat er verwacht werd was een korte presentatie gegeven. Daarna is de onderstaande story map opgesteld. Deze is gebruikt om via Trello een backlog op te stellen.
 ![story map](images/story_map.png)
 
-<center><small>Afbeelding 5: Story map<small></center>
+<center><small>Afbeelding 5: Story map</small></center>
 
 ## Exploratory Data Analyse
 

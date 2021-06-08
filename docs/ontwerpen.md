@@ -23,7 +23,7 @@ De volgende modellen zijn toegepast:
 
 ![Gemiddelde R-squared per meetwaarde en model](images/linear-regression-results.png)
 
-<center>_Afbeelding 1: Gemiddelde R-squared per meetwaarde en model_</center>
+<center><small>Afbeelding 1: Gemiddelde R-squared per meetwaarde en model</small></center>
 
 Aan de bovenstaande afbeeldingen is het volgende af te leiden:
 
@@ -41,7 +41,7 @@ De Holt-Winters seasonal methode is gebruikt om te kunnen profiteren van de tren
 
 ![Exponential smoothing per meetwaarde](images/exponential-smooting.png)
 
-<center>_Afbeelding 2: Exponential Smoothing resultaten per meetwaarde_</center>
+<center><small>Afbeelding 2: Exponential Smoothing resultaten per meetwaarde<small></center>
 
 Dit soort modellen lijken op het begin de trend goed te volgen. Na ongeveer een of twee uur beginnen ze echter steeds minder accuraat te worden en overschieten ze vaak het doel. Voor meetwaarden die afhankelijk zijn van andere factoren, zoals luchtvochtigheid en temperatuur, zijn deze modellen minder accuraat.
 
@@ -87,14 +87,14 @@ In het onderstaande systeem context diagram zijn de gebruikersgroepen en de mani
 
 ![Systeem context diagram](images/ontwerp/c1_context.png)
 
-<center>_Afbeelding 3: Systeem context diagram_</center>
+<center><small>Afbeelding 3: Systeem context diagram<small></center>
 
 **C2: Containers**<br>
 In dit diagram zal er verder ingezoomt worden op de twee software systemen zoals deze zijn beschreven in het vorige diagram. Ze zijn verder onderverdeeld worden in containers. Containers zijn onderdelen van het systeem die apart van elkaar functioneren. In dit diagram ligt de focus op de technologie keuzes en manier van communicatie tussen containers.
 
 ![Container diagram](images/ontwerp/c2_container.png)
 
-<center>_Afbeelding 4: Container diagram_</center>
+<center><small>Afbeelding 4: Container diagram<small></center>
 
 De webapplicatie haalt voorspellingen op uit de AI-layer. Om deze voorspellingen te kunnen maken is historische data nodig die voorzien wordt door de back-end applicatie van de Digital Twin.
 
@@ -103,7 +103,7 @@ Iedere container uit het vorige diagram bestaat uit een of meerdere componenten.
 
 ![Systeem context diagram](images/ontwerp/c3_components_ai_layer.png)
 
-<center>_Afbeelding 5: Components diagram_</center>
+<center><small>Afbeelding 5: Components diagram<small></center>
 
 **C4: Code** <br>
 Onderstaand valt een overzicht te vinden van de routes die aan de API zijn toegevoegd. Via deze route kunnen de voorspellingen die gemaakt zijn opgevraagd worden door het front-end
@@ -117,7 +117,7 @@ In de applicatie zullen zich meerdere entiteiten bevinden. Onderstaand is een ov
 <center>
 ![Entity Relation diagram](images/ontwerp/erd.png){:height="70%" width="70%"}
 </center>
-<center>_Afbeelding 6: Entity relation diagram_</center>
+<center><small>Afbeelding 6: Entity relation diagram<small></center>
 
 ## Model experimenten versie 2
 
@@ -139,7 +139,7 @@ Uit een vergelijkbaar onderzoek[^7] is gebleken dat temperatuur, luchtvochtighei
 <center>
 ![Correlatie heatmap](images/realisatie/heatmap.png)
 </center>
-<center>_Afbeelding 7: Correlatie Heatmap_</center>
+<center><small>Afbeelding 7: Correlatie Heatmap<small></center>
 
 ### Beschrijving & resultaten
 
@@ -160,7 +160,7 @@ Per model kan het verschillen welke features tot het beste resultaat leiden. Om 
 
 ![Feature selectie](images/realisatie/feature-selection.png)
 
-<center>_Afbeelding 8: Feature selectie_</center>
+<center><small>Afbeelding 8: Feature selectie<small></center>
 
 Een belangrijke bevinding uit deze grafiek is dat de modellen niet alleen de voorgaande CO2 metingen gebruiken, wat overfitting zou veroorzaken, maar ook bijvoorbeeld verlichting- en luchtvochtigheidsniveaus.
 
@@ -169,20 +169,20 @@ Door de voorspelde waarde tegenover daadwerkelijke waarde te plotten kunnen patr
 <center>
 ![Daadwerkelijk vs. voorspelt](images/realisatie/actual-v-predicted.png)
 </center>
-<center>_Afbeelding 9: Daadwerkelijk vs. voorspelt_</center>
+<center><small>Afbeelding 9: Daadwerkelijk vs. voorspelt<small></center>
 
 De r-squared (R2) score van een model geeft aan hoe goed de fit is van een model. Hoe dichter dit bij 1.0 is hoe beter. Het MLP en RR model presteren beter dan de baseline. Dit valt ook te zien in de foutmarges van de modellen. Het RR model presteert het beste op RMSE en MAE
 <center>
 ![Model evaluatie](images/realisatie/model-eval.png)
 </center>
-<center>_Afbeelding 10: Model evaluatie_</center>
+<center><small>Afbeelding 10: Model evaluatie<small></center>
 
 **Lange termijn - Resultaten** </br>
 
 Ieder model, baseline inbegrepen, vertoont hetzelfde patroon. Er zitten meer lage waarden in de dataset dan hoge. Hierdoor zijn alle modellen gebiased richting lagere voorspellingen.
 ![Daadwerkelijk vs. voorspelt](images/realisatie/long-term-actual-v-predicted.png)
 
-<center>_Afbeelding 9: Daadwerkelijk vs. voorspelt_</center>
+<center><small>Afbeelding 9: Daadwerkelijk vs. voorspelt<small></center>
 
 ### Bevindingen
 Vanuit de vorige iteratie waren er een viertal uitdagingen die opgelost moesten worden. Onderstaand zijn deze, en de oplossingen, toegelicht.

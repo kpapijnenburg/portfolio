@@ -42,11 +42,11 @@ Vorige oplevering waren het ontwerp en doelswijzigvoorstel goedgekeurd. Deze opl
 | 6        | Front-end aanpassingen | Ja       |
 
 **Resultaten** <br>
-In de onderstaande afbeelding is te zien hoe de gewenste uitkomst van de implementatie gepland was. In de linker afbeelding is de start situatie te zien, dit is een visualizatie van de luchtvochtigheid van de afgelopen dag. In de gewenste situatie wordt deze visualizatie uitgebreid met de verwachte luchtvochtigheid voor de komende uren.
+In de onderstaande afbeelding is te zien hoe de gewenste uitkomst van de implementatie gepland was. In de linker afbeelding is de start situatie te zien, dit is een visualisatie van de luchtvochtigheid van de afgelopen dag. In de gewenste situatie wordt deze visualisatie uitgebreid met de verwachte luchtvochtigheid voor de komende uren.
 
 ![Gewenste situatie](images/realisatie/gewenste-situatie.png)
 
-<center>_Afbeelding 1: Gewenste situatie_</center>
+<center><small>Afbeelding 1: Gewenste situatie</small></center>
 
 Om deze situatie te kunnen realiseren is de pipeline zoals deze in het ontwerp is beschreven ontwikkeld. Onderstaand is in een schematische tekening te zien hoe deze pipeline functioneert.
 
@@ -54,7 +54,7 @@ Periodiek wordt er nieuwe data opgevraagt die voorbereid wordt om de ARIMA model
 
 ![Pipeline implementatie](images/realisatie/pipeline.png)
 
-<center>_Afbeelding 2: Pipeline implementatie_</center>
+<center><small>Afbeelding 2: Pipeline implementatie</small></center>
 
 Onderstaand is te zien hoe deze voorspellingen verwerkt waren in het front-end. Het eind resultaat lijkt redelijk op de gewenste situatie. Er zijn echter wat onderdelen die niet naar verwachting werkte.
 
@@ -63,14 +63,14 @@ Onderstaand is te zien hoe deze voorspellingen verwerkt waren in het front-end. 
 3. De voorspellingen zijn niet accuraat genoeg.
 
 <center>![Front-end implementatie](images/realisatie/front-end.png)</center>
-<center>_Afbeelding 3: Front-end implementatie_</center>
+<center><small>Afbeelding 3: Front-end implementatie<small></center>
 
 **Feedback** <br>
 Tijdens de presentatie[^4] van de oplevering werd de onderstaande afbeelding getoond. Hierin is te zien dat de voorspellingen altijd ~ 1 uur achter lijken te lopen. Om dit op te lossen is veel tijd besteed aan het controleren met welke data de modellen werden geüpdatet en voor welke tijdstippen de voorspellingen werden gemaakt. Uiteindelijk was, mede door feedback van Marco van Techtenna, de conclusie dat dit een eigenschap is van de modellen die zijn toegepast.
 
 ![Arima evaluatie](images/realisatie/arima-evaluatie.png)
 
-<center>_Afbeelding 4: Arima evaluaties</center>
+<center><small>Afbeelding 4: Arima evaluaties</small></center>
 
 Andere feedback was dat de impact van de visualisatie niet sterk genoeg is om mensen aan te sporen de situatie te veranderen. Aangezien dit de kern van het probleem is opgelost is hiervoor een [tweede iteratie](ontwerpen.md#model-experimenten-versie-2) van de machine learning modellen gedaan.
 
@@ -83,9 +83,33 @@ Daarnaast gad ik voor het implementeren van de applicatie maar een sprint ingepl
 
 ## Oplevering 3: Iteratie op integratie
 
+Na aanleiding van de feedback op de tweede iteratie waren nieuwe [model experimenten](ontwerpen.md#model-experimenten-versie-2) uitgevoerd. Deze modellen zijn gebruikt om de pipeline en het front-end aan te passen.
+
 **Geplande werkzaamheden** <br>
+
+| Sprint # | Werkzaamheden          | Afgerond |
+| -------- | ---------------------- | -------- |
+| 7        | Model experimenten     | Ja       |
+| 8        | Pipeline aanpassingen  | Ja       |
+| 8        | Front-end aanpassingen | Ja       |
+| 8        | Meldingen weergeven    | Nee      |
+
 **Gerealiseerde werkzaamheden** <br>
+Voordat begonnen was aan het implementeren van de nieuwe modellen in de pipeline en front-end was er een mock-up gemaakt, zie afbeelding 5, van de gewenste eind situatie.
+
+<center>
+![Mock-up](images/realisatie/mock-up.png)
+</center>
+
+<center><small>Afbeelding 5: </small></center>
+
+Door de korte termijn voorspellingen een aparte balkgrafiek te visualiseren en de kleur aan te passen wanneer bepaalde waarden worden overschreden wordt er een gortere impact gemaakt. Op deze manier zal de gebruiker aangespoort worden om in te grijpen wanneer de situatie dreigt te verslechteren.
+
+De aanpassingen die aan de pipeline gemaakt moesten worden waren minimaal. Over het algemeen kon de applicatie versimpeld worden omdat het machine learning model niet afhankelijk is van `timestamps`. 
+
+
 **Feedback** <br>
+
 **Reflectie** <br>
 
 ## Algemene evaluaties & reflecties

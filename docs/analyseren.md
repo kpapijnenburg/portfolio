@@ -8,7 +8,7 @@ Om de stakeholders te kunnen identificeren is een brainstormsessie gehouden. Het
 
 ![brainstrom](images/stakeholders-analyse-brainstorm.png)
 
-<center>*Afbeelding 1: Stakeholders mindmap*</center>
+<center><small>Afbeelding 1: Stakeholders mindmap</small></center>
 
 ### Prioriteren
 
@@ -16,7 +16,7 @@ De stakeholders die in het vorige hoofdstuk geïdentificeerd zijn zullen in dit 
 
 ![power-interest grid](images/stakeholders-power-interest-grid.png)
 
-<center>*Afbeelding 2: Power interest grid*</center>
+<center><small>Afbeelding 2: Power interest grid</small></center>
 
 ### Begrijpen
 
@@ -25,7 +25,7 @@ aantal vragen te stellen en te beantwoorden [^3]. Gebaseerd op deze vragen is he
 
 ![communicatie plan](images/communicatie-plan.png)
 
-<center>*Afbeelding 3: Communicatie plan*</center>
+<center><small>Afbeelding 3: Communicatie plan</small></center>
 
 ## Story mapping
 
@@ -37,7 +37,7 @@ Aan de hand van het communicatie plan, zie _afbeelding 3: Communicatie plan_ is 
 
 ![story mapping sessie aanwezige](images/story-mapping-aanwezigen.png)
 
-<center>*Afbeelding 4: Aanwezigen*</center>
+<center><small>Afbeelding 4: Aanwezigen</small></center>
 
 Personas zijn gebruikt worden om een duidelijker beeld bij de gebruikers van de applicatie te krijgen. Uiteindelijk is vastgesteld dat er twee gebruikersgroepen binnen de applicatie zijn [^6]. Hotelmanagers & consumers.
 
@@ -46,7 +46,7 @@ Personas zijn gebruikt worden om een duidelijker beeld bij de gebruikers van de 
 De story mapping sessie heeft plaatsgevonden op 02-03-2021. Om iedereen duidelijk te maken wat er verwacht werd was een korte presentatie gegeven. Daarna is de onderstaande story map opgesteld. Deze is gebruikt om via Trello een backlog op te stellen.
 ![story map](images/story_map.png)
 
-<center>*Afbeelding 5: Story map*</center>
+<center><small>Afbeelding 5: Story map<small></center>
 
 ## Exploratory Data Analyse
 
@@ -82,7 +82,7 @@ Univariate analyse is de eenvoudigste vorm van data analyse. Tijdens deze analys
 
 ![boardroom distributie](images/univariate.PNG)
 
-<center>_Afbeelding 6: Big Top's Boardroom distributie_</center>
+<center><small>Afbeelding 6: Big Top's Boardroom distributie</small></center>
 
 In de bovenstaande afbeelding zijn de distributies van alle meetwaarden in de boardroom van de Big Top gevisualiseerd. Hierin valt te zien dat de meeste waarden een redelijk normale distributie hebben. Sommigen zoals bijvoorbeeld de CO2 waarden hebben afwijkingen en uitschieters. Tijdens de modellering fase zal hier rekening mee gehouden moeten worden.
 
@@ -92,7 +92,7 @@ Tijdens dit soort data analyse zullen de verbanden tussen twee variabelen worden
 
 ![boardroom heatmap](images/corr-heatmap.png)
 
-<center>_Afbeelding 7: Big Top's Boardroom correlaties_</center>
+<center><small>Afbeelding 7: Big Top's Boardroom correlaties</small></center>
 
 Hieruit kunnen we opmaken dat er meerdere waarden zijn die redelijk sterk met elkaar gecorreleerd zijn. Bijvoorbeeld TVOC & temperatuur, dit zou een indicatie kunnen zijn dat wanneer de temperatuur stijgt de TVOC waarde meestijgt. Om dit te kunnen uitsluiten zal per meetwaarden verder onderzoek verricht moeten worden.
 
@@ -106,7 +106,7 @@ In de onderstaande afbeelding is het percentage van de data wat mist gevisualise
 
 ![missende gegevens big top](images/missing-values.png)
 
-<center>_Afbeelding 8: Big Top's missende gegevens_</center>
+<center><small>Afbeelding 8: Big Top's missende gegevens</small></center>
 
 Na de applicatie beter te bekijken is bevonden dat er per ruimte andere gegevens worden bijgehouden. Hierdoor is de clustervorming van de missende gegevens te verklaren. Tijdens het modelleren moet hier rekening mee gehouden worden.
 
@@ -190,7 +190,7 @@ Om te bepalen of aan de luchtkwaliteitseisen wordt voldaan is een overzicht same
 |              CO2 | 400                | 800                | 300          | 1200         |
 |             TVOC | -1                 | 200                | -1           | 250          |
 
-<center>_tabel 1: minima & maxima waarden_</center>
+<center><small>tabel 1: minima & maxima waarden</small></center>
 
 Uit dit onderzoek is de volgende lijst met te verzamelen data gekomen:
 

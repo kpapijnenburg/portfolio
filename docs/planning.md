@@ -4,7 +4,7 @@ Tijdens het project zal er gewerkt worden in sprint van twee weken. Om het proje
 
 ![ibm methodology](images/ibm-data-science-methodology.png)
 
-<center>_Afbeelding 1: IBM Data Science Methodology_</center>
+<center><small>Afbeelding 1: IBM Data Science Methodology<small></center>
 
 | #   | Fase    | Onderzoeken                                       | Producten                             | Start | Eind  |
 | :-- | :------ | :------------------------------------------------ | :------------------------------------ | :---- | :---- |

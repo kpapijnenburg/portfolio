@@ -1,10 +1,10 @@
 ## Stakeholders analyse
 
-Om te bepalen welke partijen relevant zijn voor het project is een stakeholders analyse uitgevoerd [^1]. De methodiek om de stakeholders analyse uit te voeren bestaat uit het identificeren- , prioriteren- en het begrijpen van deze groepen personen[^2].
+Om te bepalen welke partijen relevant waren voor het project was een stakeholders analyse uitgevoerd [^1]. De methodiek om de stakeholders analyse uit te voeren bestaat uit het identificeren- , prioriteren- en het begrijpen van deze groepen personen[^2].
 
 ### Identificeren
 
-Om de stakeholders te kunnen identificeren is een brainstormsessie gehouden. Het resultaat van deze sessie is een mindmap van alle personen of entiteiten die invloed hebben op het project. In de onderstaande afbeelding is deze mindmap te zien.
+Om de stakeholders te kunnen identificeren was een brainstormsessie gehouden. Het resultaat van deze sessie was een mindmap van alle personen of entiteiten die invloed hebben op het project. In de onderstaande afbeelding is deze mindmap te zien.
 
 ![brainstrom](images/stakeholders-analyse-brainstorm.png)
 
@@ -12,7 +12,7 @@ Om de stakeholders te kunnen identificeren is een brainstormsessie gehouden. Het
 
 ### Prioriteren
 
-De stakeholders die in het vorige hoofdstuk geïdentificeerd zijn zullen in dit hoofdstuk worden geprioriteerd. Dit wordt gedaan door te kijken wat hun niveau van invloed is en hoeveel belang zij hebben bij het project. In het onderstaande “Stakeholder Power Interest Grid” wordt dit gevisualiseerd.
+Om te de communicatiemethoden te bepalen zijn de stakeholders geprioriteerd. Dit was gedaan door te kijken wat hun niveau van invloed is en hoeveel belang zij hadden bij het project. In het onderstaande “Stakeholder Power Interest Grid” wordt dit gevisualiseerd.
 
 ![power-interest grid](images/stakeholders-power-interest-grid.png)
 
@@ -20,7 +20,7 @@ De stakeholders die in het vorige hoofdstuk geïdentificeerd zijn zullen in dit 
 
 ### Begrijpen
 
-De volgende stap is om, per stakeholder, te begrijpen wat hun relatie is tot het project. Dit is gedaan door per stakeholder categorie een
+De volgende stap was om, per stakeholder, te begrijpen wat hun relatie was tot het project. Dit was gedaan door per stakeholder categorie een
 aantal vragen te stellen en te beantwoorden [^3]. Gebaseerd op deze vragen is het onderstaande communicatieplan opgesteld.
 
 ![communicatie plan](images/communicatie-plan.png)
@@ -29,17 +29,17 @@ aantal vragen te stellen en te beantwoorden [^3]. Gebaseerd op deze vragen is he
 
 ## Story mapping
 
-Tijdens het project zal een agile werkwijze worden gehanteerd. Een van de onderdelen hiervan is een product backlog waarin alle taken zijn vastgelegd. De techniek die gebruikt is voor het opstellen van deze backlog is story mapping[^4]. In dit hoofdstuk wordt de voorbereiding en conclusie van deze story mapping sessie[^5] toegelicht.
+Gedurende het project was een agile werkwijze worden gehanteerd. Een van de onderdelen hiervan is een product backlog waarin alle taken waren vastgelegd. De techniek die gebruikt is voor het opstellen van deze backlog is story mapping[^4]. De voorbereiding en conclusie van deze story mapping sessie[^5] worden onderstaand toegelicht.
 
 ### Voorbereiding
 
-Aan de hand van het communicatie plan, zie _afbeelding 3: Communicatie plan_ is een lijst met personen opgesteld die aanwezig moeten zijn bij de story mapping sessie.
+Aan de hand van het communicatie plan, zie _afbeelding 3: Communicatie plan_ is een lijst met personen opgesteld die aanwezig moest zijn bij de story mapping sessie.
 
 ![story mapping sessie aanwezige](images/story-mapping-aanwezigen.png)
 
 <center><small>Afbeelding 4: Aanwezigen</small></center>
 
-Personas zijn gebruikt worden om een duidelijker beeld bij de gebruikers van de applicatie te krijgen. Uiteindelijk is vastgesteld dat er twee gebruikersgroepen binnen de applicatie zijn [^6]. Hotelmanagers & consumers.
+Personas waren toegepast om een duidelijker te krijgen bij de gebruikers van de applicatie. Uiteindelijk was vastgesteld dat er twee gebruikersgroepen binnen de applicatie waren [^6]. Hotelmanagers & consumers.
 
 ### Resultaat
 
@@ -50,7 +50,7 @@ De story mapping sessie heeft plaatsgevonden op 02-03-2021. Om iedereen duidelij
 
 ## Exploratory Data Analyse
 
-De eerste stap om te kunnen bepalen welke machine learning modellen toegepast kunnen worden is het analyseren van de data die Twindle tot nu toe verzameld heeft. Hiervoor is een Exploratory Data Analyse[^7] (EDA) gemaakt volgens de methode van Sunil Ray[^8]. Dit bestaat uit de volgende onderdelen:
+De eerste stap om te kunnen bepalen welke machine learning modellen toegepast konden worden was het analyseren van de data die Twindle tot nu toe verzameld heeft. Hiervoor is een Exploratory Data Analyse[^7] (EDA) gemaakt volgens de methode van Sunil Ray[^8]. Dit bestaat uit de volgende onderdelen:
 
 1. Variable identificatie
 2. Univariate analyse
@@ -60,7 +60,7 @@ De eerste stap om te kunnen bepalen welke machine learning modellen toegepast ku
 
 ### Variable identificatie
 
-De volgende gegevens, en hun datatype, zijn aanwezig in de dataset. Een overzicht van de handelingen die gedaan zijn om de onjuiste datatypes op te lossen kan gevonden worden in hoofdstuk 1.1[^9].
+De volgende gegevens, en hun datatype, waren aanwezig in de dataset. Een overzicht van de handelingen die gedaan waren om de onjuiste datatypes op te lossen kan gevonden worden in hoofdstuk 1.1[^9].
 
 ```
 TVOC                       float64 # 'Total volatile organic componds' in PPB
@@ -78,23 +78,23 @@ room                        object # Ruimte waarin de meting is vericht.
 
 ### Univariate analyse
 
-Univariate analyse is de eenvoudigste vorm van data analyse. Tijdens deze analyse wordt elke variabele afzonderlijk geanalyseerd. Dit wordt gedaan door de gegevens in histogrammen en boxplots te visualiseren. Hierdoor kunnen eventuele afwijkingen of uitschieters gedetecteerd worden.
+Univariate analyse is de eenvoudigste vorm van data analyse. Tijdens deze analyse werd elke variabele afzonderlijk geanalyseerd. Dit werd gedaan door de gegevens in histogrammen en boxplots te visualiseren. Hierdoor konden eventuele afwijkingen of uitschieters gedetecteerd worden.
 
 ![boardroom distributie](images/univariate.PNG)
 
 <center><small>Afbeelding 6: Big Top's Boardroom distributie</small></center>
 
-In de bovenstaande afbeelding zijn de distributies van alle meetwaarden in de boardroom van de Big Top gevisualiseerd. Hierin valt te zien dat de meeste waarden een redelijk normale distributie hebben. Sommigen zoals bijvoorbeeld de CO2 waarden hebben afwijkingen en uitschieters. Tijdens de modellering fase zal hier rekening mee gehouden moeten worden.
+In de bovenstaande afbeelding zijn de distributies van alle meetwaarden in de boardroom van de Big Top gevisualiseerd. Hierin valt te zien dat de meeste waarden een redelijk normale distributie hebben. Sommigen zoals bijvoorbeeld de CO2 waarden hebben afwijkingen en uitschieters. Tijdens de modellering fase is hier rekening mee gehouden.
 
 ### Multivariate analyse
 
-Tijdens dit soort data analyse zullen de verbanden tussen twee variabelen worden geanalyseerd. Dit zal worden gedaan door correlatiecoëfficiënt-heatmaps te maken. In _afbeelding 7: Big Top's boardroom correlaties_ is een voorbeeld van deze correlatiecoëfficiënt-heatmaps te zien.
+Tijdens dit soort data analyse zijn de verbanden tussen twee variabelen geanalyseerd. Dit is gedaan correlatiecoëfficiënt-heatmaps te maken. In _afbeelding 7: Big Top's boardroom correlaties_ is een voorbeeld van deze correlatiecoëfficiënt-heatmaps te zien.
 
 ![boardroom heatmap](images/corr-heatmap.png)
 
 <center><small>Afbeelding 7: Big Top's Boardroom correlaties</small></center>
 
-Hieruit kunnen we opmaken dat er meerdere waarden zijn die redelijk sterk met elkaar gecorreleerd zijn. Bijvoorbeeld TVOC & temperatuur, dit zou een indicatie kunnen zijn dat wanneer de temperatuur stijgt de TVOC waarde meestijgt. Om dit te kunnen uitsluiten zal per meetwaarden verder onderzoek verricht moeten worden.
+Hieruit kon opgemaakt worden dat er meerdere waarden zijn die redelijk sterk met elkaar gecorreleerd zijn. Bijvoorbeeld TVOC & temperatuur, dit zou een indicatie kunnen zijn dat wanneer de temperatuur stijgt de TVOC waarde meestijgt. Om dit te kunnen uitsluiten zal per meetwaarden verder onderzoek verricht moeten worden.
 
 ### Missende gegevens
 
@@ -108,7 +108,7 @@ In de onderstaande afbeelding is het percentage van de data wat mist gevisualise
 
 <center><small>Afbeelding 8: Big Top's missende gegevens</small></center>
 
-Na de applicatie beter te bekijken is bevonden dat er per ruimte andere gegevens worden bijgehouden. Hierdoor is de clustervorming van de missende gegevens te verklaren. Tijdens het modelleren moet hier rekening mee gehouden worden.
+Na de applicatie beter te bekijken is bevonden dat er per ruimte andere gegevens worden bijgehouden. Hierdoor is de clustervorming van de missende gegevens te verklaren.
 
 ### Uitschieters
 
@@ -143,7 +143,7 @@ Wanneer deze methode wordt gebruikt op de datasets verwijderd het ongeveer 20% v
 
 ### Bevindingen
 
-Deze Exploratory Data Analyse is uitgevoerd om te kijken hoe de data die door de Twindle applicatie verzameld wordt in elkaar zit. De volgende bevindingen zijn gemaakt:
+Deze Exploratory Data Analyse is uitgevoerd om te kijken hoe de data die door de Twindle applicatie verzameld werd in elkaar zit. De volgende bevindingen zijn gemaakt:
 
 - De gegevens bevatten grote uitschieters.
 - Niet voor elke kamer worden dezelfde gegevens verzameld.

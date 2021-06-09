@@ -19,7 +19,7 @@ Om het onderzoek te structureren is er een hoofdvraag en meerdere deelvragen opg
 > **_Hoe kan Twindle uitgebreidt worden om een hoge luchtkwaliteit in ruimten te garanderen?_**
 
 **Deelvragen** <br>
-Onderstaand zijn de deelvragen opgesomd. In het projectplan is een overzicht[^1] te vinden waarin wordt toegelicht welke onderzoeksmethoden gebruikt zullen worden om de vraag te beantwoorden.
+Onderstaand zijn de deelvragen opgesomd. In het projectplan is een overzicht[^1] te vinden waarin wordt toegelicht welke onderzoeksmethoden gebruikt zijn om de vraag te beantwoorden.
 
 - Wie zijn de gebruikers van Twindle?
 - Welke data is benodigd om luchtkwaliteit te voorspellen
@@ -43,7 +43,7 @@ Voordat begonnen was aan het ontwikkelen van het product was het belangrijk om t
 
 > **_Wie zijn de gebruikers van Twindle?_**
 
-In dit onderdeel van het portfolio zal deze vraag beantwoord worden door middel van een [stakeholders analyse](analyseren.md#stakeholders-analyse). Hierna is verder onderzocht wat de behoeften van deze stakeholders zijn door gebruik te maken van [story mapping technieken](analyseren.md#story-mapping).
+Door middel van een [stakeholders analyse](analyseren.md#stakeholders-analyse) is deze vraag beantwoord. Hierna is verder onderzocht wat de behoeften van deze stakeholders waren door gebruik te maken van [story mapping technieken](analyseren.md#story-mapping).
 
 Daarnaast werd er geanalyseerd welke data de Twindle applicatie tot nu toe heeft verzameld in een [exploratory data analyse](analyseren.md#exploratory-data-analyse). De resultaten van deze analyses zijn verwerkt in requirements. Deze zijn opgesplitst in de volgende categorieën:
 
@@ -71,13 +71,19 @@ Na het ontwerp te hebben geïmplementeerd was dit [opgeleverd](realiseren.md#opl
 
 ### Realiseren <br>
 
-Na goedkeuring van het ontwerp door de stakeholders vanuit Handpicked Labs en Techtenna was begonnen an het realiseren van de applicaties. Hiervoor is gewerkt in vier iteraties, waarvan er drie voor 18-06 plaats hebben gevonden.
+Om het ontwerp te realiseren was iteratief gewerkt. Iedere vier weken heeft er een oplevering plaatsgevonden voor de stakeholders van Handpicked Labs en Techtenna. 
 
-- [Oplevering 1: Ontwerp](realiseren.md#oplevering-1-ontwerp)
-- [Oplevering 2: Integratie ARIMA modellen](realiseren.md#oplevering-2-integratie-arima-modellen)
-- [Oplevering 3: Iteratie op integratie](realiseren.md#oplevering-3-iteratie-op-integratie)
+Tijdens de [eerste oplevering](realiseren.md#oplevering-1-ontwerp) was het ontwerp besproken met de stakeholders, zij waren allemaal akkoord met de beslissingen die daar gemaakt werden. 
 
-Voor ieder van deze opleveringen is een conclusie, evaluatie en reflectie geschreven.
+Daarnaast werd voorgesteld om het doel te wijzigen. Tot dit moment in het project was het doel om voor alle servicelagen (luchtkwaliteit, duurzaamheid en brandveiligheid) machine learning modellen te ontwikkelen. Voorgesteld was om de focus te leggen op de luchtkwaliteit, daar een robuust systeem voor te bouwen en daarna uit te breiden naar de rest van de servicelagen. De stakeholders gingen hiermee akkoord.   
+
+Hierna was tijdens de [tweede oplevering](realiseren.md#oplevering-2-integratie-arima-modellen) het resultaat van de ARIMA modellen gepresenteerd. Hier bleken nog enkele problemen mee te zijn:
+
+1. Voorspellingen waren op een te kort termijn 
+2. Modellen waren te groot (> 1GB)
+3. Voorspelligen waren niet accuraat genoeg.
+   
+Het doel was om deze problemen om te lossen voor de [derde oplevering](realiseren.md#oplevering-3-iteratie-op-integratie). Hiervoor was een tweede iteratie van de [model experimenten](ontwerpen.md#model-experimenten-versie-2) uitgevoerd wat resulteerde in verbeterde modellen. Deze loste de problemen van de voorgaande oplevering op en de stakeholders waren tevreden over de gemaakte veranderingen.
 
 ### Adviseren <br>
 

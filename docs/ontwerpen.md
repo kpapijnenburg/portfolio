@@ -1,21 +1,21 @@
 ## Model experimenten versie 1
 
-Voor de uitbreiding van het Twindle project zullen machine learning modellen gebruikt worden om de luchtkwaliteit te voorspellen. Dit zullen modellen zijn voor luchtvochtigheid, temperatuur, CO2 en TVOC. Deze modellen moeten voldoen aan bepaalde eisen, welke besproken worden in het [analyseren: requirements - machine learning](analyseren.md#machine-learning-requirements) onderdeel.
+Voor de uitbreiding van het Twindle project zijn machine learning modellen toegepast om de luchtkwaliteit te voorspellen. Dit zijn modellen voor luchtvochtigheid, temperatuur, CO2 en TVOC. Deze modellen moesten voldoen aan bepaalde eisen, welke besproken zijn in het [analyseren: requirements - machine learning](analyseren.md#machine-learning-requirements) onderdeel.
 
 ### Beschrijving & resultaten
 
-Om een betere indicatie te krijgen wat voor soort modellen toegepast kunnen worden is extra data exploratie verricht[^1]. Hieruit is gebeleken dat de data seizoensgebonden- en niet stationair is. Dit betekend dat standaard least-squares regressie niet toegepast kan worden, dit namelijk leiden tot sterke overfitting.
+Om een betere indicatie te krijgen wat voor soort modellen toegepast konden worden is extra data exploratie verricht[^1]. Hieruit is gebeleken dat de data seizoensgebonden- en niet stationair is. Dit betekend dat standaard least-squares regressie niet toegepast kon worden, dit leidt namelijk tot sterke overfitting.
 
-Na onderzoek[^2] te hebben gedaan naar modellering technieken voor dit soort data is besloten om met de volgende modellen te experimenteren:
+Na onderzoek[^2] te hebben gedaan naar geschikte modellering technieken is besloten om met de volgende modellen te experimenteren:
 
 - Lineare Regressie
 - Exponential Smoothing
 - Autoregressive Integrated Moving Average
 
 **Lineaire Regressie** <br>
-Om lineare regressie toe te kunnen passen moet de data geen autocorrelaties bevatten en stationair zijn. Hiervoor zijn differencing, het verschil tussen een meting en de voorgaande meting, technieken toegepast. Daarnaast is er een techniek[^3] gebruikt om de opeenvolgende data voor te bereiden voor gebruik in de algoritmen.
+Om lineare regressie toe te kunnen passen moest de data geen autocorrelaties bevatten en stationair zijn. Hiervoor waren differencing, het verschil tussen een meting en de voorgaande meting, technieken toegepast. Daarnaast was er een techniek[^3] toegepast om de opeenvolgende data voor te bereiden voor gebruik in de algoritmen.
 
-De volgende modellen zijn toegepast:
+De volgende modellen waren toegepast:
 
 - [LinearRegression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html) (LR)
 - [KNearestNeigbors](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsRegressor.html) (KNN)
@@ -28,14 +28,14 @@ De volgende modellen zijn toegepast:
 Aan de bovenstaande afbeeldingen is het volgende af te leiden:
 
 - Geen enkel linear regressie model behaalt de eis van 0.9 r-squared.
-- De lage of negatieve r-squared scores betekenen dat er geen patronen gevonden zijn.
+- De lage of negatieve r-squared scores betekenen dat er geen patronen gevonden waren.
 
-Waarschijnlijk missen er nog cruciale features. In verder iteraties zal dit verder onderzocht worden.
+Waarschijnlijk missen er nog cruciale features. In verder iteraties is dit verder onderzocht.
 
 **Exponential Smoothing** <br>
 Voorspelling die gemaakt worden met exponential smoothing methoden zijn gemiddelden van eerdere waarnemingen, waarbij de eerdere waarnemingen zwaarder meewegen dan de ouderen.
 
-De Holt-Winters seasonal methode is gebruikt om te kunnen profiteren van de trends en seizoensgebondenheid die aanwezig zijn in de data. Het `statsmodel` package heeft hier de volgende implementatie van:
+De Holt-Winters seasonal methode was gebruikt om te kunnen profiteren van de trends en seizoensgebondenheid die aanwezig waren in de data. Het `statsmodel` package heeft hier de volgende implementatie van:
 
 - [ExponentialSmoothing](https://www.statsmodels.org/dev/generated/statsmodels.tsa.holtwinters.ExponentialSmoothing.html)
 
@@ -55,7 +55,7 @@ Het kan gebruik maken van de trends, autocorrelatie en seizoensgebondenheid van 
 
 ![ARIMA resultaten per meetwaarden](images/arima.png)
 
-Net als bij de Exponential Smoothing modellen presteert deze techniek beter op de TVOC en CO2 meetwaarden. Deze waarden hebben ook een wekelijkse seizoensgebondenheid die momenteel nog niet gemodelleerd is. Wanneer er meer data beschikbaar is zal dit meegenomen worden in het model wat waarschijnlijk resulteert in hogere scores.
+Net als bij de Exponential Smoothing modellen presteerde deze techniek beter op de TVOC en CO2 meetwaarden. Deze waarden hebben ook een wekelijkse seizoensgebondenheid die momenteel nog niet gemodelleerd is. Wanneer er meer data beschikbaar is zal dit meegenomen worden in het model. Dit zal waarschijnlijk resulteren in hogere scores.
 
 ### Bevindingen
 
@@ -63,7 +63,7 @@ Momenteel is er nog geen enkel model wat de gestelde eis van 0.9 r-squared score
 
 ## Architectuur
 
-Ongeveer 90% van de data science projecten haalt het niet tot productie[^4]. Dit komt doordat het proces wat gebruikt wordt om machine learning modellen te ontwikkelen net perse goed aansluit bij de software engineering & DevOps processen. Om dit te voorkomen bij het Digital Twin 3.0 project zal hier rekening mee gehouden worden tijdens het ontwerp.
+Ongeveer 90% van de data science projecten haalt het niet tot productie[^4]. Dit komt doordat het proces wat gebruikt wordt om machine learning modellen te ontwikkelen net goed aansluit bij de software engineering & DevOps processen. Om dit te voorkomen bij het Digital Twin 3.0 project is hier rekening mee gehouden tijdens het ontwerp.
 
 Tijdens het ontwerp is er gewerkt met de C4 methoden[^5]. Dit is een ontwerp framework wat op vier abstractieniveaus de applicatie toelicht.
 
@@ -77,20 +77,20 @@ Voor dat een begin gemaakt was met het ontwerpen van de applicatie is eerst voor
 
 1. Het opslaan en ophalen van de data en voorspellingen.
 2. Frameworks en tooling die hierbij passen.
-   - API; gekozen voor `Flask`
-   - Database; gekozen voor `MySQL`
+    - API; gekozen voor `Flask`
+    - Database; gekozen voor `MySQL`
 3. Hoe feedback verzameld wordt en iteratief verwerkt kan worden.
-   - Modellen periodiek trainen en evalueren (R<sup>2</sup> & RMSE)
+    - Modellen periodiek trainen en evalueren (R<sup>2</sup> & RMSE)
 
 **C1: Context** <br>
-In het onderstaande systeem context diagram zijn de gebruikersgroepen en de manier waarop zij de applicatiegebruiken gevisualiseerd.
+In het onderstaande systeem context diagram zijn de gebruikersgroepen en de manier waarop zij de applicatie gebruiken gevisualiseerd.
 
 ![Systeem context diagram](images/ontwerp/c1_context.png)
 
 <center><small>Afbeelding 3: Systeem context diagram</small></center>
 
 **C2: Containers**<br>
-In dit diagram zal er verder ingezoomt worden op de twee software systemen zoals deze zijn beschreven in het vorige diagram. Ze zijn verder onderverdeeld worden in containers. Containers zijn onderdelen van het systeem die apart van elkaar functioneren. In dit diagram ligt de focus op de technologie keuzes en manier van communicatie tussen containers.
+In dit diagram wordt er verder ingezoomt op de twee software systemen zoals deze zijn beschreven in het vorige diagram. Ze zijn verder onderverdeeld in containers. Containers zijn onderdelen van het systeem die apart van elkaar functioneren. In dit diagram ligt de focus op de technologie keuzes en manier van communicatie tussen containers.
 
 ![Container diagram](images/ontwerp/c2_container.png)
 
@@ -146,7 +146,7 @@ Uit een vergelijkbaar onderzoek[^7] is gebleken dat temperatuur, luchtvochtighei
 Om het tweede doel te behalen zijn er twee modellen uitgewerkt. Een voor lange termijn voorspellingen en een voor korte termijn voorspellingen. In het onderzoeksrapport[^8] wordt verder toegelicht welke data gebruikt was en hoe deze werd voorbereid.
 
 **Korte termijn - Modellen** <br>
-Tijdens het onderzoek van Kallio et al.[^7] worden meerdere mogelijke modellen beschreven. Deze zijn specifiek uitgekozen omdat ze accurate voorspellingen kunnen geven op auto gecorreleerde data.
+Tijdens onderzoek van Kallio et al.[^7] worden meerdere mogelijke modellen beschreven. Deze zijn specifiek uitgekozen omdat ze accurate voorspellingen kunnen geven op auto gecorreleerde data.
 
 - [Ridge Regression (RR)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html)
 - [Decision Tree (DT)](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html)
@@ -156,7 +156,7 @@ Tijdens het onderzoek van Kallio et al.[^7] worden meerdere mogelijke modellen b
 Aangezien de CO2 waarden in een ruimte vaak niet drastisch veranderen in korte tijd is er gekozen om als baseline een ‘last-observation carried forward’ model te gebruiken. Dit geeft een de laatst gemeten CO2 waarde aan als de voorspelde waarde.
 
 **Korte termijn - Features** <br>
-Per model kan het verschillen welke features tot het beste resultaat leiden. Om dit te optimaliseren is gebruik gemaakt van de `SelectKBest` class. Deze klasse maakt gebruik van `f_regression` om te bepalen welke features het meest gecorreleerd zijn tot het target. Tussen de drie en dertig features zijn getest door middel van GridSearch. Onderstaand valt per model te zien welke features de hoogste score behalen.
+Per model kan het verschillen welke features tot het beste resultaat leiden. Om dit te optimaliseren is gebruik gemaakt van de `SelectKBest` class. Deze klasse maakt gebruik van `f_regression` om te bepalen welke features het meest gecorreleerd zijn tot het target. Tussen de drie en dertig features zijn getest door middel van `GridSearch`. Onderstaand valt per model te zien welke features de hoogste score behalen.
 
 ![Feature selectie](images/realisatie/feature-selection.png)
 
@@ -166,12 +166,14 @@ Een belangrijke bevinding uit deze grafiek is dat de modellen niet alleen de voo
 
 **Korte termijn - Resultaten** <br>
 Door de voorspelde waarde tegenover daadwerkelijke waarde te plotten kunnen patronen in de fouten van model worden opgespoord. Ideaal gezien vormen deze plotten een diagonale lijn, zoals bij het baseline, RR en MLP model. Dit betekend dat de voorspelde waarde dicht bij de daadwerkelijke waarde ligt. Bij de DTR en RF modellen worden de voorspellingen onnauwkeurig wanneer ze hoger worden.
+
 <center>
 ![Daadwerkelijk vs. voorspelt](images/realisatie/actual-v-predicted.png)
 </center>
 <center><small>Afbeelding 9: Daadwerkelijk vs. voorspelt</small></center>
 
 De r-squared (R2) score van een model geeft aan hoe goed de fit is van een model. Hoe dichter dit bij 1.0 is hoe beter. Het MLP en RR model presteren beter dan de baseline. Dit valt ook te zien in de foutmarges van de modellen. Het RR model presteert het beste op RMSE en MAE
+
 <center>
 ![Model evaluatie](images/realisatie/model-eval.png)
 </center>
@@ -185,6 +187,7 @@ Ieder model, baseline inbegrepen, vertoont hetzelfde patroon. Er zitten meer lag
 <center><small>Afbeelding 9: Daadwerkelijk vs. voorspelt</small></center>
 
 ### Bevindingen
+
 Vanuit de vorige iteratie waren er een viertal uitdagingen die opgelost moesten worden. Onderstaand zijn deze, en de oplossingen, toegelicht.
 
 _Onderzoeken wat invloed heeft op veranderingen in de meetwaarden en deze data toevoegen aan de modellen._

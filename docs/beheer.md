@@ -1,5 +1,3 @@
-In het vierde hoofdstuk van het project plan[^1] was uitgelegt hoe het project beheert zou worden. In dit onderdeel van het portfolio wordt toegelicht hoe dit in de realiteit verlopen is.
-
 ## Versiebeheer
 
 Het versiebeheersysteem wat binnen Handpicked Labs wordt toegepast is [BitBucket](https://www.bitbucket.org). Om dit systeem zo soepel mogelijk te laten verlopen is de onderstaande branching strategie toegepast.
@@ -167,4 +165,4 @@ Onderhouden heet -> Beheer
 
 - Onderdeel hernoemt.
 
-[^1]: [Projectplan: 4 Testaanpak en Configuratiemanagement](pdfs/project_plan.pdf#page=23) _blz. 23 t/m 25_
+

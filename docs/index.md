@@ -71,26 +71,25 @@ Na het ontwerp te hebben geïmplementeerd was dit [opgeleverd](realiseren.md#opl
 
 ### Realiseren <br>
 
-Om het ontwerp te realiseren was iteratief gewerkt. Iedere vier weken heeft er een oplevering plaatsgevonden voor de stakeholders van Handpicked Labs en Techtenna. 
+Om het ontwerp te realiseren was iteratief gewerkt. Iedere vier weken heeft er een oplevering plaatsgevonden voor de stakeholders van Handpicked Labs en Techtenna.
 
-Tijdens de [eerste oplevering](realiseren.md#oplevering-1-ontwerp) was het ontwerp besproken met de stakeholders, zij waren allemaal akkoord met de beslissingen die daar gemaakt werden. 
+Tijdens de [eerste oplevering](realiseren.md#oplevering-1-ontwerp) was het ontwerp besproken met de stakeholders, zij waren allemaal akkoord met de beslissingen die daar gemaakt werden.
 
-Daarnaast werd voorgesteld om het doel te wijzigen. Tot dit moment in het project was het doel om voor alle servicelagen (luchtkwaliteit, duurzaamheid en brandveiligheid) machine learning modellen te ontwikkelen. Voorgesteld was om de focus te leggen op de luchtkwaliteit, daar een robuust systeem voor te bouwen en daarna uit te breiden naar de rest van de servicelagen. De stakeholders gingen hiermee akkoord.   
+Daarnaast werd voorgesteld om het doel te wijzigen. Tot dit moment in het project was het doel om voor alle servicelagen (luchtkwaliteit, duurzaamheid en brandveiligheid) machine learning modellen te ontwikkelen. Voorgesteld was om de focus te leggen op de luchtkwaliteit, daar een robuust systeem voor te bouwen en daarna uit te breiden naar de rest van de servicelagen. De stakeholders gingen hiermee akkoord.
 
 Hierna was tijdens de [tweede oplevering](realiseren.md#oplevering-2-integratie-arima-modellen) het resultaat van de ARIMA modellen gepresenteerd. Hier bleken nog enkele problemen mee te zijn:
 
-1. Voorspellingen waren op een te kort termijn 
+1. Voorspellingen waren op een te kort termijn
 2. Modellen waren te groot (> 1GB)
 3. Voorspelligen waren niet accuraat genoeg.
-   
+
 Het doel was om deze problemen om te lossen voor de [derde oplevering](realiseren.md#oplevering-3-iteratie-op-integratie). Hiervoor was een tweede iteratie van de [model experimenten](ontwerpen.md#model-experimenten-versie-2) uitgevoerd wat resulteerde in verbeterde modellen. Deze loste de problemen van de voorgaande oplevering op en de stakeholders waren tevreden over de gemaakte veranderingen.
 
-### Onderhouden <br>
+### Beheer <br>
 
-- Versie beheer
-- Automatische tests
-- Deployment
-- Feedback
+Om het project in goede banen leiden is tijdens het opstellen van het plan[^5] uitgelegt hoe het project beheert zou worden. In dit onderdeel van het portfolio wordt toegelicht hoe dit in de realiteit verlopen is.
+
+Door middel van [versie beheer](beheer.md#versiebeheer) toe te passen wordt het aantal merge conflicten geminimaliseerd. Samen met [automatische tests](beheer.md#automatishe-tests) vormt dit de basis voor het [continous deployment](beheer.md#deployment) systeem.
 
 ### Adviseren <br>
 
@@ -102,7 +101,6 @@ Tijdens de realisatie zijn er meerdere onderwerpen waar adviezen over gemaakt zi
 
 > **_Met welke ethische aspecten dient rekening gehouden te worden? En op welke manier?_**
 
-
 ## Behaalde resultaten
 
 Hier komt een overzicht van de behaalde resultaten zodra dit het project afgerond is.
@@ -111,3 +109,4 @@ Hier komt een overzicht van de behaalde resultaten zodra dit het project afgeron
 [^2]: [Projectplan 1.2.1 SMART](./pdfs/project_plan.pdf#page=8) _blz. 8 - 9_
 [^3]: [Projectplan 1.4 Onderzoeksvragen](./pdfs/project_plan.pdf#page=12) _blz. 12 - 15_
 [^4]: [Projectplan 1.5 Eindproducten](./pdfs/project_plan.pdf#page=8) _blz. 16 - 17_
+[^5]: [Projectplan: 4 Testaanpak en Configuratiemanagement](pdfs/project_plan.pdf#page=23) _blz. 23 t/m 25_

@@ -161,7 +161,9 @@ Deze onderdelen resulteren in een systeem wat nauwkeurige voorspellingen kan mak
 **Reflectie** <br>
 Ik vind dat door meerdere iteraties uit te voeren en de feedback te verwerken er een passende oplossing voor het probleem is gevonden. Wel is het zo dat ik het teleurstellend vind dat het meldingensysteem niet is geimplementeerd. 
 
-Ik denk dat ik te snel aan het ontwikkelen van de machine learning modellen ben begonnen. Het zou waarschijnlijk beter zijn geweest als ik eerst een proof of concept zou hebben gemaakt waarin de visualisaties en meldingen getoond werden. Vanaf hier had ik dan sneller de juiste modellen kunnen maken.    
+Ik denk dat ik te snel aan het ontwikkelen van de machine learning modellen ben begonnen. Het zou waarschijnlijk beter zijn geweest als ik eerst een proof of concept zou hebben gemaakt waarin de visualisaties en meldingen getoond werden. Vanaf hier had ik dan sneller de juiste modellen kunnen maken.
+
+Ook had ik onderschat hoeveel tijd het kostte om de pipline en front-end veranderingen te realiseren. Origineel had ik een sprint ingepland voor het ontwerpen en realiseren van de applicatie. Uiteindelijk heb ik hier ongeveer drie sprints aan besteed. Tijdens de planningsfase van volgende projecten kan ik hier rekening mee houden. 
 
 [^1]: [Oplevering Twindle 3.0 Techtenna #1 07-02-21](pdfs/oplevering_1.pdf)
 [^2]: [Ontwerpen: Machine learning experimenten versie 1](ontwerpen.md#model-experimenten-versie-1)

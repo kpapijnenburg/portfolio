@@ -1,6 +1,75 @@
-# Beheer
+In het vierde hoofdstuk van het project plan[^1] was uitgelegt hoe het project beheert zou worden. In dit onderdeel van het portfolio wordt toegelicht hoe dit in de realiteit verlopen is.
 
-## Project plan
+## Versiebeheer
+
+Het versiebeheersysteem wat binnen Handpicked Labs wordt toegepast is [BitBucket](https://www.bitbucket.org). Om dit systeem zo soepel mogelijk te laten verlopen is de onderstaande branching strategie toegepast.
+
+![Branching strategie](images/beheer/branching-strategie.png)
+
+<center><small>Afbeelding 1: Branching strategie</center></small>
+
+Deze strategie is succesvol toegepast, zie afbeelding 2. Door deze strategie toe te passen is er voor gezorgd dat merge conflicten tot een minimum bleven en het mogelijk was om continous integration en deployment toe te passen.
+
+<center>
+![Branching strategie implementatie](images/beheer/branching-voorbeeld.png)
+</center>
+<center><small>Afbeelding 2: Branching strategie implementatie</center></small>
+
+## Automatische tests
+Tijdens het ontwikkelen van de machine learning API is zoveel mogelijk gewerkt op een test driven manier. Dit betekend dat methodes getests werden terwijl ze geïmplementeerd wrden. Op deze manier kon gevalideerd worden dat de code werkt na verwachtingen. Onderstaand valt het resultaat van deze tests te zien.
+
+```
+test_create_no_invalid_parameters_entity_persisted (tests.test_base_service.TestBaseService) ... ok
+test_delete_entity_entity_exists_deleted (tests.test_base_service.TestBaseService) ... ok
+test_get_all_none_exist_returns_empty_list (tests.test_base_service.TestBaseService) ... ok
+test_get_all_one_record_returns_list_of_one (tests.test_base_service.TestBaseService) ... ok
+test_get_by_filter_entity_does_not_exist_returns_empty_list (tests.test_base_service.TestBaseService) ... ok
+test_get_by_filter_entity_exists_returns_entity (tests.test_base_service.TestBaseService) ... ok
+test_get_by_id_entity_does_not_exist_returns_none (tests.test_base_service.TestBaseService) ... ok
+test_get_by_id_entity_exists_returns_entity (tests.test_base_service.TestBaseService) ... ok
+test_update_entity_not_found_raises_typeerror (tests.test_base_service.TestBaseService) ... ok
+test_update_entity_prohibited_raises_typeerror (tests.test_base_service.TestBaseService) ... ok
+test_get_between_dates_all_correct_four_forecasts_returned (tests.test_forecast_service.TestForecastService) ... ok
+test_get_between_dates_none_found_returns_empty_list (tests.test_forecast_service.TestForecastService) ... ok
+test_get_between_dates_not_datetime_raises_typerror (tests.test_forecast_service.TestForecastService) ... ok
+test_filter_between_date_end_before_start_raise_error (tests.test_ingestion_service.TestDummyIngestionService) ... ok
+test_remove_outliers_correct_dicts_outliers_were_removed (tests.test_preparation_methods.TestPreparationMethods) ... ok
+test_remove_outliers_min_higher_than_max_raises_value_error (tests.test_preparation_methods.TestPreparationMethods) ... ok
+test_resample_index_not_of_type_DatetimeIndex_raises_IndexError (tests.test_preparation_methods.TestPreparationMethods) ... ok
+test_resample_interpolate_returns_resamples_dataframe (tests.test_preparation_methods.TestPreparationMethods) ... ok
+test_resample_time_unit_is_not_H_or_T_raises_ValueError (tests.test_preparation_methods.TestPreparationMethods) ... ok
+test_split_into_segments_datetimeindex_returns_tuple_of_lists (tests.test_preparation_methods.TestPreparationMethods) ... ok
+test_split_into_segments_no_datetimeindex_raises_typeerror (tests.test_preparation_methods.TestPreparationMethods) ... ok
+test_train_test_split_segments_correct_nr_of_rows_returnd (tests.test_preparation_methods.TestPreparationMethods) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.673s
+
+OK
+```
+
+## Deployment
+BitBucket biedt de mogelijkheid om via het BitBucket pipelines een automatische deployment straat in te richten. Momenteel is er bij Handpicked Labs geen omgeving waar deze pipelines de applicaties naar kunnen deployen. Om voorbereid te zijn op een toekomst wanneer dit wel mogelijk zou zijn is de onderstaande pipeline ontwikkeld.
+
+```
+image: python:3.8
+
+pipelines:
+  default:
+    - parallel:
+        - step:
+            name: Test
+            caches:
+              - pip
+            script:
+              - if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+              - python -m unittest
+```
+
+
+## Feedback
+
+### Project plan
 
 **Sjoerd - 10-02-2021** <br>
 In de introductie van het project plan stond dat er een Digital Twin ontwikkeld was voor het kantoorpand van Handpicked Agencies. Sjoerd had de opmerking dat er tevens een implementatie gemaakt is voor in hotelomgevingen. De introductie is herschreven zodat deze niet specifiek vermeld waar Digital Twins actief zijn.
@@ -63,7 +132,7 @@ Voeg ook een deelvraag over air quality toe. Je hebt daar niet genoeg kennis van
 
 - Deelvraag 3 specifiek op luchtkwaliteit gericht.
 
-## Portfolio
+### Portfolio
 
 ** Bartosz op 19-05-2021** <br>
 Evaluatie, zelf reflexie en conclusie bijvoegen in de leeswijzer. op hoog niveau van leeswijzer wil je laten zien wat het probleem was en in hoeverre het opgelost is (behaalde resultaten).
@@ -71,9 +140,9 @@ Evaluatie, zelf reflexie en conclusie bijvoegen in de leeswijzer. op hoog niveau
 ** Bartosz op 02-06-2021** <br>
 Gebruik verleden tijd, omdat het een blik is op de al uitgevoerde werk/project.
 
- - Project omgezet naar verleden tijd.
+- Project omgezet naar verleden tijd.
 
-De structuur dat je voorstelde met abstractie niveaus is goed. Je kan dan ook strategisch wat meer detail plaatsen in bv. leeswijzer -waar je zelf denkt dat je het meeste kan scoren. Want je wilt niet dat een opmerkelijke werk van je te onzichtbaar is.  Je kan dus shinen door het beste werk stiekem expliciet naar voren te brengen in de leeswijzer. dat kan uiteraard niet te veel van zijn- dus wees selectief.
+De structuur dat je voorstelde met abstractie niveaus is goed. Je kan dan ook strategisch wat meer detail plaatsen in bv. leeswijzer -waar je zelf denkt dat je het meeste kan scoren. Want je wilt niet dat een opmerkelijke werk van je te onzichtbaar is. Je kan dus shinen door het beste werk stiekem expliciet naar voren te brengen in de leeswijzer. dat kan uiteraard niet te veel van zijn- dus wees selectief.
 
 planning zou ik weghalen van je introductie pagina. Te veel detail.
 
@@ -85,7 +154,7 @@ planning zou ik weghalen van je introductie pagina. Te veel detail.
 
 in story_mapping.pdf zie ik niet vanuit de tekst een verwijzing naar de bronnen die je helemaal op het einde had bijgevoegd. Verwijs je ernaar? Dat zou moeten.
 
-- Zo ver ik zie zijn alle bronnen op de APA stijl opgesteld en wordt er naar verwezen in de tekst.   
+- Zo ver ik zie zijn alle bronnen op de APA stijl opgesteld en wordt er naar verwezen in de tekst.
 
 Bij het analyseren zou ik wat meer requirements willen zien. Dus wat was gevraagd om te bouwen uiteindelijk, en over ML aspecten vind ik ook maar amper iets.
 
@@ -97,3 +166,5 @@ Bij het analyseren zou ik wat meer requirements willen zien. Dus wat was gevraag
 Onderhouden heet -> Beheer
 
 - Onderdeel hernoemt.
+
+[^1]: [Projectplan: 4 Testaanpak en Configuratiemanagement](pdfs/project_plan.pdf#page=23) _blz. 23 t/m 25_

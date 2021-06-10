@@ -85,6 +85,13 @@ Hierna was tijdens de [tweede oplevering](realiseren.md#oplevering-2-integratie-
    
 Het doel was om deze problemen om te lossen voor de [derde oplevering](realiseren.md#oplevering-3-iteratie-op-integratie). Hiervoor was een tweede iteratie van de [model experimenten](ontwerpen.md#model-experimenten-versie-2) uitgevoerd wat resulteerde in verbeterde modellen. Deze loste de problemen van de voorgaande oplevering op en de stakeholders waren tevreden over de gemaakte veranderingen.
 
+### Onderhouden <br>
+
+- Versie beheer
+- Automatische tests
+- Deployment
+- Feedback
+
 ### Adviseren <br>
 
 Tijdens de realisatie zijn er meerdere onderwerpen waar adviezen over gemaakt zijn:
@@ -95,11 +102,6 @@ Tijdens de realisatie zijn er meerdere onderwerpen waar adviezen over gemaakt zi
 
 > **_Met welke ethische aspecten dient rekening gehouden te worden? En op welke manier?_**
 
-### Onderhouden <br>
-
-- Versie beheer
-- Planning
-- Feedback
 
 ## Behaalde resultaten
 

@@ -93,20 +93,69 @@ Door middel van [versie beheer](beheer.md#versiebeheer) toe te passen wordt het 
 
 ### Adviseren <br>
 
-Tijdens de realisatie zijn er meerdere onderwerpen waar adviezen over gemaakt zijn:
+Na afloop van het project is er [teruggekeken](realiseren.md#algemene-evaluatie-reflectie) op wat er goed ging en wat er beter kon. Vanuit deze bevindingen zijn adviezen uitgebracht over de volgende onderwerpen
 
-- Aanpak & scope
-- Volgende stappen
-- Ethische gevolgen
+1. [Data](adviseren.md#data)
+2. [Workflow](adviseren.md#workflow)
+3. [Ethiek](adviseren.md#ethiek)
+
+Door de ethische aspecten van het project te analyseren is antwoord gegeven op de volgende vraag:
 
 > **_Met welke ethische aspecten dient rekening gehouden te worden? En op welke manier?_**
 
-## Behaalde resultaten
+## Conclusie
 
-Hier komt een overzicht van de behaalde resultaten zodra dit het project afgerond is.
+Ter conclusie zal bepaalt worden of aan het doel voldaan is door de hoofd- en deelvragen te beantwoorden en te reflecteren op de stageperiode. Het doel van het project was:
+
+> **_Vanaf 18-06 zullen de gebruikers van Twindle meldingen kunnen ontvangen wanneer slechte luchtkwaliteit wordt verwacht. Het machine learning model wat hiervoor wordt toegepast zal een "recall" en "precision" score hebben van minimaal 90%._**
+
+**Wie zijn de gebruikers van Twindle?** <br>
+Door gebruik te maken van een stakeholdersanalyse is bepaalt dat de gebruikers van twindle in twee groepen vallen; Gebouwbeheerders en gebouwgebruikers.
+
+**Welke data is benodigd om luchtkwaliteit te voorspellen** <br>
+Om te bepalen welke data benodigd is voor de voorspellingen was gezocht naar onderzoeken die hetzelfde onderwerp betreffen. Hieruit is gebleken dat de oppervlakte van ruimten, het bouwjaar, verwarmingsinstellingen, raamstand, buitentemperatuur, luchtvochtigheid en zonnestraling benodigd zijn. Aangezien deze nog niet aanwezig zijn in de dataset zijn deze verzameld\*
+
+**Hoe kan machine learning worden toegepast om luchtkwaliteit te voorspellen?** <br>
+Door twee iteraties model experimenten uit te voeren is bevonden dat door `ridge regression` toe te passen de luchtkwaliteit op korte termijn, tot 15 minuten in de toekomst, valt te voorspellen. Een model wat op langere termijn effectief is was niet gevonden. De oplossing hiervoor is om gemiddelden waarden voor bepaalde dagen en tijdstippen te gebruiken als voorspelling.
+
+**Met welke ethische aspecten dient rekening gehouden te worden? En op welke manier?** <br>
+Het Twindle project wordt al aan hoge standaarden wat betreft privacy en dataverzameling gehouden. Het is belangrijk dat bij uitbreiding van het project, vooral de brandveiligheid servicelaag, deze standaarden aangehouden worden.
+
+**Hoe kunnen machine learning modellen gekoppeld worden aan Twindle?** <br>
+Een groot gedeelte van de machine learning projecten faalt omdat de modellen niet goed up-to-date gehouden kunnen worden. Om dit te voorkomen is een pipeline ontwikkeld die periodiek de modellen update en nieuwe voorspellingen maakt. Via een API is dit gekoppeld aan Twindle.
+
+<small>\*Alleen indien er een model ontwikkeld is voor de desbetreffende meetwaarden</small>
+
+### Evaluatie & reflectie
+
+Om te bepalen of het doel behaalt is zal op de STARR methode[^6] gereflecteerd worden op de gehele stageperiode.
+
+**Situatie** <br>
+Tijdens de periode van 08-02-21 tot 09-07-2021 heb ik stage gelopen bij Handpicked Labs. Het doel moest bereikt zijn op 18-06-2021. Gedurende deze periode heb ik gewerkt aan het Twindle project. Hierbij werd ik begeleid door Sjoerd van Oosten, conceptueel, en Samet Yilmaz, technisch.
+
+**Taak** <br>
+Het was aan mij om een applicatie te ontwerpen en ontwikkelen waarmee gebruikers van Twindle meldingen konden ontvangen wanneer de luchtkwaliteit in gevaar was. Dit omdat luchtkwaliteit een steeds groter probleem is in ruimten, en we personen willen beschermen tegen de gevolgen van slechte luchtkwaliteit.
+
+**Actie** <br>
+Dit probleem heb ik opgelost door de volgende onderdelen te realiseren:
+
+1. Machine learning modellen die de CO2-waarden in een bepaalde ruimte voorspellen.
+2. Een pipeline die deze modellen up-to-date houdt en regelmatig nieuwe voorspellingen maakt.
+3. Een front-end uitbreiding waar deze voorspellingen worden gevisualiseerd.
+
+**Resultaat** <br>
+Deze onderdelen resulteren in een systeem wat nauwkeurige voorspellingen kan maken en deze op een manier visualiseert zodat personen aangespoort worden de situatie te verbeteren. Het andere gedeelte van het doel, het weergeven van meldingen, is wegens tijdgebrek en complicaties tijdens het ontwikkelen niet gerealiseerd.
+
+**Reflectie** <br>
+Ik vind dat door meerdere iteraties uit te voeren en de feedback te verwerken er een passende oplossing voor het probleem is gevonden. Wel is het zo dat ik het teleurstellend vind dat het meldingensysteem niet is geimplementeerd.
+
+Ik denk dat ik te snel aan het ontwikkelen van de machine learning modellen ben begonnen. Het zou waarschijnlijk beter zijn geweest als ik eerst een proof of concept zou hebben gemaakt waarin de visualisaties en meldingen getoond werden. Vanaf hier had ik sneller de juiste modellen kunnen ontwikkelen.
+
+Ook had ik onderschat hoeveel tijd het kostte om de pipline en front-end veranderingen te realiseren. Origineel had ik een sprint ingepland voor het ontwerpen en realiseren van de applicatie. Uiteindelijk heb ik hier ongeveer drie sprints aan besteed. Tijdens de planningsfase van volgende projecten kan ik hier rekening mee houden.
 
 [^1]: [Projectplan 1.4.1 & 1.4.2](./pdfs/project_plan.pdf#page=13) _blz. 13 - 15_
 [^2]: [Projectplan 1.2.1 SMART](./pdfs/project_plan.pdf#page=8) _blz. 8 - 9_
 [^3]: [Projectplan 1.4 Onderzoeksvragen](./pdfs/project_plan.pdf#page=12) _blz. 12 - 15_
 [^4]: [Projectplan 1.5 Eindproducten](./pdfs/project_plan.pdf#page=8) _blz. 16 - 17_
 [^5]: [Projectplan: 4 Testaanpak en Configuratiemanagement](pdfs/project_plan.pdf#page=23) _blz. 23 t/m 25_
+[^6]: [Scribbr: Reflecteren met de STARR-methode](https://www.scribbr.nl/stage/starr-methode/)

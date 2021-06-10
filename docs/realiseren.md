@@ -133,41 +133,8 @@ Het verwerken van het model in de pipeline ging vlot. Ik had er rekening mee geh
 
 De front-end implementatie verliep niet zo soepel. Ik ben erg lang bezig geweest om met Chart.js informatieve grafieken te maken. Aangezien ik hier nog geen ervaring mee had ging het erg moeizaam. Daarnaast ging door een update aan het package de date parsing kapot. Momenteel heb ik dit handmatig opgelost maar dit resulteert nog niet in de gewenste visualisaties.
 
-## Algemene evaluatie & reflectie
-Op het begin van het project was het volgende doel opgesteld: 
-
-> **_Vanaf 18-06 zullen de gebruikers van Twindle meldingen kunnen ontvangen wanneer slechte luchtkwaliteit wordt verwacht. Het machine learning model wat hiervoor wordt toegepast zal een "recall" en "precision" score hebben van minimaal 90%._**
-
-Om te bepalen of dit doel behaalt is zal op de STARR methode[^6] gereflecteerd worden op de gehele stageperiode. 
-
-### STARR reflectie
-
-**Situatie** <br>
-Tijdens de periode van 08-02-21 tot 09-07-2021 heb ik stage gelopen bij Handpicked Labs. Het doel, zoals beschreven bij de evaluatie, moest bereikt zijn op 18-06-2021. Gedurende deze periode heb ik gewerkt aan het Twindle project. Hierbij werd ik begeleid door Sjoerd van Oosten, conceptueel, en Samet Yilmaz, technisch. 
-
-**Taak** <br>
-Het was aan mij om een applicatie te ontwerpen en ontwikkelen waarmee gebruikers van Twindle meldingen konden ontvangen wanneer de luchtkwaliteit in gevaar was. Dit omdat luchtkwaliteit een steeds groter probleem is in ruimten, en we personen willen beschermen tegen de gevolgen van slechte luchtkwaliteit.    
-
-**Actie** <br>
-Dit probleem heb ik opgelost door de volgende onderdelen te realiseren:
-
-1. Machine learning modellen die de CO2-waarden in een bepaalde ruimte voorspellen.
-2. Een pipeline die deze modellen up-to-date houdt en regelmatig nieuwe voorspellingen maakt.
-3. Een front-end uitbreiding waar deze voorspellingen worden gevisualiseerd.
-
-**Resultaat** <br>
-Deze onderdelen resulteren in een systeem wat nauwkeurige voorspellingen kan maken en deze op een manier visualiseert zodat personen aangespoort worden de situatie te verbeteren. Het andere gedeelte van het doel, het weergeven van meldingen, is wegens tijdgebrek en complicaties tijdens het ontwikkelen niet gerealiseerd.  
-
-**Reflectie** <br>
-Ik vind dat door meerdere iteraties uit te voeren en de feedback te verwerken er een passende oplossing voor het probleem is gevonden. Wel is het zo dat ik het teleurstellend vind dat het meldingensysteem niet is geimplementeerd. 
-
-Ik denk dat ik te snel aan het ontwikkelen van de machine learning modellen ben begonnen. Het zou waarschijnlijk beter zijn geweest als ik eerst een proof of concept zou hebben gemaakt waarin de visualisaties en meldingen getoond werden. Vanaf hier had ik dan sneller de juiste modellen kunnen maken.
-
-Ook had ik onderschat hoeveel tijd het kostte om de pipline en front-end veranderingen te realiseren. Origineel had ik een sprint ingepland voor het ontwerpen en realiseren van de applicatie. Uiteindelijk heb ik hier ongeveer drie sprints aan besteed. Tijdens de planningsfase van volgende projecten kan ik hier rekening mee houden. 
-
 [^1]: [Oplevering Twindle 3.0 Techtenna #1 07-02-21](pdfs/oplevering_1.pdf)
 [^2]: [Ontwerpen: Machine learning experimenten versie 1](ontwerpen.md#model-experimenten-versie-1)
 [^3]: [Forecasting: Principles and Practice](https://otexts.com/fpp2/index.html)
 [^4]: [Oplevering Twindle 3.0 Techtenna #2 04-05-21](pdfs/oplevering_2.pdf)
 [^5]: [Oplevering Twindle 3.0 Techtenna # 3 02-06-21](pdfs/oplevering_3.pdf)
-[^6]: [Sribbr: Reflecteren met de STARR-methode](https://www.scribbr.nl/stage/starr-methode/)

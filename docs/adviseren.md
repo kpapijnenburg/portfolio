@@ -38,4 +38,13 @@ De bedoeling was om tijdens het project gebruik te maken van [continous integrat
 
 Om in de toekomst betere demoes te kunnen geven en hogere kwaliteit software af te leveren is het advies om een development en release omgeving beschikbaar te stellen voor de stagiaires. 
 
+## Ethiek
+Om te bepalen met welke ethische aspecten rekening gehouden moet worden en op welke manier is de TICT-tool[^2] toegepast. Dit is een tool die helpt bij het inschatten van de impact die een nieuwe technology gaat maken. Voor dit project is gebruik gemaakt van de "quick scan" optie om een globaal overzicht van de situatie te krijgen[^3].
+
+Belangrijke bevingingen van deze quickscan zijn dat er al veel rekening gehouden wordt met privacy en dat er een positieve impact gemaakt wordt op de personen die de applicatie gebruiken. 
+
+Er zijn plannen om de applicatie uit te breiden zodat deze kan de brandveiligheid kan monitoren. Wanneer deze uitbreidingen worden gemaakt is het belangrijk dat er aan dezelfde  hoge privacy eisen wordt gehouden.
+
 [^1]: [Forecasting office indoor CO2 concentration using machine learning with a one-year dataset](https://doi.org/10.1016/j.buildenv.2020.107409)
+[^2]: [Technology Impact Cycle Tool](https://www.tict.io/)
+[^3]: [TICT Quickscan](pdfs/tict_quickscan.pdf)

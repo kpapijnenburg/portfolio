@@ -230,6 +230,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#behaalde-resultaten" class="md-nav__link">
+    Behaalde resultaten
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -265,15 +272,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#adviseren" class="md-nav__link">
-    Adviseren 
+  <a href="#beheer" class="md-nav__link">
+    Beheer 
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#onderhouden" class="md-nav__link">
-    Onderhouden 
+  <a href="#adviseren" class="md-nav__link">
+    Adviseren 
   </a>
   
 </li>
@@ -284,9 +291,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#behaalde-resultaten" class="md-nav__link">
-    Behaalde resultaten
+  <a href="#conclusie" class="md-nav__link">
+    Conclusie
   </a>
+  
+    <nav class="md-nav" aria-label="Conclusie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluatie-reflectie" class="md-nav__link">
+    Evaluatie &amp; reflectie
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -351,8 +371,8 @@
   
   
     <li class="md-nav__item">
-      <a href="adviseren/" class="md-nav__link">
-        Adviseren
+      <a href="beheer/" class="md-nav__link">
+        Beheer
       </a>
     </li>
   
@@ -366,8 +386,8 @@
   
   
     <li class="md-nav__item">
-      <a href="beheer/" class="md-nav__link">
-        Beheer
+      <a href="adviseren/" class="md-nav__link">
+        Adviseren
       </a>
     </li>
   
@@ -455,6 +475,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#behaalde-resultaten" class="md-nav__link">
+    Behaalde resultaten
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -490,15 +517,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#adviseren" class="md-nav__link">
-    Adviseren 
+  <a href="#beheer" class="md-nav__link">
+    Beheer 
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#onderhouden" class="md-nav__link">
-    Onderhouden 
+  <a href="#adviseren" class="md-nav__link">
+    Adviseren 
   </a>
   
 </li>
@@ -509,9 +536,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#behaalde-resultaten" class="md-nav__link">
-    Behaalde resultaten
+  <a href="#conclusie" class="md-nav__link">
+    Conclusie
   </a>
+  
+    <nav class="md-nav" aria-label="Conclusie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluatie-reflectie" class="md-nav__link">
+    Evaluatie &amp; reflectie
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -543,7 +583,7 @@
 <p><strong><em>Hoe kan Twindle uitgebreidt worden om een hoge luchtkwaliteit in ruimten te garanderen?</em></strong></p>
 </blockquote>
 <p><strong>Deelvragen</strong> <br>
-Onderstaand zijn de deelvragen opgesomd. In het projectplan is een overzicht<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> te vinden waarin wordt toegelicht welke onderzoeksmethoden gebruikt zullen worden om de vraag te beantwoorden.</p>
+Onderstaand zijn de deelvragen opgesomd. In het projectplan is een overzicht<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> te vinden waarin wordt toegelicht welke onderzoeksmethoden gebruikt zijn om de vraag te beantwoorden.</p>
 <ul>
 <li>Wie zijn de gebruikers van Twindle?</li>
 <li>Welke data is benodigd om luchtkwaliteit te voorspellen</li>
@@ -553,9 +593,16 @@ Onderstaand zijn de deelvragen opgesomd. In het projectplan is een overzicht<sup
 </ul>
 <h3 id="doelstelling">Doelstelling</h3>
 <blockquote>
-<p><strong><em>Vanaf 18-06 zullen de gebruikers van Twindle meldingen kunnen ontvangen wanneer slechte luchtkwaliteit wordt verwacht. Het machine learning model wat hiervoor wordt toegepast zal een "recall" en "precision" score hebben van minimaal 95%.</em></strong></p>
+<p><strong><em>Vanaf 18-06 zullen de gebruikers van Twindle meldingen kunnen ontvangen wanneer slechte luchtkwaliteit wordt verwacht. Het machine learning model wat hiervoor wordt toegepast zal een "recall" en "precision" score hebben van minimaal 90%.</em></strong></p>
 </blockquote>
 <p>Een verdere beschrijving van het doel kan in hoofdstuk <em>1.2.1 SMART</em> <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> van het projectplan gevonden worden.</p>
+<h3 id="behaalde-resultaten">Behaalde resultaten</h3>
+<p>Uiteindelijk is er een pipeline ontwikkeld die periodiek bekijkt of de machine learning modellen geupdated moeten worden en voorspellingen maakt. Via een API is deze applicatie gekoppeld aan Twindle. Onderstaand valt een voorbeeld van deze koppeling te zien.</p>
+<p><center>
+<img alt="Voorbeeld koppeling" src="images/realisatie/mock-up-realisatie.png" />
+</center>
+<center><small>Afbeedling 1: Voorbeeld van koppeling</center></small></p>
+<p>Door deze manier van visualizatie toe te passen worden gebruikers aangespoort om in te grijpen wanneer de situatie dreigt te verslechteren. </p>
 <h2 id="leeswijzer">Leeswijzer</h2>
 <p>Tijdens het afstuderen is gewerkt aan de ICT competenties zoals beschreven in de <a href="https://hboidomein-212218.appspot.com/pdf?template=https://hboidomein-212218.appspot.com/template.html&amp;deep=true&amp;full=true&amp;lang=NL&amp;skipcache=&amp;viewport=1156x818&amp;url=https://hboidomein-212218.appspot.com/pdfdoc">HBO-I domeinbeschrijving</a>. In de onderstaande secties zal per competentie kort samengevat worden hoe deze aangetoond is.</p>
 <h3 id="analyseren">Analyseren</h3>
@@ -563,7 +610,7 @@ Onderstaand zijn de deelvragen opgesomd. In het projectplan is een overzicht<sup
 <blockquote>
 <p><strong><em>Wie zijn de gebruikers van Twindle?</em></strong></p>
 </blockquote>
-<p>In dit onderdeel van het portfolio zal deze vraag beantwoord worden door middel van een <a href="analyseren/#stakeholders-analyse">stakeholders analyse</a>. Hierna is verder onderzocht wat de behoeften van deze stakeholders zijn door gebruik te maken van <a href="analyseren/#story-mapping">story mapping technieken</a>.</p>
+<p>Door middel van een <a href="analyseren/#stakeholders-analyse">stakeholders analyse</a> is deze vraag beantwoord. Hierna is verder onderzocht wat de behoeften van deze stakeholders waren door gebruik te maken van <a href="analyseren/#story-mapping">story mapping technieken</a>.</p>
 <p>Daarnaast werd er geanalyseerd welke data de Twindle applicatie tot nu toe heeft verzameld in een <a href="analyseren/#exploratory-data-analyse">exploratory data analyse</a>. De resultaten van deze analyses zijn verwerkt in requirements. Deze zijn opgesplitst in de volgende categorieën:</p>
 <ul>
 <li><a href="analyseren/#software-requirements">Software</a></li>
@@ -586,31 +633,65 @@ Onderstaand zijn de deelvragen opgesomd. In het projectplan is een overzicht<sup
 </blockquote>
 <p>Na het ontwerp te hebben geïmplementeerd was dit <a href="realiseren/#oplevering-2-integratie-arima-modellen">opgeleverd</a>. Hieruit bleek dat er meerdere problemen waren met de machine learning modellen die opgelost moesten worden. Hiervoor is een <a href="ontwerpen/#model-experimenten-versie-2">tweede iteratie</a> van de model experimenten gedaan.</p>
 <h3 id="realiseren">Realiseren <br></h3>
-<p>Na goedkeuring van het ontwerp door de stakeholders vanuit Handpicked Labs en Techtenna was begonnen an het realiseren van de applicaties. Hiervoor is gewerkt in vier iteraties, waarvan er drie voor 18-06 plaats hebben gevonden.</p>
-<ul>
-<li><a href="realiseren/#oplevering-1-ontwerp">Oplevering 1: Ontwerp</a></li>
-<li><a href="realiseren/#oplevering-2-integratie-arima-modellen">Oplevering 2: Integratie ARIMA modellen</a></li>
-<li><a href="realiseren/#oplevering-3-iteratie-op-integratie">Oplevering 3: Iteratie op integratie</a></li>
-</ul>
-<p>Voor ieder van deze opleveringen is een conclusie, evaluatie en reflectie geschreven.</p>
+<p>Om het ontwerp te realiseren was iteratief gewerkt. Iedere vier weken heeft er een oplevering plaatsgevonden voor de stakeholders van Handpicked Labs en Techtenna.</p>
+<p>Tijdens de <a href="realiseren/#oplevering-1-ontwerp">eerste oplevering</a> was het ontwerp besproken met de stakeholders, zij waren allemaal akkoord met de beslissingen die daar gemaakt werden.</p>
+<p>Daarnaast werd voorgesteld om het doel te wijzigen. Tot dit moment in het project was het doel om voor alle servicelagen (luchtkwaliteit, duurzaamheid en brandveiligheid) machine learning modellen te ontwikkelen. Voorgesteld was om de focus te leggen op de luchtkwaliteit, daar een robuust systeem voor te bouwen en daarna uit te breiden naar de rest van de servicelagen. De stakeholders gingen hiermee akkoord.</p>
+<p>Hierna was tijdens de <a href="realiseren/#oplevering-2-integratie-arima-modellen">tweede oplevering</a> het resultaat van de ARIMA modellen gepresenteerd. Hier bleken nog enkele problemen mee te zijn:</p>
+<ol>
+<li>Voorspellingen waren op een te kort termijn</li>
+<li>Modellen waren te groot (&gt; 1GB)</li>
+<li>Voorspelligen waren niet accuraat genoeg.</li>
+</ol>
+<p>Het doel was om deze problemen om te lossen voor de <a href="realiseren/#oplevering-3-iteratie-op-integratie">derde oplevering</a>. Hiervoor was een tweede iteratie van de <a href="ontwerpen/#model-experimenten-versie-2">model experimenten</a> uitgevoerd wat resulteerde in verbeterde modellen. Deze loste de problemen van de voorgaande oplevering op en de stakeholders waren tevreden over de gemaakte veranderingen.</p>
+<h3 id="beheer">Beheer <br></h3>
+<p>Om het project in goede banen leiden is tijdens het opstellen van het plan<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup> uitgelegt hoe het project beheert zou worden. In dit onderdeel van het portfolio wordt toegelicht hoe dit in de realiteit verlopen is.</p>
+<p>Door middel van <a href="beheer/#versiebeheer">versie beheer</a> toe te passen wordt het aantal merge conflicten geminimaliseerd. Samen met <a href="beheer/#automatishe-tests">automatische tests</a> vormt dit de basis voor het <a href="beheer/#deployment">continous deployment</a> systeem.</p>
 <h3 id="adviseren">Adviseren <br></h3>
-<p>Tijdens de realisatie zijn er meerdere onderwerpen waar adviezen over gemaakt zijn:</p>
-<ul>
-<li>Aanpak &amp; scope</li>
-<li>Volgende stappen</li>
-<li>Ethische gevolgen</li>
-</ul>
+<p>Na afloop van het project is er <a href="realiseren/#algemene-evaluatie-reflectie">teruggekeken</a> op wat er goed ging en wat er beter kon. Vanuit deze bevindingen zijn adviezen uitgebracht over de volgende onderwerpen</p>
+<ol>
+<li><a href="adviseren/#data">Data</a></li>
+<li><a href="adviseren/#workflow">Workflow</a></li>
+<li><a href="adviseren/#ethiek">Ethiek</a></li>
+</ol>
+<p>Door de ethische aspecten van het project te analyseren is antwoord gegeven op de volgende vraag:</p>
 <blockquote>
 <p><strong><em>Met welke ethische aspecten dient rekening gehouden te worden? En op welke manier?</em></strong></p>
 </blockquote>
-<h3 id="onderhouden">Onderhouden <br></h3>
-<ul>
-<li>Versie beheer</li>
-<li>Planning</li>
-<li>Feedback</li>
-</ul>
-<h2 id="behaalde-resultaten">Behaalde resultaten</h2>
-<p>Hier komt een overzicht van de behaalde resultaten zodra dit het project afgerond is.</p>
+<h2 id="conclusie">Conclusie</h2>
+<p>Ter conclusie zal bepaalt worden of aan het doel voldaan is door de hoofd- en deelvragen te beantwoorden en te reflecteren op de stageperiode. Het doel van het project was:</p>
+<blockquote>
+<p><strong><em>Vanaf 18-06 zullen de gebruikers van Twindle meldingen kunnen ontvangen wanneer slechte luchtkwaliteit wordt verwacht. Het machine learning model wat hiervoor wordt toegepast zal een "recall" en "precision" score hebben van minimaal 90%.</em></strong></p>
+</blockquote>
+<p><strong>Wie zijn de gebruikers van Twindle?</strong> <br>
+Door gebruik te maken van een stakeholdersanalyse is bepaalt dat de gebruikers van twindle in twee groepen vallen; Gebouwbeheerders en gebouwgebruikers.</p>
+<p><strong>Welke data is benodigd om luchtkwaliteit te voorspellen</strong> <br>
+Om te bepalen welke data benodigd is voor de voorspellingen was gezocht naar onderzoeken die hetzelfde onderwerp betreffen. Hieruit is gebleken dat de oppervlakte van ruimten, het bouwjaar, verwarmingsinstellingen, raamstand, buitentemperatuur, luchtvochtigheid en zonnestraling benodigd zijn. Aangezien deze nog niet aanwezig zijn in de dataset zijn deze verzameld*</p>
+<p><strong>Hoe kan machine learning worden toegepast om luchtkwaliteit te voorspellen?</strong> <br>
+Door twee iteraties model experimenten uit te voeren is bevonden dat door <code>ridge regression</code> toe te passen de luchtkwaliteit op korte termijn, tot 15 minuten in de toekomst, valt te voorspellen. Een model wat op langere termijn effectief is was niet gevonden. De oplossing hiervoor is om gemiddelden waarden voor bepaalde dagen en tijdstippen te gebruiken als voorspelling.</p>
+<p><strong>Met welke ethische aspecten dient rekening gehouden te worden? En op welke manier?</strong> <br>
+Het Twindle project wordt al aan hoge standaarden wat betreft privacy en dataverzameling gehouden. Het is belangrijk dat bij uitbreiding van het project, vooral de brandveiligheid servicelaag, deze standaarden aangehouden worden.</p>
+<p><strong>Hoe kunnen machine learning modellen gekoppeld worden aan Twindle?</strong> <br>
+Een groot gedeelte van de machine learning projecten faalt omdat de modellen niet goed up-to-date gehouden kunnen worden. Om dit te voorkomen is een pipeline ontwikkeld die periodiek de modellen update en nieuwe voorspellingen maakt. Via een API is dit gekoppeld aan Twindle.</p>
+<p><small>*Alleen indien er een model ontwikkeld is voor de desbetreffende meetwaarden</small></p>
+<h3 id="evaluatie-reflectie">Evaluatie &amp; reflectie</h3>
+<p>Om te bepalen of het doel behaalt is zal op de STARR methode<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup> gereflecteerd worden op de gehele stageperiode.</p>
+<p><strong>Situatie</strong> <br>
+Tijdens de periode van 08-02-21 tot 09-07-2021 heb ik stage gelopen bij Handpicked Labs. Het doel moest bereikt zijn op 18-06-2021. Gedurende deze periode heb ik gewerkt aan het Twindle project. Hierbij werd ik begeleid door Sjoerd van Oosten, conceptueel, en Samet Yilmaz, technisch.</p>
+<p><strong>Taak</strong> <br>
+Het was aan mij om een applicatie te ontwerpen en ontwikkelen waarmee gebruikers van Twindle meldingen konden ontvangen wanneer de luchtkwaliteit in gevaar was. Dit omdat luchtkwaliteit een steeds groter probleem is in ruimten, en we personen willen beschermen tegen de gevolgen van slechte luchtkwaliteit.</p>
+<p><strong>Actie</strong> <br>
+Dit probleem heb ik opgelost door de volgende onderdelen te realiseren:</p>
+<ol>
+<li>Machine learning modellen die de CO2-waarden in een bepaalde ruimte voorspellen.</li>
+<li>Een pipeline die deze modellen up-to-date houdt en regelmatig nieuwe voorspellingen maakt.</li>
+<li>Een front-end uitbreiding waar deze voorspellingen worden gevisualiseerd.</li>
+</ol>
+<p><strong>Resultaat</strong> <br>
+Deze onderdelen resulteren in een systeem wat nauwkeurige voorspellingen kan maken en deze op een manier visualiseert zodat personen aangespoort worden de situatie te verbeteren. Het andere gedeelte van het doel, het weergeven van meldingen, is wegens tijdgebrek en complicaties tijdens het ontwikkelen niet gerealiseerd.</p>
+<p><strong>Reflectie</strong> <br>
+Ik vind dat door meerdere iteraties uit te voeren en de feedback te verwerken er een passende oplossing voor het probleem is gevonden. Wel is het zo dat ik het teleurstellend vind dat het meldingensysteem niet is geimplementeerd.</p>
+<p>Ik denk dat ik te snel aan het ontwikkelen van de machine learning modellen ben begonnen. Het zou waarschijnlijk beter zijn geweest als ik eerst een proof of concept zou hebben gemaakt waarin de visualisaties en meldingen getoond werden. Vanaf hier had ik sneller de juiste modellen kunnen ontwikkelen.</p>
+<p>Ook had ik onderschat hoeveel tijd het kostte om de pipline en front-end veranderingen te realiseren. Origineel had ik een sprint ingepland voor het ontwerpen en realiseren van de applicatie. Uiteindelijk heb ik hier ongeveer drie sprints aan besteed. Tijdens de planningsfase van volgende projecten kan ik hier rekening mee houden.</p>
 <div class="footnote">
 <hr />
 <ol>
@@ -625,6 +706,12 @@ Onderstaand zijn de deelvragen opgesomd. In het projectplan is een overzicht<sup
 </li>
 <li id="fn:4">
 <p><a href="pdfs/project_plan.pdf#page=8">Projectplan 1.5 Eindproducten</a> <em>blz. 16 - 17</em>&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p><a href="pdfs/project_plan.pdf#page=23">Projectplan: 4 Testaanpak en Configuratiemanagement</a> <em>blz. 23 t/m 25</em>&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p><a href="https://www.scribbr.nl/stage/starr-methode/">Scribbr: Reflecteren met de STARR-methode</a>&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

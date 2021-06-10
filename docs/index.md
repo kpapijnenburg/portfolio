@@ -33,6 +33,17 @@ Onderstaand zijn de deelvragen opgesomd. In het projectplan is een overzicht[^1]
 
 Een verdere beschrijving van het doel kan in hoofdstuk _1.2.1 SMART_ [^2] van het projectplan gevonden worden.
 
+### Behaalde resultaten
+
+Uiteindelijk is er een pipeline ontwikkeld die periodiek bekijkt of de machine learning modellen geupdated moeten worden en voorspellingen maakt. Via een API is deze applicatie gekoppeld aan Twindle. Onderstaand valt een voorbeeld van deze koppeling te zien.
+
+<center>
+![Voorbeeld koppeling](images/realisatie/mock-up-realisatie.png)
+</center>
+<center><small>Afbeedling 1: Voorbeeld van koppeling</center></small>
+
+Door deze manier van visualizatie toe te passen worden gebruikers aangespoort om in te grijpen wanneer de situatie dreigt te verslechteren. 
+
 ## Leeswijzer
 
 Tijdens het afstuderen is gewerkt aan de ICT competenties zoals beschreven in de [HBO-I domeinbeschrijving](https://hboidomein-212218.appspot.com/pdf?template=https://hboidomein-212218.appspot.com/template.html&deep=true&full=true&lang=NL&skipcache=&viewport=1156x818&url=https://hboidomein-212218.appspot.com/pdfdoc). In de onderstaande secties zal per competentie kort samengevat worden hoe deze aangetoond is.

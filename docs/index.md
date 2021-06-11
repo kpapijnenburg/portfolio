@@ -16,7 +16,7 @@ Om het onderzoek te structureren is er een hoofdvraag en meerdere deelvragen opg
 
 **Hoofdvraag** <br>
 
-> **_Hoe kan Twindle uitgebreidt worden om een hoge luchtkwaliteit in ruimten te garanderen?_**
+> **_Hoe kan Twindle uitgebreid worden om een hoge luchtkwaliteit in ruimten te garanderen?_**
 
 **Deelvragen** <br>
 Onderstaand zijn de deelvragen opgesomd. In het projectplan is een overzicht[^1] te vinden waarin wordt toegelicht welke onderzoeksmethoden gebruikt zijn om de vraag te beantwoorden.
@@ -35,7 +35,7 @@ Een verdere beschrijving van het doel kan in hoofdstuk _1.2.1 SMART_ [^2] van he
 
 ### Behaalde resultaten
 
-Uiteindelijk is er een pipeline ontwikkeld die periodiek bekijkt of de machine learning modellen geupdated moeten worden en voorspellingen maakt. Via een API is deze applicatie gekoppeld aan Twindle. Onderstaand valt een voorbeeld van deze koppeling te zien.
+Uiteindelijk is er een pipeline ontwikkeld die periodiek bekijkt of de machine learning modellen geüpdatet moeten worden en voorspellingen maakt. Via een API is deze applicatie gekoppeld aan Twindle. Onderstaand valt een voorbeeld van deze koppeling te zien.
 
 <center>
 ![Voorbeeld koppeling](images/realisatie/mock-up-realisatie.png)
@@ -62,7 +62,7 @@ Daarnaast werd er geanalyseerd welke data de Twindle applicatie tot nu toe heeft
 - [Data](analyseren.md#data-requirements)
 - [Machine learning](analyseren.md#machine-learning-requirements)
 
-Deze requirements onderzoeken hebben geleidt tot een antwoord op de vraag:
+Deze requirements onderzoeken hebben geleid tot een antwoord op de vraag:
 
 > **_Welke data is benodigd om luchtkwaliteit te voorspellen?_**
 
@@ -78,7 +78,7 @@ De tweede stap was om een systeem te ontwerpen waardoor de machine learning mode
 
 > **_Hoe kunnen machine learning modellen gekoppeld worden aan Twindle?_**
 
-Na het ontwerp te hebben geïmplementeerd was dit [opgeleverd](realiseren.md#oplevering-2-integratie-arima-modellen). Hieruit bleek dat er meerdere problemen waren met de machine learning modellen die opgelost moesten worden. Hiervoor is een [tweede iteratie](ontwerpen.md#model-experimenten-versie-2) van de model experimenten gedaan.
+Na het ontwerp te hebben geïmplementeerd was dit [opgeleverd](realiseren.md#oplevering-2-integratie-arima-modellen). Hieruit bleek dat er meerdere problemen waren met de machine learning modellen die opgelost moesten worden. Hiervoor is een [tweede iteratie](ontwerpen.md#model-experimenten-versie-2) van de model experimenten uitgevoerd.
 
 ### Realiseren <br>
 
@@ -98,7 +98,7 @@ Het doel was om deze problemen om te lossen voor de [derde oplevering](realisere
 
 ### Beheer <br>
 
-Om het project in goede banen leiden is tijdens het opstellen van het plan[^5] uitgelegt hoe het project beheert zou worden. In dit onderdeel van het portfolio wordt toegelicht hoe dit in de realiteit verlopen is.
+Om het project in goede banen leiden is tijdens het opstellen van het plan[^5] uitgelegt hoe het project beheert zou worden. In dit onderdeel van het portfolio word toegelicht hoe dit in de realiteit verlopen is.
 
 Door middel van [versie beheer](beheer.md#versiebeheer) toe te passen wordt het aantal merge conflicten geminimaliseerd. Samen met [automatische tests](beheer.md#automatishe-tests) vormt dit de basis voor het [continous deployment](beheer.md#deployment) systeem.
 
@@ -121,7 +121,7 @@ Ter conclusie zal bepaalt worden of aan het doel voldaan is door de hoofd- en de
 > **_Vanaf 18-06 zullen de gebruikers van Twindle meldingen kunnen ontvangen wanneer slechte luchtkwaliteit wordt verwacht. Het machine learning model wat hiervoor wordt toegepast zal een "recall" en "precision" score hebben van minimaal 90%._**
 
 **Wie zijn de gebruikers van Twindle?** <br>
-Door gebruik te maken van een stakeholdersanalyse is bepaalt dat de gebruikers van twindle in twee groepen vallen; Gebouwbeheerders en gebouwgebruikers.
+Door gebruik te maken van een stakeholdersanalyse is bepaalt dat de gebruikers van twindle in twee groepen vallen; gebouwbeheerders en gebouwgebruikers.
 
 **Welke data is benodigd om luchtkwaliteit te voorspellen** <br>
 Om te bepalen welke data benodigd is voor de voorspellingen was gezocht naar onderzoeken die hetzelfde onderwerp betreffen. Hieruit is gebleken dat de oppervlakte van ruimten, het bouwjaar, verwarmingsinstellingen, raamstand, buitentemperatuur, luchtvochtigheid en zonnestraling benodigd zijn. Aangezien deze nog niet aanwezig zijn in de dataset zijn deze verzameld\*
@@ -155,7 +155,7 @@ Dit probleem heb ik opgelost door de volgende onderdelen te realiseren:
 3. Een front-end uitbreiding waar deze voorspellingen worden gevisualiseerd.
 
 **Resultaat** <br>
-Deze onderdelen resulteren in een systeem wat nauwkeurige voorspellingen kan maken en deze op een manier visualiseert zodat personen aangespoort worden de situatie te verbeteren. Het andere gedeelte van het doel, het weergeven van meldingen, is wegens tijdgebrek en complicaties tijdens het ontwikkelen niet gerealiseerd.
+Deze onderdelen resulteren in een systeem wat nauwkeurige voorspellingen kan maken en deze op een manier visualiseert zodat personen aangespoord worden de situatie te verbeteren. Het andere gedeelte van het doel, het weergeven van meldingen, is wegens tijdgebrek en complicaties tijdens het ontwikkelen niet gerealiseerd.
 
 **Reflectie** <br>
 Ik vind dat door meerdere iteraties uit te voeren en de feedback te verwerken er een passende oplossing voor het probleem is gevonden. Wel is het zo dat ik het teleurstellend vind dat het meldingensysteem niet is geimplementeerd.

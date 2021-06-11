@@ -4,7 +4,7 @@ Om te bepalen welke partijen relevant waren voor het project was een stakeholder
 
 ### Identificeren
 
-Om de stakeholders te kunnen identificeren was een brainstormsessie gehouden. Het resultaat van deze sessie was een mindmap van alle personen of entiteiten die invloed hebben op het project. In de onderstaande afbeelding is deze mindmap te zien.
+Om de stakeholders te kunnen identificeren was een brainstormsessie gehouden. Het resultaat van deze sessie is een mindmap van alle personen of entiteiten die invloed hebben op het project. In de onderstaande afbeelding is deze mindmap te zien.
 
 ![brainstrom](images/stakeholders-analyse-brainstorm.png)
 
@@ -12,7 +12,7 @@ Om de stakeholders te kunnen identificeren was een brainstormsessie gehouden. He
 
 ### Prioriteren
 
-Om te de communicatiemethoden te bepalen zijn de stakeholders geprioriteerd. Dit was gedaan door te kijken wat hun niveau van invloed is en hoeveel belang zij hadden bij het project. In het onderstaande “Stakeholder Power Interest Grid” wordt dit gevisualiseerd.
+Om te de communicatiemethoden te bepalen zijn de stakeholders geprioriteerd. Dit was gedaan door te kijken wat hun niveau van invloed is en hoeveel belang zij hadden bij het project. In het onderstaande “Stakeholder Power Interest Grid” is dit gevisualiseerd.
 
 ![power-interest grid](images/stakeholders-power-interest-grid.png)
 
@@ -29,11 +29,11 @@ aantal vragen te stellen en te beantwoorden [^3]. Gebaseerd op deze vragen is he
 
 ## Story mapping
 
-Gedurende het project was een agile werkwijze worden gehanteerd. Een van de onderdelen hiervan is een product backlog waarin alle taken waren vastgelegd. De techniek die gebruikt is voor het opstellen van deze backlog is story mapping[^4]. De voorbereiding en conclusie van deze story mapping sessie[^5] worden onderstaand toegelicht.
+Gedurende het project was een agile werkwijze worden gehanteerd. Een van de onderdelen hiervan is een product backlog waarin alle taken waren vastgelegd. De techniek die gebruikt was voor het opstellen van deze backlog is story mapping[^4]. De voorbereiding en conclusie van deze story mapping sessie[^5] worden onderstaand toegelicht.
 
 ### Voorbereiding
 
-Aan de hand van het communicatie plan, zie _afbeelding 3: Communicatie plan_ is een lijst met personen opgesteld die aanwezig moest zijn bij de story mapping sessie.
+Aan de hand van het communicatie plan, zie _afbeelding 3: Communicatie plan_ was een lijst met personen opgesteld die aanwezig moesten zijn bij de story mapping sessie.
 
 ![story mapping sessie aanwezige](images/story-mapping-aanwezigen.png)
 
@@ -56,7 +56,7 @@ De eerste stap om te kunnen bepalen welke machine learning modellen toegepast ko
 2. Univariate analyse
 3. Multivariate analyse
 4. Missende gegevens
-5. uitschieters
+5. Uitschieters
 
 ### Variable identificatie
 
@@ -84,7 +84,7 @@ Univariate analyse is de eenvoudigste vorm van data analyse. Tijdens deze analys
 
 <center><small>Afbeelding 6: Big Top's Boardroom distributie</small></center>
 
-In de bovenstaande afbeelding zijn de distributies van alle meetwaarden in de boardroom van de Big Top gevisualiseerd. Hierin valt te zien dat de meeste waarden een redelijk normale distributie hebben. Sommigen zoals bijvoorbeeld de CO2 waarden hebben afwijkingen en uitschieters. Tijdens de modellering fase is hier rekening mee gehouden.
+In de bovenstaande afbeelding zijn de distributies van alle meetwaarden in de boardroom van de Big Top gevisualiseerd. Hierin valt te zien dat de meeste waarden een redelijk normale distributie hebben. Sommigen zoals bijvoorbeeld de CO2 waarde hebben afwijkingen en uitschieters. Tijdens de modellering fase is hier rekening mee gehouden.
 
 ### Multivariate analyse
 

@@ -14,7 +14,7 @@ Deze strategie is succesvol toegepast, zie afbeelding 2. Door deze strategie toe
 <center><small>Afbeelding 2: Branching strategie implementatie</center></small>
 
 ## Automatische tests
-Tijdens het ontwikkelen van de machine learning API is zoveel mogelijk gewerkt op een test driven manier. Dit betekend dat methodes getests werden terwijl ze geïmplementeerd wrden. Op deze manier kon gevalideerd worden dat de code werkt na verwachtingen. Onderstaand valt het resultaat van deze tests te zien.
+Tijdens het ontwikkelen van de machine learning API is zoveel mogelijk gewerkt op een test driven manier. Dit betekend dat methoden getests werden terwijl ze geïmplementeerd wrden. Op deze manier kon gevalideerd worden dat de code werkt na verwachtingen. Onderstaand valt het resultaat van deze tests te zien.
 
 ```
 test_create_no_invalid_parameters_entity_persisted (tests.test_base_service.TestBaseService) ... ok

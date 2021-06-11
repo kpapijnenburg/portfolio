@@ -33,9 +33,9 @@ Aan de bovenstaande afbeeldingen is het volgende af te leiden:
 Waarschijnlijk missen er nog cruciale features. In verder iteraties is dit verder onderzocht.
 
 **Exponential Smoothing** <br>
-Voorspelling die gemaakt worden met exponential smoothing methoden zijn gemiddelden van eerdere waarnemingen, waarbij de eerdere waarnemingen zwaarder meewegen dan de ouderen.
+Voorspelling die gemaakt worden met exponential smoothing methoden zijn gemiddelden van eerdere waarnemingen, waarbij de eerdere waarnemingen zwaarder meewegen dan de oudere.
 
-De Holt-Winters seasonal methode was gebruikt om te kunnen profiteren van de trends en seizoensgebondenheid die aanwezig waren in de data. Het `statsmodel` package heeft hier de volgende implementatie van:
+De Holt-Winters seasonal methode was toegepast om te kunnen profiteren van de trends en seizoensgebondenheid die aanwezig waren in de data. Het `statsmodel` package heeft hier de volgende implementatie van:
 
 - [ExponentialSmoothing](https://www.statsmodels.org/dev/generated/statsmodels.tsa.holtwinters.ExponentialSmoothing.html)
 
@@ -63,7 +63,7 @@ Momenteel is er nog geen enkel model wat de gestelde eis van 0.9 r-squared score
 
 ## Architectuur
 
-Ongeveer 90% van de data science projecten haalt het niet tot productie[^4]. Dit komt doordat het proces wat gebruikt wordt om machine learning modellen te ontwikkelen net goed aansluit bij de software engineering & DevOps processen. Om dit te voorkomen bij het Digital Twin 3.0 project is hier rekening mee gehouden tijdens het ontwerp.
+Ongeveer 90% van de data science projecten haalt het niet tot productie[^4]. Dit komt doordat het proces wat gebruikt wordt om machine learning modellen te ontwikkelen niet goed aansluit bij de software engineering & DevOps processen. Om dit te voorkomen bij het Digital Twin 3.0 project is hier rekening mee gehouden tijdens het ontwerp.
 
 Tijdens het ontwerp is er gewerkt met de C4 methoden[^5]. Dit is een ontwerp framework wat op vier abstractieniveaus de applicatie toelicht.
 
@@ -90,7 +90,7 @@ In het onderstaande systeem context diagram zijn de gebruikersgroepen en de mani
 <center><small>Afbeelding 3: Systeem context diagram</small></center>
 
 **C2: Containers**<br>
-In dit diagram wordt er verder ingezoomt op de twee software systemen zoals deze zijn beschreven in het vorige diagram. Ze zijn verder onderverdeeld in containers. Containers zijn onderdelen van het systeem die apart van elkaar functioneren. In dit diagram ligt de focus op de technologie keuzes en manier van communicatie tussen containers.
+In dit diagram wordt er verder ingezoomd op de twee software systemen zoals deze zijn beschreven in het vorige diagram. Ze zijn verder onderverdeeld in containers. Containers zijn onderdelen van het systeem die apart van elkaar functioneren. In dit diagram ligt de focus op de technologie keuzes en manier van communicatie tussen containers.
 
 ![Container diagram](images/ontwerp/c2_container.png)
 
@@ -128,7 +128,7 @@ De voorgaande experimenten resulteerde nog niet in modellen die de eis van 0.9 r
 3. Betere controle voor welk tijdstip de voorspelling wordt gemaakt.
 4. Bestandsgrootte limiteren om schaalbaarheid te vergroten
 
-In overleg met de opdrachtgevers en belangrijkste stakeholder, Techtenna, was besloten om eerste een model voor de CO2 waarde te ontwikkelen. Wanneer dit succesvol is bevonden kan dit worden uitgebreid naar de overige meetwaarden.
+In overleg met de opdrachtgevers en belangrijkste stakeholder, Techtenna, was besloten om eerst een model voor de CO2 waarde te ontwikkelen. Wanneer dit succesvol is bevonden kan dit worden uitgebreid naar de overige meetwaarden.
 
 ### Gegevensverzameling
 
@@ -153,7 +153,7 @@ Tijdens onderzoek van Kallio et al.[^7] worden meerdere mogelijke modellen besch
 - [Random Forest (RF)](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)
 - [Multilayer Perceptron (MLP)](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html)
 
-Aangezien de CO2 waarden in een ruimte vaak niet drastisch veranderen in korte tijd is er gekozen om als baseline een ‘last-observation carried forward’ model te gebruiken. Dit geeft een de laatst gemeten CO2 waarde aan als de voorspelde waarde.
+Aangezien de CO2 waarde in een ruimte niet drastisch veranderd in korte tijd is er gekozen om als baseline een ‘last-observation carried forward’ model te gebruiken. Dit geeft een de laatst gemeten CO2 waarde aan als de voorspelde waarde.
 
 **Korte termijn - Features** <br>
 Per model kan het verschillen welke features tot het beste resultaat leiden. Om dit te optimaliseren is gebruik gemaakt van de `SelectKBest` class. Deze klasse maakt gebruik van `f_regression` om te bepalen welke features het meest gecorreleerd zijn tot het target. Tussen de drie en dertig features zijn getest door middel van `GridSearch`. Onderstaand valt per model te zien welke features de hoogste score behalen.

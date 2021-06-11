@@ -1,6 +1,6 @@
 ## Manier van aanpak
 
-Tijdens het realiseren van het project is de scrum methode toegepast. Dit betekend dat er gewerkt is in sprint van twee weken. Aan het eind van deze twee weken zijn demo's gegeven aan de mede stagiairs en begeleiders. Daarnaast heeft er iedere vier weken een oplevering voor de belangrijkste stakeholders, Handpicked Labs & Techtenna plaatsgevonden.
+Tijdens het realiseren van het project is de scrum methode toegepast. Dit betekend dat er gewerkt is in sprints van twee weken. Aan het eind van deze twee weken zijn demo's gegeven aan de mede stagiairs en begeleiders. Daarnaast heeft er iedere vier weken een oplevering voor de belangrijkste stakeholders, Handpicked Labs & Techtenna plaatsgevonden.
 
 In de onderstaande secties zal per oplevering de geplande werkzaamheden, de gerealiseerde werkzaamheden, feedback en reflectie worden toegelicht.
 
@@ -23,7 +23,7 @@ Tijdens het ontwerpen van de applicatie werd duidelijk dat de modellen redelijk 
 Om te voorkomen dat de machine learning modellen falen in de productie omgeving was voorgesteld om het doel te beperken tot luchtkwaliteit. Hierdoor kon er meer focus gelegd worden op het ontwikkelen van een systeem wat periodiek de modellen update en evalueert. Wanneer dit goed werkt kan het uitgebreid worden naar de andere service lagen.
 
 ### Feedback
-Op het eind van de opleveringspresentatie[^1] werd het voorstel gedaan om het doel aan te passen. De reacties hierop waren positief. De stakeholders van Handpicked Labs & Techtenna vonden het allemaal een goed idee om klein te beginnen, een robuust systeem te bouwen en daarna uit te breiden.
+Op het eind van de opleveringspresentatie[^1] werd het voorstel gedaan om het doel aan te passen. De reacties hierop waren positief. De stakeholders van Handpicked Labs & Techtenna vonden het een goed idee om klein te beginnen, een robuust systeem te bouwen en daarna uit te breiden.
 
 ### Reflectie
 Het grootste gedeelte van deze sprints had ik besteed aan de experimenteren. Hierbij was het doel om voor vier verschillende meetwaarden een geschikt model te vinden. Om deze modellen te ontwikkelen waren verschillende technieken onderzocht[^2].
@@ -81,13 +81,13 @@ Tijdens de 5e en 6e sprint was ik vooral bezig met het omzetten van de model exp
 
 De voorspellingen die uiteindelijk gevisualiseerd waren maakte niet de gewenste impact en waren niet accuraat genoeg. Hierdoor moest ik meer model experimenten uitvoeren.
 
-Daarnaast had ik voor het implementeren van de applicatie maar een sprint ingepland. Uiteindelijk had ik een complete sprint nodig om alleen de pipeline en API te ontwikkelen en een extra halve sprint om het front-end uit te breiden. Hierdoor verwachte ik in tijdsnood zou kunnen komen, dit viel uiteindelijk mee.
+Daarnaast had ik voor het implementeren van de applicatie maar een sprint ingepland. Uiteindelijk had ik een complete sprint nodig om alleen de pipeline en API te ontwikkelen en een extra halve sprint om het front-end uit te breiden. Hierdoor verwachte ik in tijdsnood zou kunnen komen.
 
 ## Oplevering 3: Iteratie op integratie
 
 Na aanleiding van de feedback op de tweede iteratie waren nieuwe [model experimenten](ontwerpen.md#model-experimenten-versie-2) uitgevoerd. Deze modellen zijn gebruikt om de pipeline en het front-end aan te passen.
 
-### Feplande werkzaamheden
+### Geplande werkzaamheden
 
 | Sprint # | Werkzaamheden          | Afgerond |
 | -------- | ---------------------- | -------- |
@@ -97,7 +97,7 @@ Na aanleiding van de feedback op de tweede iteratie waren nieuwe [model experime
 | 8        | Meldingen weergeven    | Nee      |
 
 ### Gerealiseerde werkzaamheden
-Voordat begonnen was aan het implementeren van de nieuwe modellen in de pipeline en front-end was er een mock-up gemaakt, zie afbeelding 5, van de gewenste eind situatie.
+Voordat begonnen was aan het implementeren van de nieuwe modellen in de pipeline en front-end was er een mock-up gemaakt van de gewenste eind situatie.
 
 <center>
 ![Mock-up](images/realisatie/mock-up.png)
@@ -105,13 +105,13 @@ Voordat begonnen was aan het implementeren van de nieuwe modellen in de pipeline
 
 <center><small>Afbeelding 5: Mock-up </small></center>
 
-Door de korte termijn voorspellingen een aparte balkgrafiek te visualiseren en de kleur aan te passen wanneer bepaalde waarden worden overschreden wordt er een gortere impact gemaakt. Op deze manier zal de gebruiker aangespoort worden om in te grijpen wanneer de situatie dreigt te verslechteren.
+Door de korte termijn voorspellingen een aparte balkgrafiek te visualiseren en de kleur aan te passen wanneer bepaalde waarden worden overschreden wordt er een grotere impact gemaakt. Op deze manier zal de gebruiker aangespoord worden om in te grijpen wanneer de situatie dreigt te verslechteren.
 
 De aanpassingen die aan de pipeline gemaakt moesten worden waren minimaal. Over het algemeen kon de applicatie versimpeld worden omdat het machine learning model niet afhankelijk is van `timestamps`.
 
 Onderstaand is de front-end implementatie van de mock-up van afbeelding 5 te zien. De realisatie was goed gelukt er zijn echter nog wat verbeter punten:
 
-1. TimeStamps worden niet goed vertaald naar labels
+1. Date objecten worden niet goed vertaald naar labels
 2. Horizontale belijning is hardcoded.
 
 <center>

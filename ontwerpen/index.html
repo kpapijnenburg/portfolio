@@ -515,8 +515,8 @@ Om lineare regressie toe te kunnen passen moest de data geen autocorrelaties bev
 </ul>
 <p>Waarschijnlijk missen er nog cruciale features. In verder iteraties is dit verder onderzocht.</p>
 <p><strong>Exponential Smoothing</strong> <br>
-Voorspelling die gemaakt worden met exponential smoothing methoden zijn gemiddelden van eerdere waarnemingen, waarbij de eerdere waarnemingen zwaarder meewegen dan de ouderen.</p>
-<p>De Holt-Winters seasonal methode was gebruikt om te kunnen profiteren van de trends en seizoensgebondenheid die aanwezig waren in de data. Het <code>statsmodel</code> package heeft hier de volgende implementatie van:</p>
+Voorspelling die gemaakt worden met exponential smoothing methoden zijn gemiddelden van eerdere waarnemingen, waarbij de eerdere waarnemingen zwaarder meewegen dan de oudere.</p>
+<p>De Holt-Winters seasonal methode was toegepast om te kunnen profiteren van de trends en seizoensgebondenheid die aanwezig waren in de data. Het <code>statsmodel</code> package heeft hier de volgende implementatie van:</p>
 <ul>
 <li><a href="https://www.statsmodels.org/dev/generated/statsmodels.tsa.holtwinters.ExponentialSmoothing.html">ExponentialSmoothing</a></li>
 </ul>
@@ -535,7 +535,7 @@ Autoregressive integrated moving average (ARIMA) modellen maken gebruik van een 
 <h3 id="bevindingen">Bevindingen</h3>
 <p>Momenteel is er nog geen enkel model wat de gestelde eis van 0.9 r-squared score behaalt. Wel komen de ARIMA modellen redelijk dicht in de buurt. Met deze reden is er voor gekozen om de eerste iteratie van de implementatie deze modellen toe te passen.</p>
 <h2 id="architectuur">Architectuur</h2>
-<p>Ongeveer 90% van de data science projecten haalt het niet tot productie<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>. Dit komt doordat het proces wat gebruikt wordt om machine learning modellen te ontwikkelen net goed aansluit bij de software engineering &amp; DevOps processen. Om dit te voorkomen bij het Digital Twin 3.0 project is hier rekening mee gehouden tijdens het ontwerp.</p>
+<p>Ongeveer 90% van de data science projecten haalt het niet tot productie<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>. Dit komt doordat het proces wat gebruikt wordt om machine learning modellen te ontwikkelen niet goed aansluit bij de software engineering &amp; DevOps processen. Om dit te voorkomen bij het Digital Twin 3.0 project is hier rekening mee gehouden tijdens het ontwerp.</p>
 <p>Tijdens het ontwerp is er gewerkt met de C4 methoden<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup>. Dit is een ontwerp framework wat op vier abstractieniveaus de applicatie toelicht.</p>
 <ol>
 <li>Context; Op hoog niveau wordt weergegeven wie er op welke manier interacteert met de systemen.</li>
@@ -562,7 +562,7 @@ In het onderstaande systeem context diagram zijn de gebruikersgroepen en de mani
 <p><img alt="Systeem context diagram" src="../images/ontwerp/c1_context.png" /></p>
 <p><center><small>Afbeelding 3: Systeem context diagram</small></center></p>
 <p><strong>C2: Containers</strong><br>
-In dit diagram wordt er verder ingezoomt op de twee software systemen zoals deze zijn beschreven in het vorige diagram. Ze zijn verder onderverdeeld in containers. Containers zijn onderdelen van het systeem die apart van elkaar functioneren. In dit diagram ligt de focus op de technologie keuzes en manier van communicatie tussen containers.</p>
+In dit diagram wordt er verder ingezoomd op de twee software systemen zoals deze zijn beschreven in het vorige diagram. Ze zijn verder onderverdeeld in containers. Containers zijn onderdelen van het systeem die apart van elkaar functioneren. In dit diagram ligt de focus op de technologie keuzes en manier van communicatie tussen containers.</p>
 <p><img alt="Container diagram" src="../images/ontwerp/c2_container.png" /></p>
 <p><center><small>Afbeelding 4: Container diagram</small></center></p>
 <p>De webapplicatie haalt voorspellingen op uit de AI-layer. Om deze voorspellingen te kunnen maken is historische data nodig die voorzien wordt door de back-end applicatie van de Digital Twin.</p>
@@ -605,7 +605,7 @@ Onderstaand valt een overzicht te vinden van de routes die aan de API zijn toege
 <li>Betere controle voor welk tijdstip de voorspelling wordt gemaakt.</li>
 <li>Bestandsgrootte limiteren om schaalbaarheid te vergroten</li>
 </ol>
-<p>In overleg met de opdrachtgevers en belangrijkste stakeholder, Techtenna, was besloten om eerste een model voor de CO2 waarde te ontwikkelen. Wanneer dit succesvol is bevonden kan dit worden uitgebreid naar de overige meetwaarden.</p>
+<p>In overleg met de opdrachtgevers en belangrijkste stakeholder, Techtenna, was besloten om eerst een model voor de CO2 waarde te ontwikkelen. Wanneer dit succesvol is bevonden kan dit worden uitgebreid naar de overige meetwaarden.</p>
 <h3 id="gegevensverzameling">Gegevensverzameling</h3>
 <p>Tijdens de tweede oplevering van het project werd door Marco van Techtenna opgemerkt dat het aantal personen wat zich in een ruimte bevindt invloed heeft op de CO2 niveaus. Via de Google Calendar API is opgevraagd hoeveel personen zich op een bepaalde tijd in een ruimte bevinden. Deze gegevens zijn toegevoegd aan de dataset zoals beschreven in de vorige iteratie.</p>
 <p>Uit een vergelijkbaar onderzoek<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup> is gebleken dat temperatuur, luchtvochtigheid en activiteitsniveau een mogelijke invloed kunnen hebben op de CO2 waarde. Door deze waarden te visualiseren in een correlatie heatmap kon dit gevalideerd worden.</p>
@@ -623,7 +623,7 @@ Tijdens onderzoek van Kallio et al.<sup id="fnref2:7"><a class="footnote-ref" hr
 <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html">Random Forest (RF)</a></li>
 <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html">Multilayer Perceptron (MLP)</a></li>
 </ul>
-<p>Aangezien de CO2 waarden in een ruimte vaak niet drastisch veranderen in korte tijd is er gekozen om als baseline een ‘last-observation carried forward’ model te gebruiken. Dit geeft een de laatst gemeten CO2 waarde aan als de voorspelde waarde.</p>
+<p>Aangezien de CO2 waarde in een ruimte niet drastisch veranderd in korte tijd is er gekozen om als baseline een ‘last-observation carried forward’ model te gebruiken. Dit geeft een de laatst gemeten CO2 waarde aan als de voorspelde waarde.</p>
 <p><strong>Korte termijn - Features</strong> <br>
 Per model kan het verschillen welke features tot het beste resultaat leiden. Om dit te optimaliseren is gebruik gemaakt van de <code>SelectKBest</code> class. Deze klasse maakt gebruik van <code>f_regression</code> om te bepalen welke features het meest gecorreleerd zijn tot het target. Tussen de drie en dertig features zijn getest door middel van <code>GridSearch</code>. Onderstaand valt per model te zien welke features de hoogste score behalen.</p>
 <p><img alt="Feature selectie" src="../images/realisatie/feature-selection.png" /></p>

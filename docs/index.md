@@ -6,7 +6,7 @@ Dit product is vorig jaar ontwikkeld door [Handpicked Labs](https://labs.handpic
 
 ### Probleemstelling
 
-Twidle bepaalt of er voldaan wordt aan de gestelde luchtkwaliteitseisen door de tempratuur, luchtvochtigheid en het CO2-gehalte in een ruimte te meten. Mede door COVID-19 is de luchtkwaliteit in een ruimte steeds belangrijker geworden. Slechte luchtkwaliteit kan ernstige gezondheidsproblemen veroorzaken. Door de luchtkwaliteit te voorspellen en meldingen te maken wanneer deze in gevaar is willen we de leefbaarheid van ruimten verbeteren.
+Twidle bepaalt of er voldaan wordt aan de gestelde luchtkwaliteitseisen door de tempratuur, luchtvochtigheid en het CO2-gehalte in een ruimte te meten. Mede door COVID-19 is de luchtkwaliteit in een ruimte steeds belangrijker geworden. Slechte luchtkwaliteit kan ernstige gezondheidsproblemen veroorzaken. Door de luchtkwaliteit te voorspellen en meldingen te geven wanneer deze in gevaar is willen we de leefbaarheid van ruimten verbeteren.
 
 ### Hoofd- en deelvragen
 

@@ -10,9 +10,9 @@ Twidle bepaalt of er voldaan wordt aan de gestelde luchtkwaliteitseisen door de 
 
 ### Hoofd- en deelvragen
 
-Tijdens het gehele project is onderzoek verricht worden volgens het [Development Oriented Triangulation (DOT) framework](https://ictresearchmethods.nl/The_DOT_Framework). Dit framework bestaat uit verschillende onderzoekscategorieën die gecombineerd moeten worden om tot een valide conclusie te komen.
+Tijdens het project heb ik onderzoek verricht volgens het [Development Oriented Triangulation (DOT) framework](https://ictresearchmethods.nl/The_DOT_Framework). Dit framework bestaat uit verschillende onderzoekscategorieën die gecombineerd moeten worden om tot een valide conclusie te komen.
 
-Om het onderzoek te structureren is er een hoofdvraag en meerdere deelvragen opgesteld. Tijdens de conclusie zullen deze hoofd- en deelvragen beantwoord worden.
+Om het onderzoek te structureren heb ik een hoofdvraag en meerdere deelvragen opgesteld. Tijdens de conclusie beantwoord ik deze hoofd- en deelvragen.
 
 **Hoofdvraag** <br>
 

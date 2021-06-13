@@ -104,7 +104,7 @@ Door [versie beheer](beheer.md#versiebeheer) toe te passen wordt het aantal merg
 
 ### Adviseren <br>
 
-Na afloop van het project is er [teruggekeken](realiseren.md#algemene-evaluatie-reflectie) op wat er goed ging en wat er beter kon. Vanuit deze bevindingen zijn adviezen uitgebracht over de volgende onderwerpen
+Na afloop van het project is er [gereflecteerd](realiseren.md#algemene-evaluatie-reflectie) op wat er goed ging en wat er beter kon. Vanuit deze bevindingen zijn adviezen uitgebracht over de volgende onderwerpen
 
 1. [Data](adviseren.md#data)
 2. [Workflow](adviseren.md#workflow)

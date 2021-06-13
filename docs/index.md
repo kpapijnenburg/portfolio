@@ -42,7 +42,7 @@ Uiteindelijk is er een pipeline ontwikkeld die periodiek bekijkt of de machine l
 </center>
 <center><small>Afbeedling 1: Voorbeeld van koppeling</center></small>
 
-Door deze manier van visualizatie toe te passen worden gebruikers aangespoort om in te grijpen wanneer de situatie dreigt te verslechteren. 
+Door deze manier van visualizatie toe te passen worden gebruikers aangespoord om in te grijpen wanneer de situatie dreigt te verslechteren. 
 
 ## Leeswijzer
 

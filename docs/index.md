@@ -100,7 +100,7 @@ Het doel was om deze problemen om te lossen voor de [derde oplevering](realisere
 
 Om het project in goede banen leiden is tijdens het opstellen van het plan[^5] uitgelegd hoe het project beheerd zou worden. In dit onderdeel van het portfolio wordt toegelicht hoe dit in de realiteit verlopen is.
 
-Door middel van [versie beheer](beheer.md#versiebeheer) toe te passen wordt het aantal merge conflicten geminimaliseerd. Samen met [automatische tests](beheer.md#automatishe-tests) vormt dit de basis voor het [continous deployment](beheer.md#deployment) systeem.
+Door [versie beheer](beheer.md#versiebeheer) toe te passen wordt het aantal merge conflicten geminimaliseerd. Samen met [automatische tests](beheer.md#automatishe-tests) vormt dit de basis voor het [continous deployment](beheer.md#deployment) systeem.
 
 ### Adviseren <br>
 

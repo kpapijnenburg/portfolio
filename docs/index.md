@@ -116,7 +116,7 @@ Door de ethische aspecten van het project te analyseren is antwoord gegeven op d
 
 ## Conclusie
 
-Ter conclusie zal bepaalt worden of aan het doel voldaan is door de hoofd- en deelvragen te beantwoorden en te reflecteren op de stageperiode. Het doel van het project was:
+Ter conclusie zal bepaald worden of aan het doel voldaan is door de hoofd- en deelvragen te beantwoorden en te reflecteren op de stageperiode. Het doel van het project was:
 
 > **_Vanaf 18-06 zullen de gebruikers van Twindle meldingen kunnen ontvangen wanneer slechte luchtkwaliteit wordt verwacht. Het machine learning model wat hiervoor wordt toegepast zal een "recall" en "precision" score hebben van minimaal 90%._**
 

@@ -68,7 +68,7 @@ Deze requirements onderzoeken hebben geleid tot een antwoord op de vraag:
 
 ### Ontwerpen
 
-Uit de verschillende analyses was gebleken dat het belangrijk is dat personen snel geinformeerd worden wanneer de luchtkwaliteit dreigt te verslechteren. De eerste stap hierin is om de meetwaarden die samen de luchtkwaliteit vormen te voorspellen. Hiervoor is de volgende vraag gesteld:
+Uit de verschillende analyses was gebleken dat het belangrijk is dat personen snel geïnformeerd worden wanneer de luchtkwaliteit dreigt te verslechteren. De eerste stap hierin is om de meetwaarden die samen de luchtkwaliteit vormen te voorspellen. Hiervoor is de volgende vraag gesteld:
 
 > **_Hoe kan machine learning worden toegepast om luchtkwaliteit te voorspellen?_**
 

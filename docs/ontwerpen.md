@@ -8,12 +8,12 @@ Om een betere indicatie te krijgen wat voor soort modellen toegepast konden word
 
 Na onderzoek[^2] te hebben gedaan naar geschikte modellering technieken is besloten om met de volgende modellen te experimenteren:
 
-- Lineare Regressie
-- Exponential Smoothing
-- Autoregressive Integrated Moving Average
+- Lineare Regressie[^3]
+- Exponential Smoothing[^4]
+- Autoregressive Integrated Moving Average[^5]
 
 **Lineaire Regressie** <br>
-Om lineare regressie toe te kunnen passen moest de data geen autocorrelaties bevatten en stationair zijn. Hiervoor waren differencing, het verschil tussen een meting en de voorgaande meting, technieken toegepast. Daarnaast was er een techniek[^3] toegepast om de opeenvolgende data voor te bereiden voor gebruik in de algoritmen.
+Om lineare regressie toe te kunnen passen moest de data geen autocorrelaties bevatten en stationair zijn. Hiervoor waren differencing, het verschil tussen een meting en de voorgaande meting, technieken toegepast. Daarnaast was er een techniek[^6] toegepast om de opeenvolgende data voor te bereiden voor gebruik in de algoritmen.
 
 De volgende modellen waren toegepast:
 
@@ -63,9 +63,9 @@ Momenteel is er nog geen enkel model wat de gestelde eis van 0.9 r-squared score
 
 ## Architectuur
 
-Ongeveer 90% van de data science projecten haalt het niet tot productie[^4]. Dit komt doordat het proces wat gebruikt wordt om machine learning modellen te ontwikkelen niet goed aansluit bij de software engineering & DevOps processen. Om dit te voorkomen bij het Digital Twin 3.0 project is hier rekening mee gehouden tijdens het ontwerp.
+Ongeveer 90% van de data science projecten haalt het niet tot productie[^7]. Dit komt doordat het proces wat gebruikt wordt om machine learning modellen te ontwikkelen niet goed aansluit bij de software engineering & DevOps processen. Om dit te voorkomen bij het Digital Twin 3.0 project is hier rekening mee gehouden tijdens het ontwerp.
 
-Tijdens het ontwerp is er gewerkt met de C4 methoden[^5]. Dit is een ontwerp framework wat op vier abstractieniveaus de applicatie toelicht.
+Tijdens het ontwerp is er gewerkt met de C4 methoden[^8]. Dit is een ontwerp framework wat op vier abstractieniveaus de applicatie toelicht.
 
 1. Context; Op hoog niveau wordt weergegeven wie er op welke manier interacteert met de systemen.
 2. Container; Globaal overzicht van de software architectuur. Focus op technologiekeuze en manier van communicatie.
@@ -73,7 +73,7 @@ Tijdens het ontwerp is er gewerkt met de C4 methoden[^5]. Dit is een ontwerp fra
 4. Code; Laag niveau overzicht van de code door, bijvoorbeeld, klasse diagrammen.
 
 **Vooronderzoek** <br>
-Voor dat een begin gemaakt was met het ontwerpen van de applicatie is eerst vooronderzoek[^6] verricht om te bepalen welke tools en technieken toegepast gingen worden. Dit vooronderzoek ging dieper in op de volgende onderwerpen:
+Voor dat een begin gemaakt was met het ontwerpen van de applicatie is eerst vooronderzoek[^9] verricht om te bepalen welke tools en technieken toegepast gingen worden. Dit vooronderzoek ging dieper in op de volgende onderwerpen:
 
 1. Het opslaan en ophalen van de data en voorspellingen.
 2. Frameworks en tooling die hierbij passen.
@@ -134,7 +134,7 @@ In overleg met de opdrachtgevers en belangrijkste stakeholder, Techtenna, was be
 
 Tijdens de tweede oplevering van het project werd door Marco van Techtenna opgemerkt dat het aantal personen wat zich in een ruimte bevindt invloed heeft op de CO2 niveaus. Via de Google Calendar API is opgevraagd hoeveel personen zich op een bepaalde tijd in een ruimte bevinden. Deze gegevens zijn toegevoegd aan de dataset zoals beschreven in de vorige iteratie.
 
-Uit een vergelijkbaar onderzoek[^7] is gebleken dat temperatuur, luchtvochtigheid en activiteitsniveau een mogelijke invloed kunnen hebben op de CO2 waarde. Door deze waarden te visualiseren in een correlatie heatmap kon dit gevalideerd worden.
+Uit een vergelijkbaar onderzoek[^10] is gebleken dat temperatuur, luchtvochtigheid en activiteitsniveau een mogelijke invloed kunnen hebben op de CO2 waarde. Door deze waarden te visualiseren in een correlatie heatmap kon dit gevalideerd worden.
 
 <center>
 ![Correlatie heatmap](images/realisatie/heatmap.png)
@@ -143,10 +143,10 @@ Uit een vergelijkbaar onderzoek[^7] is gebleken dat temperatuur, luchtvochtighei
 
 ### Beschrijving & resultaten
 
-Om het tweede doel te behalen zijn er twee modellen uitgewerkt. Een voor lange termijn voorspellingen en een voor korte termijn voorspellingen. In het onderzoeksrapport[^8] wordt verder toegelicht welke data gebruikt was en hoe deze werd voorbereid.
+Om het tweede doel te behalen zijn er twee modellen uitgewerkt. Een voor lange termijn voorspellingen[^11] en een voor korte termijn voorspellingen[^12]. In het onderzoeksrapport[^13] wordt verder toegelicht welke data gebruikt was en hoe deze werd voorbereid.
 
 **Korte termijn - Modellen** <br>
-Tijdens onderzoek van Kallio et al.[^7] worden meerdere mogelijke modellen beschreven. Deze zijn specifiek uitgekozen omdat ze accurate voorspellingen kunnen geven op auto gecorreleerde data.
+Tijdens onderzoek van Kallio et al.[^10] worden meerdere mogelijke modellen beschreven. Deze zijn specifiek uitgekozen omdat ze accurate voorspellingen kunnen geven op auto gecorreleerde data.
 
 - [Ridge Regression (RR)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html)
 - [Decision Tree (DT)](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html)
@@ -196,7 +196,7 @@ CO2 gehaltes worden vooral bepaald door het aantal personen in een ruimte. Door 
 
 _Verder in de toekomst kijken, 3 uur of meer._
 
-In het onderzoek van Kallio et al. [^7] werd geconcludeerd dat voorspellingen voor de lange termijn vaak niet accuraat zijn. Hierdoor is er gekozen om een model te ontwikkelen wat op korte termijn accuraat is, deze zal ondersteunt worden door een visualisatie van gemiddelde voor een bepaalde dag en tijd.
+In het onderzoek van Kallio et al. [^10] werd geconcludeerd dat voorspellingen voor de lange termijn vaak niet accuraat zijn. Hierdoor is er gekozen om een model te ontwikkelen wat op korte termijn accuraat is, deze zal ondersteunt worden door een visualisatie van gemiddelde voor een bepaalde dag en tijd.
 
 _Betere controleren voor welk tijdstip de voorspelling gemaakt worden._
 
@@ -208,9 +208,14 @@ De Ridge Regression modellen zijn minder dan 64 KB groot. Dit betekend dat het m
 
 [^1]: [Model experimenten rapport - versie 1: Gegevensoverzicht](pdfs/model_experimenten_v1.pdf#page=3) _blz. 3 t/m 9_
 [^2]: [Model experimenten rapport - versie 1: Bronnen](pdfs/model_experimenten_v1.pdf#page=21) _blz. 21_
-[^3]: [Model experimenten rapport - versie 1: Gegevensvoorbereiding](pdfs/model_experimenten_v1.pdf#page=13) _blz. 12_
-[^4]: [StackoverFlow Blog: How to put machine learning models into production](https://stackoverflow.blog/2020/10/12/how-to-put-machine-learning-models-into-production/)
-[^5]: [c4model.com](https://c4model.com/)
-[^6]: [Ontwerpdocument: Vooronderzoek](pdfs/ontwerp.pdf#page=4) _blz. 3 t/m 6_
-[^7]: [Forecasting office indoor CO2 concentration using machine learning with a one-year dataset](https://doi.org/10.1016/j.buildenv.2020.107409)
-[^8]: [Model experimenten rapport - versie 2: Model beschrijvingen](pdfs/model_experimenten_v2.pdf#page=6)_blz. 5 t/m 6_
+[^3]: [Lineare Regressie notebook](htmls/model_experiments_v1/linear-regression.html)
+[^4]: [Exponential Smoothing notebook](htmls/model_experiments_v1/exponential-smoothing.html)
+[^5]: [Autoregressive Integrated Moving Average](htmls/model_experiments_v1/arima.html)
+[^6]: [Model experimenten rapport - versie 1: Gegevensvoorbereiding](pdfs/model_experimenten_v1.pdf#page=13) _blz. 12_
+[^7]: [StackoverFlow Blog: How to put machine learning models into production](https://stackoverflow.blog/2020/10/12/how-to-put-machine-learning-models-into-production/)
+[^8]: [c4model.com](https://c4model.com/)
+[^9]: [Ontwerpdocument: Vooronderzoek](pdfs/ontwerp.pdf#page=4) _blz. 3 t/m 6_
+[^10]: [Forecasting office indoor CO2 concentration using machine learning with a one-year dataset](https://doi.org/10.1016/j.buildenv.2020.107409)
+[^11]: [Long term notebook](htmls/model_experiments_v2/long-term.html)
+[^12]: [Short term notebook](htmls/model_experiments_v2/short-term.html)
+[^11]: [Model experimenten rapport - versie 2: Model beschrijvingen](pdfs/model_experimenten_v2.pdf#page=6)_blz. 5 t/m 6_

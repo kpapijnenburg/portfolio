@@ -6,11 +6,11 @@ Dit product is vorig jaar ontwikkeld door [Handpicked Labs](https://labs.handpic
 
 ### Probleemstelling
 
-Twindle meet, onder andere, de temperatuur, luchtvochtigheid en CO2 en bepaalt of er voldaan wordt aan de gestelde luchtkwaliteitseisen. Mede door COVID-19 is de luchtkwaliteit in een ruimte steeds belangrijker geworden. Slechte luchtkwaliteit kan ernstige gezondheidsproblemen veroorzaken. Door de luchtkwaliteit te voorspellen en meldingen te maken wanneer deze in gevaar is willen we de leefbaarheid van ruimten verbeteren.
+Twidle bepaalt of er voldaan wordt aan de gestelde luchtkwaliteitseisen door de tempratuur, luchtvochtigheid en het CO2-gehalte in een ruimte te meten. Mede door COVID-19 is de luchtkwaliteit in een ruimte steeds belangrijker geworden. Slechte luchtkwaliteit kan ernstige gezondheidsproblemen veroorzaken. Door de luchtkwaliteit te voorspellen en meldingen te geven wanneer deze in gevaar is willen we de leefbaarheid van ruimten verbeteren.
 
 ### Hoofd- en deelvragen
 
-Tijdens het gehele project is onderzoek verricht worden volgens het [Development Oriented Triangulation (DOT) framework](https://ictresearchmethods.nl/The_DOT_Framework). Dit framework bestaat uit verschillende onderzoekscategorieën die gecombineerd moeten worden om tot een valide conclusie te komen.
+Tijdens het gehele project is onderzoek verricht volgens het [Development Oriented Triangulation (DOT) framework](https://ictresearchmethods.nl/The_DOT_Framework). Dit framework bestaat uit verschillende onderzoekscategorieën die gecombineerd moeten worden om tot een valide conclusie te komen.
 
 Om het onderzoek te structureren is er een hoofdvraag en meerdere deelvragen opgesteld. Tijdens de conclusie zullen deze hoofd- en deelvragen beantwoord worden.
 
@@ -42,7 +42,7 @@ Uiteindelijk is er een pipeline ontwikkeld die periodiek bekijkt of de machine l
 </center>
 <center><small>Afbeedling 1: Voorbeeld van koppeling</center></small>
 
-Door deze manier van visualizatie toe te passen worden gebruikers aangespoort om in te grijpen wanneer de situatie dreigt te verslechteren. 
+Door deze manier van visualizatie toe te passen worden gebruikers aangespoord om in te grijpen wanneer de situatie dreigt te verslechteren. 
 
 ## Leeswijzer
 
@@ -68,7 +68,7 @@ Deze requirements onderzoeken hebben geleid tot een antwoord op de vraag:
 
 ### Ontwerpen
 
-Uit de verschillende analyses was gebleken dat het belangrijk is dat personen snel geinformeerd worden wanneer de luchtkwaliteit dreigt te verslechteren. De eerste stap hierin is om de meetwaarden die samen de luchtkwaliteit vormen te voorspellen. Hiervoor is de volgende vraag gesteld:
+Uit de verschillende analyses was gebleken dat het belangrijk is dat personen snel geïnformeerd worden wanneer de luchtkwaliteit dreigt te verslechteren. De eerste stap hierin is om de meetwaarden die samen de luchtkwaliteit vormen te voorspellen. Hiervoor is de volgende vraag gesteld:
 
 > **_Hoe kan machine learning worden toegepast om luchtkwaliteit te voorspellen?_**
 
@@ -98,13 +98,13 @@ Het doel was om deze problemen om te lossen voor de [derde oplevering](realisere
 
 ### Beheer <br>
 
-Om het project in goede banen leiden is tijdens het opstellen van het plan[^5] uitgelegt hoe het project beheert zou worden. In dit onderdeel van het portfolio word toegelicht hoe dit in de realiteit verlopen is.
+Om het project in goede banen leiden is tijdens het opstellen van het plan[^5] uitgelegd hoe het project beheerd zou worden. In dit onderdeel van het portfolio wordt toegelicht hoe dit in de realiteit verlopen is.
 
-Door middel van [versie beheer](beheer.md#versiebeheer) toe te passen wordt het aantal merge conflicten geminimaliseerd. Samen met [automatische tests](beheer.md#automatishe-tests) vormt dit de basis voor het [continous deployment](beheer.md#deployment) systeem.
+Door [versie beheer](beheer.md#versiebeheer) toe te passen wordt het aantal merge conflicten geminimaliseerd. Samen met [automatische tests](beheer.md#automatishe-tests) vormt dit de basis voor het [continous deployment](beheer.md#deployment) systeem.
 
 ### Adviseren <br>
 
-Na afloop van het project is er [teruggekeken](realiseren.md#algemene-evaluatie-reflectie) op wat er goed ging en wat er beter kon. Vanuit deze bevindingen zijn adviezen uitgebracht over de volgende onderwerpen
+Na afloop van het project is er [gereflecteerd](realiseren.md#algemene-evaluatie-reflectie) op wat er goed ging en wat er beter kon. Vanuit deze bevindingen zijn adviezen uitgebracht over de volgende onderwerpen
 
 1. [Data](adviseren.md#data)
 2. [Workflow](adviseren.md#workflow)
@@ -116,7 +116,7 @@ Door de ethische aspecten van het project te analyseren is antwoord gegeven op d
 
 ## Conclusie
 
-Ter conclusie zal bepaalt worden of aan het doel voldaan is door de hoofd- en deelvragen te beantwoorden en te reflecteren op de stageperiode. Het doel van het project was:
+Ter conclusie zal bepaald worden of aan het doel voldaan is door de hoofd- en deelvragen te beantwoorden en te reflecteren op de stageperiode. Het doel van het project was:
 
 > **_Vanaf 18-06 zullen de gebruikers van Twindle meldingen kunnen ontvangen wanneer slechte luchtkwaliteit wordt verwacht. Het machine learning model wat hiervoor wordt toegepast zal een "recall" en "precision" score hebben van minimaal 90%._**
 

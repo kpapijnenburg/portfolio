@@ -14,6 +14,7 @@ Deze strategie is succesvol toegepast, zie afbeelding 2. Door deze strategie toe
 <center><small>Afbeelding 2: Branching strategie implementatie</center></small>
 
 ## Automatische tests
+
 Tijdens het ontwikkelen van de machine learning API is zoveel mogelijk gewerkt op een test driven manier. Dit betekend dat methoden getests werden terwijl ze geïmplementeerd wrden. Op deze manier kon gevalideerd worden dat de code werkt na verwachtingen. Onderstaand valt het resultaat van deze tests te zien.
 
 ```
@@ -47,6 +48,7 @@ OK
 ```
 
 ## Deployment
+
 BitBucket biedt de mogelijkheid om via het BitBucket pipelines een automatische deployment straat in te richten. Momenteel is er bij Handpicked Labs geen omgeving waar deze pipelines de applicaties naar kunnen deployen. Om voorbereid te zijn op een toekomst wanneer dit wel mogelijk zou zijn is de onderstaande pipeline ontwikkeld.
 
 ```
@@ -64,8 +66,9 @@ pipelines:
               - python -m unittest
 ```
 
-
 ## Feedback
+
+In de volgende secties valt de feedback op het project plan en portfolio, en hoe deze verwerkt is, te vinden.
 
 ### Project plan
 
@@ -157,12 +160,29 @@ in story_mapping.pdf zie ik niet vanuit de tekst een verwijzing naar de bronnen 
 Bij het analyseren zou ik wat meer requirements willen zien. Dus wat was gevraagd om te bouwen uiteindelijk, en over ML aspecten vind ik ook maar amper iets.
 
 - Apart hoofdstuk gemaakt voor:
-  - Software requirements
-  - Data requirements
-  - Machine learning requirements
+   - Software requirements
+   - Data requirements
+   - Machine learning requirements
 
 Onderhouden heet -> Beheer
 
 - Onderdeel hernoemt.
 
+**Bartosz op 10-06-2021** <br>
+Ziet en heel goed eruit, toegankelijk en gelaagd portfolio. leest fijn en de content is interessant.
 
+Check even heel goed of je alle competenties dekt? ik mis bijvoorbeeld communicatie. Zelf reflectie en evaluatie is ook handig (op het einde van de leeswijzer)
+
+- Communicatie toon ik aan door de presentaties die ik heb gegeven tijdens de opleveringen te beschrijven. Daarnaast is het portfolio zelf en de eindpresentatie hier ook onderdeel van.
+- Evaluatie/zelfreflectie toegevoegd aan de conclusie op de leeswijzer.
+
+je moet nog paar pagina's vullen met tekst maar als je het doet zoals je deed tot nu toe dan komt alles goed. Ik vind het een fijn portfolio.
+
+Ik kwam nog iets tegen. Ga je geen code/notebooks opleveren met je portfolio? Je verhaal is fijn maar ik zou meer producten willen zien van je werk, dus concrete deliverables waaraan jij gewerkt hebt.
+
+- Model experiment notebooks toegevoegd:
+    - Linear regressie
+    - Exponential smoothing
+    - ARIMA
+    - Short term
+    - Long term 

@@ -476,7 +476,7 @@
                 
                 <h2 id="data">Data</h2>
 <h3 id="missende-gegevens">Missende gegevens</h3>
-<p>Tijdens de <a href="../analyseren/#missende-gegevens">data exploratie</a> was opgemerkt dat niet in iedere ruimte dezelfde data bijgehouden werd, zie tabel 1. Dit heeft ervoor gezorgd dat het niet mogelijk was om voor elke ruimte hetzelfde machine learning model te ontwikkelen.</p>
+<p>Tijdens de <a href="../analyseren/#missende-gegevens">data exploratie</a> was opgemerkt dat niet in iedere ruimte dezelfde data bijgehouden werd, zie tabel 1. Dit heeft ervoor gezorgd dat het niet mogelijk was om voor elke ruimte hetzelfde machine learningmodel te ontwikkelen.</p>
 <table>
 <thead>
 <tr>
@@ -568,22 +568,22 @@
 </tbody>
 </table>
 <p><center><small>Tabel 1: Dataverzameling per ruimte in de Big Top</small></center>
-<small>*Deurstatus en deurgebruik zijn momenteel geen onderdeel van het machine learning model.</small></p>
-<p>Een oplossing zou zijn om voor iedere ruimte sensoren te installeren die de waarden meten die in table 1 worden gespecificeerd. Op deze manier kan er voor iedere ruimte een model ontwikkeld worden en zal de applicatie beter gebruikt kunnen worden om de luchtkwaliteit te verbeteren. </p>
+<small>*Deurstatus en deurgebruik zijn momenteel geen onderdeel van het machine learningmodel.</small></p>
+<p>Een oplossing zou zijn om voor iedere ruimte sensoren te installeren die de waarden meten die in table 1 worden gespecificeerd. Op deze manier kan er voor iedere ruimte een model ontwikkeld worden en zal de applicatie beter toegepast kunnen worden om de luchtkwaliteit te verbeteren. </p>
 <h3 id="verzameling">Verzameling</h3>
 <p>De data die beschikbaar was tijdens het project verzameld tussen <code>2021-01-07 09:11</code> en <code>2021-02-09 12:54</code>. Dit betekend dat er maar ongeveer een maand aan data gebruikt kon worden om de machine learning modellen te trainen. Tijdens het onderzoek van Kallio et al.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> werd een dataset van een jaar gebruikt. Dit is belangrijk om bepaalde seizoensgebonden trends op te kunnen nemen in het model.</p>
 <p>De voorgestelde oplossing is om een jaar aan data te verzamelen en daarna de modellen te trainen op de complete dataset. Op deze manier kan gevalideerd worden of de bevindingen van dit project juist waren.</p>
 <h2 id="workflow">Workflow</h2>
 <h3 id="teststrategie">Teststrategie</h3>
-<p>Gedurende het ontwikkelen van de machine learning API is er gewerkt op een <a href="../beheer/">test driven</a> manier. Het voordeel hiervan is dat veranderingen die delen de software breken tijdig opgespoord konden worden. In het front-end en back-end van de Twindle applicatie is deze strategie niet toegepast. Hierdoor kon het lastig zijn om te bepalen waar bugs vandaan kwamen. </p>
-<p>Het voorstel is om in de toekomst een striktere teststrategie te hanteren. Op deze manier zal uitbreiding van besstaande applicaties vloeiender verlopen.</p>
+<p>Gedurende het ontwikkelen van de machine learning API is er gewerkt op een <a href="../beheer/">test driven</a> manier. Het voordeel hiervan is dat veranderingen die delen de software breken tijdig opgespoord konden worden. In de front-end- en back-endapplicaties van het Twindle project is deze strategie niet toegepast. Hierdoor kon het lastig zijn om te bepalen waar bugs vandaan kwamen. </p>
+<p>Het voorstel is om in de toekomst een striktere teststrategie te hanteren. Op deze manier zal uitbreiding van bestaande applicaties vloeiender verlopen.</p>
 <h3 id="continuous-integration-deployment">Continuous integration &amp; deployment</h3>
 <p>De bedoeling was om tijdens het project gebruik te maken van <a href="../beheer/#deployment">continous integration (CI) en deployment (CD)</a>. Hiervoor was een sterke teststrategie en versiebeheersysteem toegepast. Daarnaast moet er ook een omgeving zijn om de applicaties te hosten. Deze was er wel maar was niet beschikbaar voor de automatische pipelines.</p>
-<p>Om in de toekomst betere demoes te kunnen geven en hogere kwaliteit software af te leveren is het advies om een development en release omgeving beschikbaar te stellen voor de stagiaires. </p>
+<p>Om in de toekomst betere demo's te kunnen geven en hogere kwaliteit software af te leveren is het advies om een development en release omgeving beschikbaar te stellen voor de stagiaires. </p>
 <h2 id="ethiek">Ethiek</h2>
 <p>Om te bepalen met welke ethische aspecten rekening gehouden moet worden en op welke manier is de TICT-tool<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> toegepast. Dit is een tool die helpt bij het inschatten van de impact die een nieuwe technology gaat maken. Voor dit project is gebruik gemaakt van de "quick scan" optie om een globaal overzicht van de situatie te krijgen<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.</p>
-<p>Belangrijke bevingingen van deze quickscan zijn dat er al veel rekening gehouden wordt met privacy en dat er een positieve impact gemaakt wordt op de personen die de applicatie gebruiken. </p>
-<p>Er zijn plannen om de applicatie uit te breiden zodat deze kan de brandveiligheid kan monitoren. Wanneer deze uitbreidingen worden gemaakt is het belangrijk dat er aan dezelfde  hoge privacy eisen wordt gehouden.</p>
+<p>Belangrijke bevindingen van deze quickscan zijn dat er al veel rekening gehouden wordt met privacy en dat er een positieve impact gemaakt wordt op de personen die de applicatie gebruiken. </p>
+<p>Er zijn plannen om de applicatie uit te breiden zodat deze de brandveiligheid kan monitoren. Wanneer deze uitbreidingen worden gemaakt is het belangrijk dat er aan dezelfde hoge privacy eisen wordt gehouden.</p>
 <div class="footnote">
 <hr />
 <ol>

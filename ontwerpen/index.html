@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#model-experimenten-versie-1" class="md-skip">
+        <a href="#modelexperimenten-versie-1" class="md-skip">
           Skip to content
         </a>
       
@@ -232,11 +232,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#model-experimenten-versie-1" class="md-nav__link">
-    Model experimenten versie 1
+  <a href="#modelexperimenten-versie-1" class="md-nav__link">
+    Modelexperimenten versie 1
   </a>
   
-    <nav class="md-nav" aria-label="Model experimenten versie 1">
+    <nav class="md-nav" aria-label="Modelexperimenten versie 1">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -266,11 +266,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#model-experimenten-versie-2" class="md-nav__link">
-    Model experimenten versie 2
+  <a href="#modelexperimenten-versie-2" class="md-nav__link">
+    Modelexperimenten versie 2
   </a>
   
-    <nav class="md-nav" aria-label="Model experimenten versie 2">
+    <nav class="md-nav" aria-label="Modelexperimenten versie 2">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -406,11 +406,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#model-experimenten-versie-1" class="md-nav__link">
-    Model experimenten versie 1
+  <a href="#modelexperimenten-versie-1" class="md-nav__link">
+    Modelexperimenten versie 1
   </a>
   
-    <nav class="md-nav" aria-label="Model experimenten versie 1">
+    <nav class="md-nav" aria-label="Modelexperimenten versie 1">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -440,11 +440,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#model-experimenten-versie-2" class="md-nav__link">
-    Model experimenten versie 2
+  <a href="#modelexperimenten-versie-2" class="md-nav__link">
+    Modelexperimenten versie 2
   </a>
   
-    <nav class="md-nav" aria-label="Model experimenten versie 2">
+    <nav class="md-nav" aria-label="Modelexperimenten versie 2">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -488,34 +488,34 @@
                 
                   <h1>Ontwerpen</h1>
                 
-                <h2 id="model-experimenten-versie-1">Model experimenten versie 1</h2>
-<p>Voor de uitbreiding van het Twindle project zijn machine learning modellen toegepast om de luchtkwaliteit te voorspellen. Dit zijn modellen voor luchtvochtigheid, temperatuur, CO2 en TVOC. Deze modellen moesten voldoen aan bepaalde eisen, welke besproken zijn in het <a href="../analyseren/#machine-learning-requirements">analyseren: requirements - machine learning</a> onderdeel.</p>
+                <h2 id="modelexperimenten-versie-1">Modelexperimenten versie 1</h2>
+<p>Voor de uitbreiding van het Twindleproject zijn machine learningmodellen toegepast om de luchtkwaliteit te voorspellen. Dit zijn modellen voor de luchtvochtigheid, temperatuur, het CO2- en TVOC-gehalte. Deze modellen moesten voldoen aan bepaalde eisen, welke besproken zijn in het <a href="../analyseren/#machine-learning-requirements">analyseren: requirements - machine learning</a> onderdeel.</p>
 <h3 id="beschrijving-resultaten">Beschrijving &amp; resultaten</h3>
-<p>Om een betere indicatie te krijgen wat voor soort modellen toegepast konden worden is extra data exploratie verricht<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. Hieruit is gebeleken dat de data seizoensgebonden- en niet stationair is. Dit betekend dat standaard least-squares regressie niet toegepast kon worden, dit leidt namelijk tot sterke overfitting.</p>
-<p>Na onderzoek<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> te hebben gedaan naar geschikte modellering technieken is besloten om met de volgende modellen te experimenteren:</p>
+<p>Om een betere indicatie te krijgen wat voor soort modellen toegepast konden worden is extra data-exploratie verricht<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. Hieruit is gebeleken dat de data seizoensgebonden- en niet stationair is. Dit betekend dat standaard least squares-regressie niet toegepast kon worden, dit leidt namelijk tot sterke overfitting.</p>
+<p>Na onderzoek<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> te hebben gedaan naar geschikte modelleringtechnieken is besloten om met de volgende modellen te experimenteren:</p>
 <ul>
-<li>Lineare Regressie</li>
-<li>Exponential Smoothing</li>
-<li>Autoregressive Integrated Moving Average</li>
+<li>Lineare Regressie<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></li>
+<li>Exponential Smoothing<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></li>
+<li>Autoregressive Integrated Moving Average<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></li>
 </ul>
 <p><strong>Lineaire Regressie</strong> <br>
-Om lineare regressie toe te kunnen passen moest de data geen autocorrelaties bevatten en stationair zijn. Hiervoor waren differencing, het verschil tussen een meting en de voorgaande meting, technieken toegepast. Daarnaast was er een techniek<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> toegepast om de opeenvolgende data voor te bereiden voor gebruik in de algoritmen.</p>
+Om lineare regressie toe te kunnen passen moest de data geen autocorrelaties bevatten en stationair zijn. Hiervoor waren differencing, het verschil tussen een meting en de voorgaande meting, technieken toegepast. Daarnaast was er een techniek<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup> toegepast om de opeenvolgende data voor te bereiden voor gebruik in de algoritmen.</p>
 <p>De volgende modellen waren toegepast:</p>
 <ul>
 <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html">LinearRegression</a> (LR)</li>
 <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsRegressor.html">KNearestNeigbors</a> (KNN)</li>
 <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html">RandomForestRegressor</a> (RF)</li>
 </ul>
-<p><img alt="Gemiddelde R-squared per meetwaarde en model" src="../images/linear-regression-results.png" /></p>
-<p><center><small>Afbeelding 1: Gemiddelde R-squared per meetwaarde en model</small></center></p>
+<p><img alt="Gemiddelde r-squared per meetwaarde en model" src="../images/linear-regression-results.png" /></p>
+<p><center><small>Afbeelding 1: Gemiddelde r-squared per meetwaarde en model</small></center></p>
 <p>Aan de bovenstaande afbeeldingen is het volgende af te leiden:</p>
 <ul>
-<li>Geen enkel linear regressie model behaalt de eis van 0.9 r-squared.</li>
+<li>Geen enkel linear regressiemodel behaalt de eis van 0.9 r-squared.</li>
 <li>De lage of negatieve r-squared scores betekenen dat er geen patronen gevonden waren.</li>
 </ul>
 <p>Waarschijnlijk missen er nog cruciale features. In verder iteraties is dit verder onderzocht.</p>
 <p><strong>Exponential Smoothing</strong> <br>
-Voorspelling die gemaakt worden met exponential smoothing methoden zijn gemiddelden van eerdere waarnemingen, waarbij de eerdere waarnemingen zwaarder meewegen dan de oudere.</p>
+Voorspelling die gemaakt worden met exponential smoothing methoden zijn gemiddelde van eerdere waarnemingen, waarbij de eerdere waarnemingen zwaarder meewegen dan de oudere.</p>
 <p>De Holt-Winters seasonal methode was toegepast om te kunnen profiteren van de trends en seizoensgebondenheid die aanwezig waren in de data. Het <code>statsmodel</code> package heeft hier de volgende implementatie van:</p>
 <ul>
 <li><a href="https://www.statsmodels.org/dev/generated/statsmodels.tsa.holtwinters.ExponentialSmoothing.html">ExponentialSmoothing</a></li>
@@ -530,21 +530,21 @@ Autoregressive integrated moving average (ARIMA) modellen maken gebruik van een 
 <li>Moving average (MA)</li>
 </ul>
 <p>Het kan gebruik maken van de trends, autocorrelatie en seizoensgebondenheid van de data. In dit geval is er gekozen voor de <code>auto_arima</code> methode van het <code>PMDARIMA</code> package. Hierbij worden meerdere combinaties van het model uitgetests en uiteindelijk het hoogst scorende model opgeslagen.</p>
-<p><img alt="ARIMA resultaten per meetwaarden" src="../images/arima.png" /></p>
-<p>Net als bij de Exponential Smoothing modellen presteerde deze techniek beter op de TVOC en CO2 meetwaarden. Deze waarden hebben ook een wekelijkse seizoensgebondenheid die momenteel nog niet gemodelleerd is. Wanneer er meer data beschikbaar is zal dit meegenomen worden in het model. Dit zal waarschijnlijk resulteren in hogere scores.</p>
+<p><img alt="ARIMA-resultaten per meetwaarden" src="../images/arima.png" /></p>
+<p>Net als bij de Exponential Smoothing modellen presteerde deze techniek beter op de TVOC- en CO2-gehalte. Deze waarden hebben een wekelijkse seizoensgebondenheid die momenteel nog niet gemodelleerd is. Wanneer er meer data beschikbaar is zal dit meegenomen worden in het model, wat waarschijnlijk resulteren in hogere scores.</p>
 <h3 id="bevindingen">Bevindingen</h3>
-<p>Momenteel is er nog geen enkel model wat de gestelde eis van 0.9 r-squared score behaalt. Wel komen de ARIMA modellen redelijk dicht in de buurt. Met deze reden is er voor gekozen om de eerste iteratie van de implementatie deze modellen toe te passen.</p>
+<p>Momenteel is er nog geen enkel model wat de gestelde eis van 0.9 r-squared score behaalt. Wel komen de ARIMA-modellen redelijk dicht in de buurt. Met deze reden is er voor gekozen om de eerste iteratie van de implementatie deze modellen toe te passen.</p>
 <h2 id="architectuur">Architectuur</h2>
-<p>Ongeveer 90% van de data science projecten haalt het niet tot productie<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>. Dit komt doordat het proces wat gebruikt wordt om machine learning modellen te ontwikkelen niet goed aansluit bij de software engineering &amp; DevOps processen. Om dit te voorkomen bij het Digital Twin 3.0 project is hier rekening mee gehouden tijdens het ontwerp.</p>
-<p>Tijdens het ontwerp is er gewerkt met de C4 methoden<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup>. Dit is een ontwerp framework wat op vier abstractieniveaus de applicatie toelicht.</p>
+<p>Ongeveer 90% van de data science projecten haalt het niet tot productie<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup>. Dit komt doordat het proces wat gebruikt wordt om machine learningmodellen te ontwikkelen niet goed aansluit bij de software engineering &amp; DevOps processen. Om dit te voorkomen bij het Digital Twin 3.0 project is hier rekening mee gehouden tijdens het ontwerp.</p>
+<p>Tijdens het ontwerp is er gewerkt met de C4 methoden<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup>. Dit is een ontwerpraamwerk wat op vier abstractieniveaus de applicatie toelicht.</p>
 <ol>
 <li>Context; Op hoog niveau wordt weergegeven wie er op welke manier interacteert met de systemen.</li>
-<li>Container; Globaal overzicht van de software architectuur. Focus op technologiekeuze en manier van communicatie.</li>
+<li>Container; Globaal overzicht van de software-architectuur. Focus op technologiekeuze en manier van communicatie.</li>
 <li>Component; Overzicht van welke onderdelen samen de container vormen.</li>
-<li>Code; Laag niveau overzicht van de code door, bijvoorbeeld, klasse diagrammen.</li>
+<li>Code; Laag niveau overzicht van de code door, bijvoorbeeld, klassediagrammen.</li>
 </ol>
 <p><strong>Vooronderzoek</strong> <br>
-Voor dat een begin gemaakt was met het ontwerpen van de applicatie is eerst vooronderzoek<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup> verricht om te bepalen welke tools en technieken toegepast gingen worden. Dit vooronderzoek ging dieper in op de volgende onderwerpen:</p>
+Voor dat een begin gemaakt was met het ontwerpen van de applicatie is eerst vooronderzoek<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup> verricht om te bepalen welke tools en technieken toegepast gingen worden. Dit vooronderzoek ging dieper in op de volgende onderwerpen:</p>
 <ol>
 <li>Het opslaan en ophalen van de data en voorspellingen.</li>
 <li>Frameworks en tooling die hierbij passen.<ul>
@@ -558,20 +558,20 @@ Voor dat een begin gemaakt was met het ontwerpen van de applicatie is eerst voor
 </li>
 </ol>
 <p><strong>C1: Context</strong> <br>
-In het onderstaande systeem context diagram zijn de gebruikersgroepen en de manier waarop zij de applicatie gebruiken gevisualiseerd.</p>
-<p><img alt="Systeem context diagram" src="../images/ontwerp/c1_context.png" /></p>
-<p><center><small>Afbeelding 3: Systeem context diagram</small></center></p>
+In het onderstaande systeem contextdiagram zijn de gebruikersgroepen en de manier waarop zij de applicatie gebruiken gevisualiseerd.</p>
+<p><img alt="Systeem contextdiagram" src="../images/ontwerp/c1_context.png" /></p>
+<p><center><small>Afbeelding 3: Systeem contextdiagram</small></center></p>
 <p><strong>C2: Containers</strong><br>
-In dit diagram wordt er verder ingezoomd op de twee software systemen zoals deze zijn beschreven in het vorige diagram. Ze zijn verder onderverdeeld in containers. Containers zijn onderdelen van het systeem die apart van elkaar functioneren. In dit diagram ligt de focus op de technologie keuzes en manier van communicatie tussen containers.</p>
-<p><img alt="Container diagram" src="../images/ontwerp/c2_container.png" /></p>
-<p><center><small>Afbeelding 4: Container diagram</small></center></p>
+In dit diagram wordt er verder ingezoomd op de twee softwaresystemen zoals deze zijn beschreven in het vorige diagram. Ze zijn verder onderverdeeld in containers. Containers zijn onderdelen van het systeem die apart van elkaar functioneren. In dit diagram ligt de focus op de technologie keuzes en manier van communicatie tussen containers.</p>
+<p><img alt="Containerdiagram" src="../images/ontwerp/c2_container.png" /></p>
+<p><center><small>Afbeelding 4: Containerdiagram</small></center></p>
 <p>De webapplicatie haalt voorspellingen op uit de AI-layer. Om deze voorspellingen te kunnen maken is historische data nodig die voorzien wordt door de back-end applicatie van de Digital Twin.</p>
 <p><strong>C3: Components</strong> <br>
 Iedere container uit het vorige diagram bestaat uit een of meerdere componenten. In dit diagram zal de technologiekeuze, communicatie en verantwoordelijkheden van deze componenten worden toegelicht.</p>
-<p><img alt="Systeem context diagram" src="../images/ontwerp/c3_components_ai_layer.png" /></p>
-<p><center><small>Afbeelding 5: Components diagram</small></center></p>
+<p><img alt="Componentdiagram" src="../images/ontwerp/c3_components_ai_layer.png" /></p>
+<p><center><small>Afbeelding 5: Componentdiagram</small></center></p>
 <p><strong>C4: Code</strong> <br>
-Onderstaand valt een overzicht te vinden van de routes die aan de API zijn toegevoegd. Via deze route kunnen de voorspellingen die gemaakt zijn opgevraagd worden door het front-end</p>
+Onderstaand valt een overzicht te vinden van de routes die aan de API zijn toegevoegd. Via deze route kunnen de voorspellingen die gemaakt zijn opgevraagd worden door het front-end.</p>
 <table>
 <thead>
 <tr>
@@ -592,12 +592,12 @@ Onderstaand valt een overzicht te vinden van de routes die aan de API zijn toege
 </tr>
 </tbody>
 </table>
-<p>In de applicatie zullen zich meerdere entiteiten bevinden. Onderstaand is een overzicht van deze entiteiten en hun attributen en relaties te zien.</p>
+<p>In de applicatie zullen zich meerdere entiteiten bevinden. Onderstaand is een overzicht van deze entiteiten, hun attributen en relaties te zien.</p>
 <p><center>
-<img alt="Entity Relation diagram" height="70%" src="../images/ontwerp/erd.png" width="70%" />
+<img alt="Entity relationsdiagram" height="70%" src="../images/ontwerp/erd.png" width="70%" />
 </center>
-<center><small>Afbeelding 6: Entity relation diagram</small></center></p>
-<h2 id="model-experimenten-versie-2">Model experimenten versie 2</h2>
+<center><small>Afbeelding 6: Entity relationsdiagram</small></center></p>
+<h2 id="modelexperimenten-versie-2">Modelexperimenten versie 2</h2>
 <p>De voorgaande experimenten resulteerde nog niet in modellen die de eis van 0.9 r-squared haalde. Uiteindelijk is toch besloten om deze modellen toe te passen in de applicatie. Uit deze <a href="../realiseren/#oplevering-2-integratie-arima-modellen">implementatie</a> bleek dat de modellen niet presteerde zoals verwacht. Om het doel te behalen moeten de volgende aanpassingen gedaan worden:</p>
 <ol>
 <li>Onderzoeken wat invloed heeft op de veranderingen in de meetwaarden.</li>
@@ -607,23 +607,23 @@ Onderstaand valt een overzicht te vinden van de routes die aan de API zijn toege
 </ol>
 <p>In overleg met de opdrachtgevers en belangrijkste stakeholder, Techtenna, was besloten om eerst een model voor de CO2 waarde te ontwikkelen. Wanneer dit succesvol is bevonden kan dit worden uitgebreid naar de overige meetwaarden.</p>
 <h3 id="gegevensverzameling">Gegevensverzameling</h3>
-<p>Tijdens de tweede oplevering van het project werd door Marco van Techtenna opgemerkt dat het aantal personen wat zich in een ruimte bevindt invloed heeft op de CO2 niveaus. Via de Google Calendar API is opgevraagd hoeveel personen zich op een bepaalde tijd in een ruimte bevinden. Deze gegevens zijn toegevoegd aan de dataset zoals beschreven in de vorige iteratie.</p>
-<p>Uit een vergelijkbaar onderzoek<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup> is gebleken dat temperatuur, luchtvochtigheid en activiteitsniveau een mogelijke invloed kunnen hebben op de CO2 waarde. Door deze waarden te visualiseren in een correlatie heatmap kon dit gevalideerd worden.</p>
+<p>Tijdens de tweede oplevering van het project werd door Marco van Techtenna opgemerkt dat het aantal personen wat zich in een ruimte bevinden invloed heeft op de CO2-gehalten. Via de Google Calendar API is opgevraagd hoeveel personen zich op een bepaalde tijd in een ruimte bevinden. Deze gegevens zijn toegevoegd aan de dataset zoals beschreven in de vorige iteratie.</p>
+<p>Uit een vergelijkbaar onderzoek<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup> is gebleken dat temperatuur, luchtvochtigheid en activiteitsniveau een mogelijke invloed kunnen hebben op het CO2-gehalte. Door deze waarden te visualiseren in een correlatieheatmap kon dit gevalideerd worden.</p>
 <p><center>
 <img alt="Correlatie heatmap" src="../images/realisatie/heatmap.png" />
 </center>
-<center><small>Afbeelding 7: Correlatie Heatmap</small></center></p>
+<center><small>Afbeelding 7: Correlatieheatmap</small></center></p>
 <h3 id="beschrijving-resultaten_1">Beschrijving &amp; resultaten</h3>
-<p>Om het tweede doel te behalen zijn er twee modellen uitgewerkt. Een voor lange termijn voorspellingen en een voor korte termijn voorspellingen. In het onderzoeksrapport<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup> wordt verder toegelicht welke data gebruikt was en hoe deze werd voorbereid.</p>
+<p>Om het tweede doel te behalen zijn er twee modellen uitgewerkt. Een voor lange termijn voorspellingen<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup> en een voor korte termijn voorspellingen<sup id="fnref:12"><a class="footnote-ref" href="#fn:12">12</a></sup>. In het onderzoeksrapport<sup id="fnref:13"><a class="footnote-ref" href="#fn:13">13</a></sup> wordt verder toegelicht welke data toegepast is en hoe deze is voorbereid.</p>
 <p><strong>Korte termijn - Modellen</strong> <br>
-Tijdens onderzoek van Kallio et al.<sup id="fnref2:7"><a class="footnote-ref" href="#fn:7">7</a></sup> worden meerdere mogelijke modellen beschreven. Deze zijn specifiek uitgekozen omdat ze accurate voorspellingen kunnen geven op auto gecorreleerde data.</p>
+Tijdens onderzoek van Kallio et al.<sup id="fnref2:10"><a class="footnote-ref" href="#fn:10">10</a></sup> worden meerdere mogelijke modellen beschreven. Deze zijn specifiek uitgekozen omdat ze accurate voorspellingen kunnen geven op auto-gecorreleerde data.</p>
 <ul>
 <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html">Ridge Regression (RR)</a></li>
 <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html">Decision Tree (DT)</a></li>
 <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html">Random Forest (RF)</a></li>
 <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html">Multilayer Perceptron (MLP)</a></li>
 </ul>
-<p>Aangezien de CO2 waarde in een ruimte niet drastisch veranderd in korte tijd is er gekozen om als baseline een ‘last-observation carried forward’ model te gebruiken. Dit geeft een de laatst gemeten CO2 waarde aan als de voorspelde waarde.</p>
+<p>Aangezien het CO2-gehalte in een ruimte niet drastisch veranderd in korte tijd is er gekozen om als baseline een ‘last-observation carried forward’ model te gebruiken. Dit geeft het laatst gemeten CO2-gehalte aan als de voorspelde waarde.</p>
 <p><strong>Korte termijn - Features</strong> <br>
 Per model kan het verschillen welke features tot het beste resultaat leiden. Om dit te optimaliseren is gebruik gemaakt van de <code>SelectKBest</code> class. Deze klasse maakt gebruik van <code>f_regression</code> om te bepalen welke features het meest gecorreleerd zijn tot het target. Tussen de drie en dertig features zijn getest door middel van <code>GridSearch</code>. Onderstaand valt per model te zien welke features de hoogste score behalen.</p>
 <p><img alt="Feature selectie" src="../images/realisatie/feature-selection.png" /></p>
@@ -647,39 +647,54 @@ Door de voorspelde waarde tegenover daadwerkelijke waarde te plotten kunnen patr
 <h3 id="bevindingen_1">Bevindingen</h3>
 <p>Vanuit de vorige iteratie waren er een viertal uitdagingen die opgelost moesten worden. Onderstaand zijn deze, en de oplossingen, toegelicht.</p>
 <p><em>Onderzoeken wat invloed heeft op veranderingen in de meetwaarden en deze data toevoegen aan de modellen.</em></p>
-<p>CO2 gehaltes worden vooral bepaald door het aantal personen in een ruimte. Door gebruik te maken van de google calendar API kan opgevraagd worden hoeveel personen zich op een bepaalde tijd in de ruimte bevonden.</p>
+<p>CO2-gehalten worden vooral bepaald door het aantal personen in een ruimte. Door gebruik te maken van de Google Calendar API kan opgevraagd worden hoeveel personen zich op een bepaalde tijd in de ruimte bevonden.</p>
 <p><em>Verder in de toekomst kijken, 3 uur of meer.</em></p>
-<p>In het onderzoek van Kallio et al. <sup id="fnref3:7"><a class="footnote-ref" href="#fn:7">7</a></sup> werd geconcludeerd dat voorspellingen voor de lange termijn vaak niet accuraat zijn. Hierdoor is er gekozen om een model te ontwikkelen wat op korte termijn accuraat is, deze zal ondersteunt worden door een visualisatie van gemiddelde voor een bepaalde dag en tijd.</p>
+<p>In het onderzoek van Kallio et al. <sup id="fnref3:10"><a class="footnote-ref" href="#fn:10">10</a></sup> werd geconcludeerd dat voorspellingen voor de lange termijn vaak niet accuraat zijn. Met deze reden is er gekozen om een model te ontwikkelen wat op korte termijn accuraat is, deze zal ondersteunt worden door een visualisatie van gemiddelde voor een bepaalde dag en tijd.</p>
 <p><em>Betere controleren voor welk tijdstip de voorspelling gemaakt worden.</em></p>
 <p>Door andere data voorbereidingstechnieken te gebruiken wordt er geen voorspelling gedaan voor een bepaald tijdstip. Hierdoor hoeft deze ook niet meer gecontroleerd te worden.</p>
 <p><em>Bestandsgrootte modellen verminderen om schaalbaarheid te vergroten.</em></p>
-<p>De Ridge Regression modellen zijn minder dan 64 KB groot. Dit betekend dat het makkelijk schaalbaar is wanneer ze voor digital twins met veel ruimten moeten worden gebruikt</p>
+<p>De ridge regressionmodellen zijn minder dan 64 KB groot. Dit betekend dat het makkelijk schaalbaar is wanneer ze in digital twins met veel ruimten moeten worden toegepast.</p>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
-<p><a href="../pdfs/model_experimenten_v1.pdf#page=3">Model experimenten rapport - versie 1: Gegevensoverzicht</a> <em>blz. 3 t/m 9</em>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p><a href="../pdfs/model_experimenten_v1.pdf#page=4">Modelexperimenten rapport - versie 1: Gegevensoverzicht</a> <em>blz. 3 t/m 9</em>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p><a href="../pdfs/model_experimenten_v1.pdf#page=21">Model experimenten rapport - versie 1: Bronnen</a> <em>blz. 21</em>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p><a href="../pdfs/model_experimenten_v1.pdf#page=22">Modelexperimenten rapport - versie 1: Bronnen</a> <em>blz. 21</em>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
-<p><a href="../pdfs/model_experimenten_v1.pdf#page=13">Model experimenten rapport - versie 1: Gegevensvoorbereiding</a> <em>blz. 12</em>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p><a href="../htmls/model_experiments_v1/linear-regression.html">Lineare regressienotebook</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:4">
-<p><a href="https://stackoverflow.blog/2020/10/12/how-to-put-machine-learning-models-into-production/">StackoverFlow Blog: How to put machine learning models into production</a>&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<p><a href="../htmls/model_experiments_v1/exponential-smoothing.html">Exponential smoothingnotebook</a>&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 <li id="fn:5">
-<p><a href="https://c4model.com/">c4model.com</a>&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+<p><a href="../htmls/model_experiments_v1/arima.html">ARIMA-notebook</a>&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
 </li>
 <li id="fn:6">
-<p><a href="../pdfs/ontwerp.pdf#page=4">Ontwerpdocument: Vooronderzoek</a> <em>blz. 3 t/m 6</em>&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+<p><a href="../pdfs/model_experimenten_v1.pdf#page=13">Modelexperimenten rapport - versie 1: Gegevensvoorbereiding</a> <em>blz. 12</em>&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
 <li id="fn:7">
-<p><a href="https://doi.org/10.1016/j.buildenv.2020.107409">Forecasting office indoor CO2 concentration using machine learning with a one-year dataset</a>&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:7" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+<p><a href="https://stackoverflow.blog/2020/10/12/how-to-put-machine-learning-models-into-production/">StackoverFlow Blog: How to put machine learning models into production</a>&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
 </li>
 <li id="fn:8">
-<p><a href="../pdfs/model_experimenten_v2.pdf#page=6">Model experimenten rapport - versie 2: Model beschrijvingen</a><em>blz. 5 t/m 6</em>&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+<p><a href="https://c4model.com/">c4model.com</a>&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p><a href="../pdfs/ontwerp.pdf#page=4">Ontwerpdocument: Vooronderzoek</a> <em>blz. 3 t/m 6</em>&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p><a href="https://doi.org/10.1016/j.buildenv.2020.107409">Forecasting office indoor CO2 concentration using machine learning with a one-year dataset</a>&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:10" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p><a href="../htmls/model_experiments_v2/long-term.html">Long-term notebook</a>&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:12">
+<p><a href="../htmls/model_experiments_v2/short-term.html">Short-term notebook</a>&#160;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:13">
+<p><a href="../pdfs/model_experimenten_v2.pdf#page=6">Modelexperimenten rapport - versie 2: Model beschrijvingen</a><em>blz. 5 t/m 6</em>&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 13 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
